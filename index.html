@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Capital™ - Welcome to the Magical World of Self Discovery</title>
+    <meta name="description"
+        content="Life Coach, Reiki Master, & Public Speaker dedicated to empowering leaders from within who are curious & committed to becoming the highest version of themselves.">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Mental Capital™ - Welcome to the Magical World of Self Discovery">
+    <meta property="og:description"
+        content="Life Coach, Reiki Master, & Public Speaker dedicated to empowering leaders from within.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://solynx-solutions.github.io/mental-capital/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Philosopher:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Mystical Background */
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 20, 0.95) 0%, rgba(10, 5, 30, 0.92) 50%, rgba(0, 0, 20, 0.95) 100%);
+            z-index: 0;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            max-width: 500px;
+            opacity: 0.15;
+            z-index: 1;
+            filter: blur(1px);
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                opacity: 0.15;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                opacity: 0.25;
+                transform: translate(-50%, -50%) scale(1.05);
+            }
+        }
+
+        /* Starfield Effect */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Main Container */
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Logo */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 1.2s ease-out;
+        }
+
+        .logo {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+            filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.6));
+            animation: logoGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes logoGlow {
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.6));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 50px rgba(255, 215, 0, 0.9));
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Typography */
+        .title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8em;
+            font-weight: 600;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5),
+                0 0 40px rgba(255, 215, 0, 0.3);
+            animation: fadeIn 1.5s ease-out 0.3s both;
+        }
+
+        .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3em;
+            line-height: 1.7;
+            text-align: center;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+            max-width: 550px;
+            animation: fadeIn 1.5s ease-out 0.6s both;
+        }
+
+        .call-to-action {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 1.4em;
+            font-style: italic;
+            text-align: center;
+            color: #FFD700;
+            margin-bottom: 50px;
+            animation: fadeIn 1.5s ease-out 0.9s both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Form Section */
+        .form-container {
+            width: 100%;
+            max-width: 520px;
+            background: rgba(20, 20, 40, 0.7);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 45px 35px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5),
+                0 0 60px rgba(255, 215, 0, 0.15);
+            animation: fadeInUp 1.5s ease-out 1.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9em;
+            color: #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1em;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+            font-style: italic;
+        }
+
+        /* Checkbox Section */
+        .interests-section {
+            margin: 35px 0;
+        }
+
+        .interests-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15em;
+            color: #e0e0e0;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .interests-subtitle {
+            font-size: 0.95em;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            accent-color: #FFD700;
+        }
+
+        .checkbox-item label {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1em;
+            color: #e0e0e0;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Submit Button */
+        .submit-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            border: none;
+            border-radius: 10px;
+            color: #000000;
+            font-family: 'Cinzel', serif;
+            font-size: 1.2em;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .submit-button:hover {
+            background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.6);
+        }
+
+        .submit-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            background: rgba(40, 167, 69, 0.2);
+            border: 2px solid rgba(40, 167, 69, 0.6);
+            border-radius: 10px;
+            margin-top: 25px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .success-message h3 {
+            font-family: 'Cinzel', serif;
+            color: #FFD700;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .success-message p {
+            color: #e0e0e0;
+            font-size: 1.1em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 15px;
+            }
+
+            .logo {
+                width: 140px;
+                height: 140px;
+            }
+
+            .title {
+                font-size: 2em;
+                letter-spacing: 2px;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
+
+            .call-to-action {
+                font-size: 1.2em;
+            }
+
+            .form-container {
+                padding: 30px 20px;
+            }
+
+            .checkbox-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .background-image {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .title {
+                font-size: 1.7em;
+            }
+
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="background-overlay"></div>
+    <img src="background.png" alt="" class="background-image" aria-hidden="true">
+    <div class="stars" id="starfield"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Mental Capital Logo" class="logo">
+        </div>
+
+        <!-- Hero Text -->
+        <h1 class="title">Mental Capital™</h1>
+        <p class="subtitle">
+            I am a Life Coach, Reiki Master, & Public Speaker dedicated to empowering leaders from within who are
+            curious & committed to becoming the highest version of themselves.
+        </p>
+        <p class="call-to-action">Are you ready to Re-awaken to Yourself?</p>
+
+        <!-- Signup Form -->
+        <div class="form-container">
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="interests-section">
+                    <p class="interests-title">What are you most interested in hearing about?</p>
+                    <p class="interests-subtitle">(feel free to select as many or as few as you like)</p>
+
+                    <div class="checkbox-grid">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="mental-health" name="interests" value="Mental Health Tips/News">
+                            <label for="mental-health">Mental Health Tips/News</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="coaching-couples" name="interests" value="Coaching for Couples">
+                            <label for="coaching-couples">Coaching for Couples</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="podcasts" name="interests" value="New Podcast Episodes">
+                            <label for="podcasts">New Podcast Episodes</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="personal-coaching" name="interests"
+                                value="Personal Coaching/Sessions">
+                            <label for="personal-coaching">Personal Coaching/Sessions</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="events" name="interests" value="Events & Retreats">
+                            <label for="events">Events & Retreats</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="reiki" name="interests" value="Reiki Sessions/Training">
+                            <label for="reiki">Reiki Sessions/Training</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">Let's Stay Connected!</button>
+
+                <div class="success-message" id="successMessage">
+                    <h3>✨ Welcome to the Journey!</h3>
+                    <p>Thank you for connecting. You'll receive updates based on your interests soon.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Create starfield effect
+        function createStars() {
+            const starfield = document.getElementById('starfield');
+            const numberOfStars = 100;
+
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                starfield.appendChild(star);
+            }
+        }
+
+        createStars();
+
+        // Form submission handler
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const interests = formData.getAll('interests');
+
+            // Show success message
+            const form = e.target;
+            const inputs = form.querySelectorAll('input, button');
+            inputs.forEach(input => input.disabled = true);
+
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+
+            // Log the data (you can replace this with actual API call)
+            console.log('Form submitted:', {
+                name,
+                email,
+                interests
+            });
+
+            // Here you would typically send the data to your email service
+            // For example, integrating with Flodesk, Mailchimp, or your backend
+            /*
+            fetch('YOUR_API_ENDPOINT', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, interests })
+            })
+            .then(response => response.json())
+            .then(data => {
+                successMessage.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your information. Please try again.');
+                inputs.forEach(input => input.disabled = false);
+            });
+            */
+
+            // Reset form after 3 seconds (optional)
+            setTimeout(() => {
+                form.reset();
+                inputs.forEach(input => input.disabled = false);
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>
