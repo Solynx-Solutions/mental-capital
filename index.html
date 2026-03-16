@@ -12,20 +12,21 @@
     <meta property="og:title" content="Welcome to the magick of Mental Capital">
     <meta property="og:description"
         content="We are dedicated to making everything related to mental health, wealth, & abundance more accessible, as well as empowering tomorrow’s healers & leaders!">
-    <meta property="og:image" content="Assets/images/logo.png">
+    <meta property="og:image" content="assets/images/logo.png">
     <meta property="og:url" content="https://mentalcapital.world/">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Welcome to the magick of Mental Capital">
-    <meta name="twitter:description" content="We are dedicated to making everything related to mental health, wealth, & abundance more accessible, as well as empowering tomorrow’s healers & leaders!">
-    <meta name="twitter:image" content="https://mentalcapital.world/Assets/images/logo.png">
+    <meta name="twitter:description"
+        content="We are dedicated to making everything related to mental health, wealth, & abundance more accessible, as well as empowering tomorrow’s healers & leaders!">
+    <meta name="twitter:image" content="https://mentalcapital.world/assets/images/logo.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Philosopher:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Philosopher:wght@400;700&display=swap"
         rel="stylesheet">
 
     <style>
@@ -498,7 +499,7 @@
         .closing-section {
             width: 100%;
             text-align: center;
-            padding: 40px 0;
+            padding: 60px 0 40px;
             animation: fadeIn 2s ease-out 2.1s both;
         }
 
@@ -506,34 +507,71 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.4em;
             font-style: italic;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            color: #e0e0e0;
-            max-width: 550px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+            color: #c8c8c8;
+            max-width: 520px;
             margin-left: auto;
             margin-right: auto;
+            position: relative;
+            padding: 0 10px;
+        }
+
+        .quote-block::before {
+            content: '\201C';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5em;
+            color: rgba(255, 215, 0, 0.35);
+            position: absolute;
+            top: -18px;
+            left: -10px;
+            line-height: 1;
+        }
+
+        .quote-block::after {
+            content: '\201D';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5em;
+            color: rgba(255, 215, 0, 0.35);
+            position: absolute;
+            bottom: -30px;
+            right: -10px;
+            line-height: 1;
         }
 
         .closing-copy {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.25em;
-            color: #e0e0e0;
-            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #c8c8c8;
+            margin-bottom: 18px;
+            line-height: 1.65;
         }
 
         .signature {
-            font-family: 'Philosopher', sans-serif;
-            font-size: 2.2em;
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5em;
             color: #FFD700;
-            margin: 20px 0;
-            font-style: italic;
+            margin: 8px 0 0;
+            font-style: normal;
+            text-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .signature-wrap {
+            margin-top: 35px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255, 215, 0, 0.18);
+            display: inline-block;
+            width: 180px;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin-top: 30px;
+            margin-top: 35px;
+            padding-bottom: 20px;
         }
 
         .social-link {
@@ -606,14 +644,14 @@
 <body>
     <!-- Background Elements -->
     <div class="background-overlay"></div>
-    <img src="Assets/images/background.png" alt="" class="background-image" aria-hidden="true">
+    <img src="assets/images/background.png" alt="" class="background-image" aria-hidden="true">
     <div class="stars" id="starfield"></div>
 
     <!-- Main Content -->
     <div class="container">
         <!-- Logo Section -->
         <div class="logo-container">
-            <img src="Assets/images/logo.png" alt="Mental Capital Logo" class="logo">
+            <img src="assets/images/logo.png" alt="Mental Capital Logo" class="logo">
         </div>
 
         <!-- Hero Text -->
@@ -682,7 +720,7 @@
         <!-- Featured Image Section -->
         <div class="featured-image-section">
             <div class="featured-image-circle">
-                <img src="Assets/images/background.png" alt="Mental Capital Cosmic Chakra Illustration">
+                <img src="assets/images/background.png" alt="Mental Capital Cosmic Chakra Illustration">
             </div>
         </div>
 
@@ -693,14 +731,15 @@
             <h2 class="section-title">EXPLORE MORE..</h2>
             <div class="link-hub">
                 <a href="https://www.buzzsprout.com/2126107" class="link-card">
-                    <div class="link-thumb"><img src="Assets/images/logo.png" alt="Podcast"></div>
-                    <span class="link-text">The Podcast</span>
+                    <div class="link-thumb"><img src="assets/images/logo.png" alt="Podcast"></div>a <span
+                        class="link-text">The Podcast</span>
                 </a>
                 <a href="https://open.spotify.com/episode/3IyKflrCjGHIZj1Oy3QLAf?si=21bdbb7eb0ad43bb" class="link-card">
                     <div class="link-thumb"><span style="color: #FFD700; font-size: 20px;">📖</span></div>
                     <span class="link-text">My Story</span>
                 </a>
-                <a href="https://api.solynx.solutions/widget/bookings/zeus-fae-personal-calendar-7efqkv34f" class="link-card">
+                <a href="https://api.solynx.solutions/widget/bookings/zeus-fae-personal-calendar-7efqkv34f"
+                    class="link-card">
                     <div class="link-thumb"><span style="color: #FFD700; font-size: 20px;">📞</span></div>
                     <span class="link-text">Schedule a Call with Zeus</span>
                 </a>
@@ -716,7 +755,7 @@
                     <div class="link-thumb"><span style="color: #FFD700; font-size: 20px;">📸</span></div>
                     <span class="link-text">Follow & Connect with Zeus</span>
                 </a>
-                <a href="#" class="link-card">
+                <a href="https://api.solynx.solutions/widget/bookings/mental-capital-podcast" class="link-card">
                     <div class="link-thumb"><span style="color: #FFD700; font-size: 20px;">🎙️</span></div>
                     <span class="link-text">Share Your Story / Be on the Podcast</span>
                 </a>
@@ -728,26 +767,42 @@
         <!-- Closing Section -->
         <div class="closing-section">
             <div class="quote-block">
-                “When we incarnated here, we forgot who we were, because that makes the remembering that much more profound.”
+                When we incarnated here, we forgot who we were, because that makes the remembering that much more
+                profound.
             </div>
-            <p class="closing-copy">I am passionate about seeing you live a life full of purpose & passion, remember who you really are at your core, & reawaken to your divinity.</p>
+            <p class="closing-copy">I am passionate about seeing you live a life full of purpose & passion, remember who
+                you really are at your core, & reawaken to your divinity.</p>
             <p class="closing-copy">You are loved, you are valued, & most importantly: You are worthy.</p>
             <p class="closing-copy">So deeply honored to walk with you on your journey,</p>
-            <div class="signature">Zeus</div>
+            <div class="signature-wrap">
+                <div class="signature">Zeus</div>
+            </div>
 
             <!-- Social Links -->
             <div class="social-links">
                 <a href="#" class="social-link" aria-label="Facebook">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-10 4.5-10 10 0 5 3.66 9.12 8.44 9.88v-6.99h-2.54v-2.89h2.54V9.85c0-2.5 1.47-3.89 3.77-3.89 1.11 0 2.22.2 2.22.2v2.44h-1.25c-1.24 0-1.63.77-1.63 1.56v1.87h2.75l-.44 2.89h-2.31v6.99c4.78-.76 8.44-4.88 8.44-9.88 0-5.5-4.5-10-10-10z"/></svg>
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.04c-5.5 0-10 4.5-10 10 0 5 3.66 9.12 8.44 9.88v-6.99h-2.54v-2.89h2.54V9.85c0-2.5 1.47-3.89 3.77-3.89 1.11 0 2.22.2 2.22.2v2.44h-1.25c-1.24 0-1.63.77-1.63 1.56v1.87h2.75l-.44 2.89h-2.31v6.99c4.78-.76 8.44-4.88 8.44-9.88 0-5.5-4.5-10-10-10z" />
+                    </svg>
                 </a>
                 <a href="#" class="social-link" aria-label="X">
-                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"/></svg>
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z" />
+                    </svg>
                 </a>
                 <a href="#" class="social-link" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.981 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.669-.072-4.949-.2-4.358-2.621-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.981 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.669-.072-4.949-.2-4.358-2.621-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
                 </a>
                 <a href="#" class="social-link" aria-label="Pinterest">
-                    <svg viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 0 5.397 0 12.017c0 5.078 3.158 9.412 7.63 11.17-.105-.945-.199-2.396.041-3.428.216-.931 1.391-5.897 1.391-5.897s-.355-.71-.355-1.762c0-1.651.957-2.884 2.15-2.884 1.013 0 1.503.76 1.503 1.67 0 1.02-.65 2.541-.983 3.952-.28 1.183.593 2.147 1.758 2.147 2.112 0 3.733-2.227 3.733-5.441 0-2.846-2.045-4.835-4.965-4.835-3.382 0-5.366 2.537-5.366 5.157 0 1.022.393 2.119.884 2.719.097.118.111.222.082.34-.09.373-.288 1.174-.327 1.332-.051.205-.169.249-.391.147-1.458-.679-2.37-2.812-2.37-4.524 0-3.682 2.674-7.065 7.711-7.065 4.048 0 7.195 2.883 7.195 6.734 0 4.021-2.535 7.258-6.052 7.258-1.182 0-2.292-.614-2.671-1.334l-.727 2.77c-.262 1.006-1.01 2.45-1.504 3.25 1.456.444 3.003.684 4.606.68 6.621 0 12.017-5.396 12.017-12.017S18.638 0 12.017 0z"/></svg>
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12.017 0C5.396 0 0 5.397 0 12.017c0 5.078 3.158 9.412 7.63 11.17-.105-.945-.199-2.396.041-3.428.216-.931 1.391-5.897 1.391-5.897s-.355-.71-.355-1.762c0-1.651.957-2.884 2.15-2.884 1.013 0 1.503.76 1.503 1.67 0 1.02-.65 2.541-.983 3.952-.28 1.183.593 2.147 1.758 2.147 2.112 0 3.733-2.227 3.733-5.441 0-2.846-2.045-4.835-4.965-4.835-3.382 0-5.366 2.537-5.366 5.157 0 1.022.393 2.119.884 2.719.097.118.111.222.082.34-.09.373-.288 1.174-.327 1.332-.051.205-.169.249-.391.147-1.458-.679-2.37-2.812-2.37-4.524 0-3.682 2.674-7.065 7.711-7.065 4.048 0 7.195 2.883 7.195 6.734 0 4.021-2.535 7.258-6.052 7.258-1.182 0-2.292-.614-2.671-1.334l-.727 2.77c-.262 1.006-1.01 2.45-1.504 3.25 1.456.444 3.003.684 4.606.68 6.621 0 12.017-5.396 12.017-12.017S18.638 0 12.017 0z" />
+                    </svg>
                 </a>
             </div>
         </div>
