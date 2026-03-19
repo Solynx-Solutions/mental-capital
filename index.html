@@ -99,21 +99,39 @@
             background: white;
             animation: drift linear infinite;
             /* size, duration, opacity set per-star via JS */
+            will-change: transform;
+        }
+
+        .star.streak {
+            border-radius: 10px;
+            width: 1px;
+            /* height and opacity varied by JS for depth */
+            filter: blur(1.5px);
+            transform-origin: top center;
+            /* Rotate slightly to match the 15vw : 120vh diagonal (approx 7deg) */
+            rotate: 7deg;
+        }
+
+        .star.fast {
+            height: 2px;
+            width: 6px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #fff, transparent);
+            filter: blur(0.5px);
         }
 
         @keyframes drift {
             0% {
-                transform: translateY(-10px);
+                transform: translate3d(0, -10vh, 0) scale(0.4);
                 opacity: 0;
             }
-            5% {
+
+            10% {
                 opacity: var(--star-opacity, 0.6);
             }
-            95% {
-                opacity: var(--star-opacity, 0.6);
-            }
+
             100% {
-                transform: translateY(110vh);
+                transform: translate3d(15vw, 110vh, 0) scale(1.6);
                 opacity: 0;
             }
         }
@@ -974,42 +992,63 @@
     </div>
 
     <script>
-        // Create floating space starfield
+        // Create immersive space travel starfield
         function createStars() {
             const starfield = document.getElementById('starfield');
-            const numberOfStars = 120;
+            const numberOfStars = 160;
 
             for (let i = 0; i < numberOfStars; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
 
-                // Three depth layers: small/slow/faint → large/fast/bright
                 const layer = Math.random();
                 let size, duration, opacity;
 
-                if (layer < 0.5) {
-                    // Far layer — tiny, slow, dim
-                    size      = (Math.random() * 0.8 + 0.6).toFixed(1);  // 0.6–1.4px
-                    duration  = (Math.random() * 20 + 40);               // 40–60s
-                    opacity   = (Math.random() * 0.2 + 0.2).toFixed(2); // 0.2–0.4
-                } else if (layer < 0.85) {
+                // Chance for special stars: streaks or fast streaks
+                const specialChance = Math.random();
+                if (specialChance < 0.05) {
+                    // STREAK STAR (elongated vertically/diagonally)
+                    star.classList.add('streak');
+                    size = (Math.random() * 1.5 + 1).toFixed(1); // width
+                    star.style.height = (Math.random() * 80 + 40) + 'px';
+                    duration = (Math.random() * 4 + 6); // fast (6-10s)
+                    opacity = (Math.random() * 0.3 + 0.5).toFixed(2);
+                } else if (specialChance < 0.10) {
+                    // FAST STAR (short horizontal-ish streak)
+                    star.classList.add('fast');
+                    duration = (Math.random() * 3 + 4); // very fast (4-7s)
+                    opacity = (Math.random() * 0.2 + 0.7).toFixed(2);
+                    size = '2'; // default size handled by class mostly
+                } else if (layer < 0.6) {
+                    // Far layer
+                    size = (Math.random() * 0.8 + 0.5).toFixed(1);
+                    duration = (Math.random() * 30 + 50); // 50-80s
+                    opacity = (Math.random() * 0.2 + 0.2).toFixed(2);
+                } else if (layer < 0.9) {
                     // Mid layer
-                    size      = (Math.random() * 1.0 + 1.2).toFixed(1);  // 1.2–2.2px
-                    duration  = (Math.random() * 15 + 25);               // 25–40s
-                    opacity   = (Math.random() * 0.25 + 0.4).toFixed(2); // 0.4–0.65
+                    size = (Math.random() * 1.0 + 1.2).toFixed(1);
+                    duration = (Math.random() * 15 + 25); // 25-40s
+                    opacity = (Math.random() * 0.3 + 0.4).toFixed(2);
                 } else {
-                    // Near layer — larger, faster, brighter
-                    size      = (Math.random() * 1.2 + 2.0).toFixed(1);  // 2.0–3.2px
-                    duration  = (Math.random() * 10 + 15);               // 15–25s
-                    opacity   = (Math.random() * 0.2 + 0.7).toFixed(2);  // 0.7–0.9
+                    // Near layer
+                    size = (Math.random() * 1.2 + 2.0).toFixed(1);
+                    duration = (Math.random() * 8 + 12); // 12-20s
+                    opacity = (Math.random() * 0.2 + 0.7).toFixed(2);
                 }
 
-                star.style.width           = size + 'px';
-                star.style.height          = size + 'px';
-                star.style.left            = Math.random() * 100 + '%';
-                star.style.top             = Math.random() * 100 + '%';
-                star.style.animationDuration  = duration + 's';
-                star.style.animationDelay     = -(Math.random() * duration) + 's'; // stagger start
+                if (!star.classList.contains('fast') && !star.classList.contains('streak')) {
+                    star.style.width = size + 'px';
+                    star.style.height = size + 'px';
+                } else if (star.classList.contains('streak')) {
+                    star.style.width = size + 'px';
+                }
+
+                // Random starting point (extended range to account for diagonal exit)
+                star.style.left = (Math.random() * 120 - 20) + '%';
+                star.style.top = (Math.random() * 130 - 30) + '%';
+                
+                star.style.animationDuration = duration + 's';
+                star.style.animationDelay = -(Math.random() * duration) + 's';
                 star.style.setProperty('--star-opacity', opacity);
 
                 starfield.appendChild(star);
