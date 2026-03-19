@@ -91,6 +91,7 @@
             height: 100%;
             z-index: 1;
             pointer-events: none;
+            animation: spaceDrift 60s linear infinite;
         }
 
         .star {
@@ -797,6 +798,12 @@
                          0 0 25px rgba(255, 215, 0, 0.25);
             animation: fadeIn 1.5s ease-out 1s both;
         }
+
+        @keyframes spaceDrift {
+            0% { transform: translateX(0px); }
+            50% { transform: translateX(-20px); }
+            100% { transform: translateX(0px); }
+        }
     </style>
 </head>
 
@@ -1001,10 +1008,15 @@
                 const star = document.createElement('div');
                 star.className = 'star';
 
+                // User refinement: 15% chance for fast class
+                if (Math.random() > 0.85) {
+                    star.classList.add('fast');
+                }
+
                 const layer = Math.random();
                 let size, duration, opacity;
 
-                // Chance for special stars: streaks or fast streaks
+                // Chance for special streak stars
                 const specialChance = Math.random();
                 if (specialChance < 0.05) {
                     // STREAK STAR (elongated vertically/diagonally)
@@ -1013,12 +1025,11 @@
                     star.style.height = (Math.random() * 80 + 40) + 'px';
                     duration = (Math.random() * 4 + 6); // fast (6-10s)
                     opacity = (Math.random() * 0.3 + 0.5).toFixed(2);
-                } else if (specialChance < 0.10) {
+                } else if (star.classList.contains('fast')) {
                     // FAST STAR (short horizontal-ish streak)
-                    star.classList.add('fast');
                     duration = (Math.random() * 3 + 4); // very fast (4-7s)
                     opacity = (Math.random() * 0.2 + 0.7).toFixed(2);
-                    size = '2'; // default size handled by class mostly
+                    size = '2';
                 } else if (layer < 0.6) {
                     // Far layer
                     size = (Math.random() * 0.8 + 0.5).toFixed(1);
@@ -1048,6 +1059,7 @@
                 star.style.top = (Math.random() * 130 - 30) + '%';
                 
                 star.style.animationDuration = duration + 's';
+                // User refinement: negative delay for instant population
                 star.style.animationDelay = -(Math.random() * duration) + 's';
                 star.style.setProperty('--star-opacity', opacity);
 
