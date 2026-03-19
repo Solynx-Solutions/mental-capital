@@ -121,6 +121,7 @@
             max-width: 640px;
             margin: 0 auto;
             padding: 60px 20px;
+            padding-top: 120px;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -638,10 +639,99 @@
                 height: 120px;
             }
         }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 5, 30, 0.75);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo */
+        .nav-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2em;
+            color: #FFD700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+        }
+
+        /* Links */
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            font-family: 'Philosopher', sans-serif;
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 0.9em;
+            letter-spacing: 1.5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        /* Hover glow */
+        .nav-links a:hover {
+            color: #FFD700;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+        }
+
+        /* Underline animation */
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 1px;
+            background: #FFD700;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo">Mental Capital</div>
+            <div class="nav-links">
+                <a href="#explore">Explore</a>
+                <a href="#podcast">Podcast</a>
+                <a href="#booking">Book</a>
+                <a href="#contact">Connect</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Background Elements -->
     <div class="background-overlay"></div>
     <img src="assets/images/background.png" alt="" class="background-image" aria-hidden="true">
@@ -727,7 +817,7 @@
         <div class="section-divider"></div>
 
         <!-- Explore More Section -->
-        <div class="explore-more-section">
+        <div class="explore-more-section" id="explore">
             <h2 class="section-title">EXPLORE MORE..</h2>
             <div class="link-hub">
                 <a href="https://www.buzzsprout.com/2126107" class="link-card">
