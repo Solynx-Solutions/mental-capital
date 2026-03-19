@@ -715,6 +715,52 @@
                 display: none;
             }
         }
+
+        /* DEFINITION SECTION */
+        .definition-section {
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto 40px;
+            animation: fadeIn 1.5s ease-out 1s both;
+        }
+
+        .definition-box {
+            background: rgba(20, 20, 40, 0.6);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            border-radius: 12px;
+            padding: 25px 25px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+        }
+
+        .definition-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8em;
+            letter-spacing: 3px;
+            color: rgba(255, 215, 0, 0.7);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .definition-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2em;
+            line-height: 1.7;
+            color: #e0e0e0;
+        }
+
+        /* Cursor blinking */
+        .cursor {
+            display: inline-block;
+            margin-left: 2px;
+            color: #FFD700;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0; }
+        }
     </style>
 </head>
 
@@ -751,6 +797,16 @@
             curious & committed to becoming the highest version of themselves.
         </p>
         <p class="call-to-action">Are you ready to Re-awaken to Yourself?</p>
+
+        <!-- Definition Section -->
+        <div class="definition-section">
+            <div class="definition-box">
+                <div class="definition-label">Definition:</div>
+                <div class="definition-text">
+                    <span id="typewriter"></span><span class="cursor">|</span>
+                </div>
+            </div>
+        </div>
 
         <!-- Signup Form -->
         <div class="form-container">
@@ -968,6 +1024,24 @@
                 inputs.forEach(input => input.disabled = false);
                 successMessage.style.display = 'none';
             }, 5000);
+        });
+
+        // Typewriter effect
+        const text = `Mental capital refers to an individual's total cognitive and emotional resources, including intellectual capability, emotional intelligence, resilience, and learning flexibility. It shapes how people learn, work, and thrive, serving as a foundational asset for personal wellbeing and economic productivity.`;
+
+        let index = 0;
+        const speed = 25;
+
+        function typeWriter() {
+            if (index < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        window.addEventListener("load", () => {
+            setTimeout(typeWriter, 800);
         });
     </script>
 </body>
