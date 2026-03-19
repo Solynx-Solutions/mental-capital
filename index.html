@@ -95,22 +95,26 @@
 
         .star {
             position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
             border-radius: 50%;
-            animation: twinkle 3s ease-in-out infinite;
+            background: white;
+            animation: drift linear infinite;
+            /* size, duration, opacity set per-star via JS */
         }
 
-        @keyframes twinkle {
-
-            0%,
-            100% {
-                opacity: 0.3;
+        @keyframes drift {
+            0% {
+                transform: translateY(-10px);
+                opacity: 0;
             }
-
-            50% {
-                opacity: 1;
+            5% {
+                opacity: var(--star-opacity, 0.6);
+            }
+            95% {
+                opacity: var(--star-opacity, 0.6);
+            }
+            100% {
+                transform: translateY(110vh);
+                opacity: 0;
             }
         }
 
@@ -955,18 +959,44 @@
     </div>
 
     <script>
-        // Create starfield effect
+        // Create floating space starfield
         function createStars() {
             const starfield = document.getElementById('starfield');
-            const numberOfStars = 100;
+            const numberOfStars = 120;
 
             for (let i = 0; i < numberOfStars; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+
+                // Three depth layers: small/slow/faint → large/fast/bright
+                const layer = Math.random();
+                let size, duration, opacity;
+
+                if (layer < 0.5) {
+                    // Far layer — tiny, slow, dim
+                    size      = (Math.random() * 0.8 + 0.6).toFixed(1);  // 0.6–1.4px
+                    duration  = (Math.random() * 20 + 40);               // 40–60s
+                    opacity   = (Math.random() * 0.2 + 0.2).toFixed(2); // 0.2–0.4
+                } else if (layer < 0.85) {
+                    // Mid layer
+                    size      = (Math.random() * 1.0 + 1.2).toFixed(1);  // 1.2–2.2px
+                    duration  = (Math.random() * 15 + 25);               // 25–40s
+                    opacity   = (Math.random() * 0.25 + 0.4).toFixed(2); // 0.4–0.65
+                } else {
+                    // Near layer — larger, faster, brighter
+                    size      = (Math.random() * 1.2 + 2.0).toFixed(1);  // 2.0–3.2px
+                    duration  = (Math.random() * 10 + 15);               // 15–25s
+                    opacity   = (Math.random() * 0.2 + 0.7).toFixed(2);  // 0.7–0.9
+                }
+
+                star.style.width           = size + 'px';
+                star.style.height          = size + 'px';
+                star.style.left            = Math.random() * 100 + '%';
+                star.style.top             = Math.random() * 100 + '%';
+                star.style.animationDuration  = duration + 's';
+                star.style.animationDelay     = -(Math.random() * duration) + 's'; // stagger start
+                star.style.setProperty('--star-opacity', opacity);
+
                 starfield.appendChild(star);
             }
         }
