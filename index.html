@@ -20,7 +20,7 @@
     <meta name="twitter:title" content="Welcome to the magick of Mental Capital">
     <meta name="twitter:description"
         content="We are dedicated to making everything related to mental health, wealth, & abundance more accessible, as well as empowering tomorrow’s healers & leaders!">
-    <meta name="twitter:image" content="https://mentalcapital.world/assets/images/logo.png">
+    <meta name="twitter:image" content="https://mentalcapital.world/assets/images/mental-capital-logo.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -117,12 +117,9 @@
             }
 
             100% {
-                transform: 
-                    translate(
-                        calc(-50% + var(--x) * 120vw),
-                        calc(-50% + var(--y) * 120vh)
-                    )
-                    scale(2.5);
+                transform:
+                    translate(calc(-50% + var(--x) * 120vw),
+                        calc(-50% + var(--y) * 120vh)) scale(2.5);
                 opacity: 0;
             }
         }
@@ -162,9 +159,12 @@
 
         /* subtle float instead of heavy glow pulse */
         @keyframes logoFloat {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px) scale(1);
             }
+
             50% {
                 transform: translateY(-6px) scale(1.02);
             }
@@ -772,8 +772,17 @@
         }
 
         @keyframes blink {
-            0%, 50%, 100% { opacity: 1; }
-            25%, 75% { opacity: 0; }
+
+            0%,
+            50%,
+            100% {
+                opacity: 1;
+            }
+
+            25%,
+            75% {
+                opacity: 0;
+            }
         }
 
         /* Definition section title */
@@ -786,14 +795,22 @@
             text-transform: uppercase;
             margin-bottom: 14px;
             text-shadow: 0 0 12px rgba(255, 215, 0, 0.5),
-                         0 0 25px rgba(255, 215, 0, 0.25);
+                0 0 25px rgba(255, 215, 0, 0.25);
             animation: fadeIn 1.5s ease-out 1s both;
         }
 
         @keyframes spaceDrift {
-            0% { transform: translateX(0px); }
-            50% { transform: translateX(-20px); }
-            100% { transform: translateX(0px); }
+            0% {
+                transform: translateX(0px);
+            }
+
+            50% {
+                transform: translateX(-20px);
+            }
+
+            100% {
+                transform: translateX(0px);
+            }
         }
     </style>
 </head>
@@ -821,7 +838,7 @@
     <div class="container">
         <!-- Logo Section -->
         <div class="logo-container">
-            <img src="/assets/images/mental-capital-logo.jpg" alt="Mental Capital Logo" class="logo new-logo">
+            <img src="assets/images/mental-capital-logo.jpg" alt="Mental Capital Logo" class="logo new-logo">
         </div>
 
         <!-- Hero Text -->
@@ -912,8 +929,8 @@
             <h2 class="section-title">EXPLORE MORE..</h2>
             <div class="link-hub">
                 <a href="https://www.buzzsprout.com/2126107" class="link-card">
-                    <div class="link-thumb"><img src="assets/images/logo.png" alt="Podcast"></div>a <span
-                        class="link-text">The Podcast</span>
+                    <div class="link-thumb"><img src="assets/images/logo.png" alt="Podcast"></div>
+                    <span class="link-text">The Podcast</span>
                 </a>
                 <a href="https://open.spotify.com/episode/3IyKflrCjGHIZj1Oy3QLAf?si=21bdbb7eb0ad43bb" class="link-card">
                     <div class="link-thumb"><span style="color: #FFD700; font-size: 20px;">📖</span></div>
