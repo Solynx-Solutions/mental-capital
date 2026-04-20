@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intel | Strategic Insights & Podcast | Mental Capital</title>
+    <meta name="description" content="Authority-building content for the modern man. Strategic insights on behavioral protocols, performance, and archetype mastery.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Cormorant Garamond', serif; background: #000; color: #fff; overflow-x: hidden; position: relative; }
+        .background-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(0, 0, 20, 0.95) 0%, rgba(10, 5, 30, 0.92) 50%, rgba(0, 0, 20, 0.95) 100%); z-index: 0; }
+        .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; animation: spaceDrift 60s linear infinite; }
+        .star { position: absolute; top: 50%; left: 50%; background: white; border-radius: 50%; transform: translate(-50%, -50%) scale(0.1); animation: warpMove linear infinite; box-shadow: 0 0 6px rgba(255, 255, 255, 0.6); will-change: transform; }
+        @keyframes warpMove { 0% { transform: translate(-50%, -50%) scale(0.05); opacity: 0; } 10% { opacity: var(--star-opacity, 0.7); } 100% { transform: translate(calc(-50% + var(--x) * 120vw), calc(-50% + var(--y) * 120vh)) scale(2.5); opacity: 0; } }
+        @keyframes spaceDrift { 0%, 100% { transform: translateX(0px); } 50% { transform: translateX(-20px); } }
+        
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; background: rgba(10, 5, 30, 0.75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 215, 0, 0.2); z-index: 1000; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-family: 'Cinzel', serif; font-size: 1.2em; color: #FFD700; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); text-decoration: none; }
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a { font-family: 'Philosopher', sans-serif; color: #e0e0e0; text-decoration: none; font-size: 0.9em; letter-spacing: 1.5px; transition: all 0.3s ease; position: relative; }
+        .nav-links a:hover { color: #FFD700; text-shadow: 0 0 8px rgba(255, 215, 0, 0.7); }
+        
+        .container { position: relative; z-index: 10; max-width: 900px; margin: 0 auto; padding: 120px 20px; }
+        .section-title { font-family: 'Cinzel', serif; font-size: 2.5em; color: #FFD700; text-align: center; margin-bottom: 40px; letter-spacing: 3px; text-transform: uppercase; text-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+        .copy-block { font-size: 1.3em; line-height: 1.8; color: #e0e0e0; margin-bottom: 50px; text-align: center; }
+
+        .intel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .intel-card { background: rgba(20, 20, 40, 0.6); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 4px; padding: 25px; transition: all 0.3s ease; text-decoration: none; display: flex; flex-direction: column; }
+        .intel-card:hover { border-color: #FFD700; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1); }
+        .intel-label { font-family: 'Cinzel', serif; font-size: 0.75em; color: #FFD700; letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase; }
+        .intel-title { font-family: 'Cinzel', serif; font-size: 1.2em; color: #fff; margin-bottom: 15px; line-height: 1.4; }
+        .intel-desc { font-size: 1em; color: #c8c8c8; line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
+        .intel-link { font-family: 'Cinzel', serif; font-size: 0.95em; color: #FFD700; text-transform: uppercase; letter-spacing: 1.5px; margin-top: auto; }
+
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+    <div class="stars" id="starfield"></div>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Mental Capital</a>
+            <div class="nav-links">
+                <a href="workshop.html">The Protocol</a>
+                <a href="brotherhood.html">Brotherhood</a>
+                <a href="coaching.html">Coaching</a>
+                <a href="intel.html">Intel</a>
+                <a href="founder.html">The Founder</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">INTEL: STRATEGIC INSIGHTS</h1>
+        
+        <div class="copy-block">
+            High-level intelligence for the man who demands excellence. Strategic insights on behavioral protocols, performance architecture, and archetype mastery.
+        </div>
+        
+        <div class="intel-grid">
+            <a href="https://www.buzzsprout.com/2126107" class="intel-card">
+                <div class="intel-label">Podcast</div>
+                <div class="intel-title">The Mental Capital Podcast</div>
+                <div class="intel-desc">Deep dives into the protocols of performance and the archetypes of masculinity.</div>
+                <div class="intel-link">Listen Now →</div>
+            </a>
+            <a href="https://open.spotify.com/episode/3IyKflrCjGHIZj1Oy3QLAf?si=21bdbb7eb0ad43bb" class="intel-card">
+                <div class="intel-label">Authority</div>
+                <div class="intel-title">Protocol Case Studies</div>
+                <div class="intel-desc">Analyzing the shifts from internal resistance to decisive power in high-stakes environments.</div>
+                <div class="intel-link">View Intel →</div>
+            </a>
+            <a href="https://www.instagram.com/mental_capital" class="intel-card">
+                <div class="intel-label">Executive</div>
+                <div class="intel-title">Daily Operations</div>
+                <div class="intel-desc">Bite-sized strategic insights and behavioral reminders for daily governance.</div>
+                <div class="intel-link">Follow Command →</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function createStars() {
+            const starfield = document.getElementById('starfield');
+            const numberOfStars = 160;
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                const angle = Math.random() * Math.PI * 2;
+                const x = Math.cos(angle);
+                const y = Math.sin(angle);
+                let size, duration, opacity;
+                const layer = Math.random();
+                if (layer < 0.5) { size = Math.random() * 1 + 0.5; duration = Math.random() * 40 + 50; opacity = Math.random() * 0.3 + 0.2; }
+                else if (layer < 0.85) { size = Math.random() * 1.5 + 1; duration = Math.random() * 25 + 30; opacity = Math.random() * 0.3 + 0.4; }
+                else { size = Math.random() * 2 + 2; duration = Math.random() * 15 + 15; opacity = Math.random() * 0.3 + 0.7; }
+                star.style.width = size + 'px'; star.style.height = size + 'px';
+                star.style.setProperty('--x', x); star.style.setProperty('--y', y); star.style.setProperty('--star-opacity', opacity);
+                star.style.animationDuration = duration + 's'; star.style.animationDelay = -(Math.random() * duration) + 's';
+                starfield.appendChild(star);
+            }
+        }
+        window.addEventListener("load", createStars);
+    </script>
+</body>
+
+</html>

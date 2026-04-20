@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-on-1 Performance Strategy | Mental Capital</title>
+    <meta name="description" content="Bespoke strategic advisory for men who have built the business but lost the clarity. High-ticket, high-accountability, zero fluff.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Cormorant Garamond', serif; background: #000; color: #fff; overflow-x: hidden; position: relative; }
+        .background-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(0, 0, 20, 0.95) 0%, rgba(10, 5, 30, 0.92) 50%, rgba(0, 0, 20, 0.95) 100%); z-index: 0; }
+        .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; animation: spaceDrift 60s linear infinite; }
+        .star { position: absolute; top: 50%; left: 50%; background: white; border-radius: 50%; transform: translate(-50%, -50%) scale(0.1); animation: warpMove linear infinite; box-shadow: 0 0 6px rgba(255, 255, 255, 0.6); will-change: transform; }
+        @keyframes warpMove { 0% { transform: translate(-50%, -50%) scale(0.05); opacity: 0; } 10% { opacity: var(--star-opacity, 0.7); } 100% { transform: translate(calc(-50% + var(--x) * 120vw), calc(-50% + var(--y) * 120vh)) scale(2.5); opacity: 0; } }
+        @keyframes spaceDrift { 0%, 100% { transform: translateX(0px); } 50% { transform: translateX(-20px); } }
+        
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; background: rgba(10, 5, 30, 0.75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 215, 0, 0.2); z-index: 1000; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-family: 'Cinzel', serif; font-size: 1.2em; color: #FFD700; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); text-decoration: none; }
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a { font-family: 'Philosopher', sans-serif; color: #e0e0e0; text-decoration: none; font-size: 0.9em; letter-spacing: 1.5px; transition: all 0.3s ease; position: relative; }
+        .nav-links a:hover { color: #FFD700; text-shadow: 0 0 8px rgba(255, 215, 0, 0.7); }
+        
+        .container { position: relative; z-index: 10; max-width: 800px; margin: 0 auto; padding: 120px 20px; text-align: center; }
+        .section-title { font-family: 'Cinzel', serif; font-size: 2.5em; color: #FFD700; margin-bottom: 40px; letter-spacing: 3px; text-transform: uppercase; text-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+        .copy-block { font-size: 1.3em; line-height: 1.8; color: #e0e0e0; margin-bottom: 30px; }
+        .highlight { color: #FFD700; font-weight: 600; }
+        
+        .card { background: rgba(20, 20, 40, 0.7); border: 1px solid rgba(255, 215, 0, 0.5); border-radius: 4px; padding: 50px; backdrop-filter: blur(10px); margin-bottom: 40px; box-shadow: 0 0 60px rgba(255, 215, 0, 0.15); position: relative; overflow: hidden; }
+        .card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, transparent, #FFD700, transparent); }
+        .card-header { font-family: 'Cinzel', serif; color: #FFD700; font-size: 1.6em; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 3px; }
+        
+        .feature-list { list-style: none; text-align: left; max-width: 500px; margin: 0 auto 30px; }
+        .feature-item { font-size: 1.2em; color: #e0e0e0; margin-bottom: 20px; padding-left: 30px; position: relative; }
+        .feature-item::before { content: "›"; position: absolute; left: 0; color: #FFD700; font-size: 1.5em; line-height: 1; }
+
+        .cta-button { display: block; width: 100%; max-width: 450px; margin: 60px auto 0; padding: 22px; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); border: none; border-radius: 4px; color: #000; font-family: 'Cinzel', serif; font-size: 1.3em; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; text-align: center; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4); }
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(255, 215, 0, 0.7); }
+
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+    <div class="stars" id="starfield"></div>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Mental Capital</a>
+            <div class="nav-links">
+                <a href="workshop.html">The Protocol</a>
+                <a href="brotherhood.html">Brotherhood</a>
+                <a href="coaching.html">Coaching</a>
+                <a href="intel.html">Intel</a>
+                <a href="founder.html">The Founder</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">BESPOKE PERFORMANCE STRATEGY</h1>
+        
+        <div class="copy-block">
+            For the man who has already built the business <span class="highlight">but lost the clarity.</span>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">1-on-1 Partnership</div>
+            <ul class="feature-list">
+                <li class="feature-item">Bespoke Audit of Internal Resistance.</li>
+                <li class="feature-item">Strategic advisory for high-stakes decision making.</li>
+                <li class="feature-item">Direct line access for behavioral governance.</li>
+                <li class="feature-item">High-accountability, zero-fluff framework.</li>
+            </ul>
+            <div class="copy-block" style="font-size: 1em; font-style: italic; color: #c8c8c8;">
+                Note: 1-on-1 engagement is by application only and limited to 5 clients at any given time.
+            </div>
+        </div>
+
+        <a href="https://api.solynx.solutions/widget/bookings/zeus-fae-personal-calendar-7efqkv34f" class="cta-button">SCHEDULE A STRATEGIC AUDIT</a>
+    </div>
+
+    <script>
+        function createStars() {
+            const starfield = document.getElementById('starfield');
+            const numberOfStars = 160;
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                const angle = Math.random() * Math.PI * 2;
+                const x = Math.cos(angle);
+                const y = Math.sin(angle);
+                let size, duration, opacity;
+                const layer = Math.random();
+                if (layer < 0.5) { size = Math.random() * 1 + 0.5; duration = Math.random() * 40 + 50; opacity = Math.random() * 0.3 + 0.2; }
+                else if (layer < 0.85) { size = Math.random() * 1.5 + 1; duration = Math.random() * 25 + 30; opacity = Math.random() * 0.3 + 0.4; }
+                else { size = Math.random() * 2 + 2; duration = Math.random() * 15 + 15; opacity = Math.random() * 0.3 + 0.7; }
+                star.style.width = size + 'px'; star.style.height = size + 'px';
+                star.style.setProperty('--x', x); star.style.setProperty('--y', y); star.style.setProperty('--star-opacity', opacity);
+                star.style.animationDuration = duration + 's'; star.style.animationDelay = -(Math.random() * duration) + 's';
+                starfield.appendChild(star);
+            }
+        }
+        window.addEventListener("load", createStars);
+    </script>
+</body>
+
+</html>

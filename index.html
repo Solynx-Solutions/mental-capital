@@ -4,22 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the magick of Mental Capital</title>
-    <meta name="description"
-        content="We are dedicated to making everything related to mental health, wealth, & abundance more accessible, as well as empowering tomorrow’s healers & leaders!">
+    <title>Mental Capital | Eliminate Resistance. Reclaim Power.</title>
+    <meta name="description" content="Total behavioral transformation for men who demand high-stakes clarity and absolute accountability. Reclaim your kingdom with the 8-Week Protocol.">
 
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Welcome to the magick of Mental Capital">
-    <meta property="og:description"
-        content="We are dedicated to making everything related to mental health, wealth, & abundance more accessible, as well as empowering tomorrow’s healers & leaders!">
-    <meta property="og:image" content="assets/images/logo.png">
+    <meta property="og:title" content="Mental Capital | Reclaim Your Power">
+    <meta property="og:description" content="High-level behavioral protocols for men. Eliminate internal resistance and operate at 100% capacity.">
+    <meta property="og:image" content="https://mentalcapital.world/assets/images/mental-capital-logo.png">
     <meta property="og:url" content="https://mentalcapital.world/">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Welcome to the magick of Mental Capital">
-    <meta name="twitter:description"
-        content="We are dedicated to making everything related to mental health, wealth, & abundance more accessible, as well as empowering tomorrow’s healers & leaders!">
+    <meta name="twitter:title" content="Mental Capital | Eliminate Resistance">
+    <meta name="twitter:description" content="Behavioral protocols and archetype mastery for the modern man.">
     <meta name="twitter:image" content="https://mentalcapital.world/assets/images/mental-capital-logo.png">
 
     <!-- Fonts -->
@@ -30,1108 +27,482 @@
         rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Cormorant Garamond', serif;
-            background: #000000;
-            color: #ffffff;
-            overflow-x: hidden;
-            position: relative;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Cormorant Garamond', serif; background: #000000; color: #ffffff; overflow-x: hidden; position: relative; }
 
         /* Mystical Background */
-        .background-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0, 0, 20, 0.95) 0%, rgba(10, 5, 30, 0.92) 50%, rgba(0, 0, 20, 0.95) 100%);
-            z-index: 0;
-        }
-
-        .background-image {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60%;
-            max-width: 500px;
-            opacity: 0.15;
-            z-index: 1;
-            filter: blur(1px);
-            animation: pulseGlow 8s ease-in-out infinite;
-        }
-
-        @keyframes pulseGlow {
-
-            0%,
-            100% {
-                opacity: 0.15;
-                transform: translate(-50%, -50%) scale(1);
-            }
-
-            50% {
-                opacity: 0.25;
-                transform: translate(-50%, -50%) scale(1.05);
-            }
-        }
+        .background-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(0, 0, 20, 0.95) 0%, rgba(10, 5, 30, 0.92) 50%, rgba(0, 0, 20, 0.95) 100%); z-index: 0; }
+        .background-image { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; max-width: 500px; opacity: 0.15; z-index: 1; filter: blur(1px); animation: pulseGlow 8s ease-in-out infinite; }
+        @keyframes pulseGlow { 0%, 100% { opacity: 0.15; transform: translate(-50%, -50%) scale(1); } 50% { opacity: 0.25; transform: translate(-50%, -50%) scale(1.05); } }
 
         /* Starfield Effect */
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            pointer-events: none;
-            animation: spaceDrift 60s linear infinite;
+        .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; animation: spaceDrift 60s linear infinite; }
+        .star { position: absolute; top: 50%; left: 50%; background: white; border-radius: 50%; transform: translate(-50%, -50%) scale(0.1); animation: warpMove linear infinite; box-shadow: 0 0 6px rgba(255, 255, 255, 0.6); will-change: transform; }
+        @keyframes warpMove { 
+            0% { transform: translate(-50%, -50%) scale(0.05); opacity: 0; } 
+            10% { opacity: var(--star-opacity, 0.7); } 
+            100% { transform: translate(calc(-50% + var(--x) * 120vw), calc(-50% + var(--y) * 120vh)) scale(2.5); opacity: 0; } 
         }
-
-        .star {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            background: white;
-            border-radius: 50%;
-            transform: translate(-50%, -50%) scale(0.1);
-            animation: warpMove linear infinite;
-            box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
-            will-change: transform;
-        }
-
-        @keyframes warpMove {
-            0% {
-                transform: translate(-50%, -50%) scale(0.05);
-                opacity: 0;
-            }
-
-            10% {
-                opacity: var(--star-opacity, 0.7);
-            }
-
-            100% {
-                transform:
-                    translate(calc(-50% + var(--x) * 120vw),
-                        calc(-50% + var(--y) * 120vh)) scale(2.5);
-                opacity: 0;
-            }
-        }
-
-        /* Main Container */
-        .container {
-            position: relative;
-            z-index: 10;
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            padding-top: 120px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Logo */
-        .logo-container {
-            text-align: center;
-            margin-bottom: 40px;
-            animation: fadeInDown 1.2s ease-out;
-        }
-
-        /* UPDATED LOGO STYLE */
-        .new-logo {
-            width: 220px;
-            height: auto;
-            margin: 0 auto;
-            display: block;
-            mix-blend-mode: screen;
-            filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.6));
-            animation: logoFloat 6s ease-in-out infinite;
-        }
-
-        /* subtle float instead of heavy glow pulse */
-        @keyframes logoFloat {
-
-            0%,
-            100% {
-                transform: translateY(0px) scale(1);
-            }
-
-            50% {
-                transform: translateY(-6px) scale(1.02);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Typography */
-        .title {
-            font-family: 'Cinzel', serif;
-            font-size: 2.8em;
-            font-weight: 600;
-            color: #FFD700;
-            text-align: center;
-            margin-bottom: 25px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5),
-                0 0 40px rgba(255, 215, 0, 0.3);
-            animation: fadeIn 1.5s ease-out 0.3s both;
-        }
-
-        .subtitle {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3em;
-            line-height: 1.7;
-            text-align: center;
-            color: #e0e0e0;
-            margin-bottom: 20px;
-            max-width: 550px;
-            animation: fadeIn 1.5s ease-out 0.6s both;
-        }
-
-        .call-to-action {
-            font-family: 'Philosopher', sans-serif;
-            font-size: 1.4em;
-            font-style: italic;
-            text-align: center;
-            color: #FFD700;
-            margin-bottom: 50px;
-            animation: fadeIn 1.5s ease-out 0.9s both;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Form Section */
-        .form-container {
-            width: 100%;
-            max-width: 520px;
-            background: rgba(20, 20, 40, 0.7);
-            border: 2px solid rgba(255, 215, 0, 0.3);
-            border-radius: 15px;
-            padding: 45px 35px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5),
-                0 0 60px rgba(255, 215, 0, 0.15);
-            animation: fadeInUp 1.5s ease-out 1.2s both;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            font-family: 'Cinzel', serif;
-            font-size: 0.9em;
-            color: #FFD700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="email"] {
-            width: 100%;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 215, 0, 0.4);
-            border-radius: 8px;
-            color: #ffffff;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.1em;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: #FFD700;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-            background: rgba(0, 0, 0, 0.7);
-        }
-
-        .form-group input::placeholder {
-            color: rgba(255, 255, 255, 0.4);
-            font-style: italic;
-        }
-
-        /* Checkbox Section */
-        .interests-section {
-            margin: 35px 0;
-        }
-
-        .interests-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.15em;
-            color: #e0e0e0;
-            text-align: center;
-            margin-bottom: 8px;
-        }
-
-        .interests-subtitle {
-            font-size: 0.95em;
-            color: rgba(255, 255, 255, 0.6);
-            text-align: center;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .checkbox-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-        }
-
-        .checkbox-item input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-            cursor: pointer;
-            accent-color: #FFD700;
-        }
-
-        .checkbox-item label {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1em;
-            color: #e0e0e0;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        /* Submit Button */
-        .submit-button {
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            border: none;
-            border-radius: 10px;
-            color: #000000;
-            font-family: 'Cinzel', serif;
-            font-size: 1.2em;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
-        }
-
-        .submit-button:hover {
-            background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.6);
-        }
-
-        .submit-button:active {
-            transform: translateY(-1px);
-        }
-
-        /* Success Message */
-        .success-message {
-            display: none;
-            text-align: center;
-            padding: 30px;
-            background: rgba(40, 167, 69, 0.2);
-            border: 2px solid rgba(40, 167, 69, 0.6);
-            border-radius: 10px;
-            margin-top: 25px;
-            animation: fadeIn 0.5s ease-out;
-        }
-
-        .success-message h3 {
-            font-family: 'Cinzel', serif;
-            color: #FFD700;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .success-message p {
-            color: #e0e0e0;
-            font-size: 1.1em;
-        }
-
-        /* Featured Image Section */
-        .featured-image-section {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin: 60px 0;
-            animation: fadeIn 2s ease-out 1.5s both;
-        }
-
-        .featured-image-circle {
-            width: 100%;
-            max-width: 500px;
-            aspect-ratio: 1;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 0 50px rgba(255, 215, 0, 0.2);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: radial-gradient(circle, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 10, 0.9) 100%);
-        }
-
-        .featured-image-circle img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.8;
-            transition: all 0.5s ease;
-        }
-
-        .featured-image-circle:hover img {
-            opacity: 1;
-            transform: scale(1.05);
-        }
-
-        /* Section Dividers */
-        .section-divider {
-            width: 60%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent);
-            margin: 40px auto;
-        }
-
-        /* "Explore More" Section */
-        .explore-more-section {
-            width: 100%;
-            max-width: 520px;
-            margin-bottom: 60px;
-            animation: fadeIn 2s ease-out 1.8s both;
-        }
-
-        .section-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.5em;
-            color: #FFD700;
-            text-align: center;
-            margin-bottom: 30px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-        }
-
-        .link-hub {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .link-card {
-            display: flex;
-            align-items: center;
-            padding: 15px 20px;
-            background: rgba(20, 20, 40, 0.6);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 12px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-        }
-
-        .link-card:hover {
-            background: rgba(40, 40, 60, 0.8);
-            border-color: #FFD700;
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.1);
-        }
-
-        .link-thumb {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #000;
-            margin-right: 20px;
-            border: 1px solid rgba(255, 215, 0, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-
-        .link-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .link-text {
-            font-family: 'Cinzel', serif;
-            font-size: 0.95em;
-            color: #ffffff;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        /* Closing Section */
-        .closing-section {
-            width: 100%;
-            text-align: center;
-            padding: 60px 0 40px;
-            animation: fadeIn 2s ease-out 2.1s both;
-        }
-
-        .quote-block {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4em;
-            font-style: italic;
-            line-height: 1.7;
-            margin-bottom: 35px;
-            color: #c8c8c8;
-            max-width: 520px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            padding: 0 10px;
-        }
-
-        .quote-block::before {
-            content: '\201C';
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3.5em;
-            color: rgba(255, 215, 0, 0.35);
-            position: absolute;
-            top: -18px;
-            left: -10px;
-            line-height: 1;
-        }
-
-        .quote-block::after {
-            content: '\201D';
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3.5em;
-            color: rgba(255, 215, 0, 0.35);
-            position: absolute;
-            bottom: -30px;
-            right: -10px;
-            line-height: 1;
-        }
-
-        .closing-copy {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2em;
-            color: #c8c8c8;
-            margin-bottom: 18px;
-            line-height: 1.65;
-        }
-
-        .signature {
-            font-family: 'Great Vibes', cursive;
-            font-size: 4.5em;
-            color: #FFD700;
-            margin: 8px 0 0;
-            font-style: normal;
-            text-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
-            letter-spacing: 2px;
-            line-height: 1.1;
-        }
-
-        .signature-wrap {
-            margin-top: 35px;
-            padding-top: 28px;
-            border-top: 1px solid rgba(255, 215, 0, 0.18);
-            display: inline-block;
-            width: 180px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 35px;
-            padding-bottom: 20px;
-        }
-
-        .social-link {
-            transition: all 0.3s ease;
-            opacity: 0.7;
-        }
-
-        .social-link:hover {
-            opacity: 1;
-            transform: scale(1.2);
-            filter: drop-shadow(0 0 10px #FFD700);
-        }
-
-        .social-link svg {
-            width: 24px;
-            height: 24px;
-            fill: #FFD700;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 15px;
-            }
-
-            .logo {
-                width: 140px;
-                height: 140px;
-            }
-
-            .title {
-                font-size: 2em;
-                letter-spacing: 2px;
-            }
-
-            .subtitle {
-                font-size: 1.1em;
-            }
-
-            .call-to-action {
-                font-size: 1.2em;
-            }
-
-            .form-container {
-                padding: 30px 20px;
-            }
-
-            .checkbox-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .background-image {
-                width: 80%;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .title {
-                font-size: 1.7em;
-            }
-
-            .logo {
-                width: 120px;
-                height: 120px;
-            }
-        }
+        @keyframes spaceDrift { 0%, 100% { transform: translateX(0px); } 50% { transform: translateX(-20px); } }
 
         /* NAVBAR */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(10, 5, 30, 0.75);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-            z-index: 1000;
-        }
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; background: rgba(10, 5, 30, 0.75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 215, 0, 0.2); z-index: 1000; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-family: 'Cinzel', serif; font-size: 1.2em; color: #FFD700; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); text-decoration: none; }
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a { font-family: 'Philosopher', sans-serif; color: #e0e0e0; text-decoration: none; font-size: 0.9em; letter-spacing: 1.5px; transition: all 0.3s ease; position: relative; }
+        .nav-links a:hover { color: #FFD700; text-shadow: 0 0 8px rgba(255, 215, 0, 0.7); }
+        .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -4px; width: 0%; height: 1px; background: #FFD700; transition: width 0.3s ease; }
+        .nav-links a:hover::after { width: 100%; }
 
-        .nav-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 15px 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        /* Main Container */
+        .container { position: relative; z-index: 10; max-width: 800px; margin: 0 auto; padding: 120px 20px; display: flex; flex-direction: column; align-items: center; }
 
-        /* Logo */
-        .nav-logo {
-            font-family: 'Cinzel', serif;
-            font-size: 1.2em;
-            color: #FFD700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
-        }
+        /* Hero */
+        .logo-container { text-align: center; margin-bottom: 40px; }
+        .new-logo { width: 220px; height: auto; margin: 0 auto; display: block; mix-blend-mode: screen; filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.6)); animation: logoFloat 6s ease-in-out infinite; }
+        @keyframes logoFloat { 0%, 100% { transform: translateY(0px) scale(1); } 50% { transform: translateY(-6px) scale(1.02); } }
 
-        /* Links */
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
+        .title { font-family: 'Cinzel', serif; font-size: 3.5em; font-weight: 700; color: #FFD700; text-align: center; margin-bottom: 25px; letter-spacing: 4px; text-transform: uppercase; text-shadow: 0 0 30px rgba(255, 215, 0, 0.4); line-height: 1.1; }
+        .subtitle { font-family: 'Cormorant Garamond', serif; font-size: 1.5em; line-height: 1.6; text-align: center; color: #ffffff; margin-bottom: 45px; max-width: 700px; font-weight: 400; }
+        .highlight { color: #FFD700; font-weight: 700; }
 
-        .nav-links a {
-            font-family: 'Philosopher', sans-serif;
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 0.9em;
-            letter-spacing: 1.5px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
+        /* Typing Animation */
+        .hero-label { font-family: 'Cinzel', serif; font-size: 1.6em; color: #FFD700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px; text-shadow: 0 0 15px rgba(255, 215, 0, 0.3); }
+        .definition-label { font-family: 'Cinzel', serif; font-size: 1.1em; color: rgba(255, 215, 0, 0.7); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
+        .typing-container { min-height: 120px; text-align: center; margin-bottom: 60px; max-width: 720px; }
+        .typing-text { font-family: 'Cormorant Garamond', serif; font-size: 1.3em; color: #e0e0e0; max-width: 720px; line-height: 1.6; }
+        .cursor { display: inline-block; color: #FFD700; font-weight: 700; margin-left: 5px; animation: blink 1s infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-        /* Hover glow */
-        .nav-links a:hover {
-            color: #FFD700;
-            text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
-        }
+        /* Buttons */
+        .button-group { display: flex; gap: 20px; justify-content: center; width: 100%; margin-bottom: 80px; }
+        .cta-primary { background: #FFD700; color: #000; border: 1px solid #FFD700; }
+        .cta-secondary { background: transparent; color: #FFD700; border: 1px solid #FFD700; }
 
-        /* Underline animation */
-        .nav-links a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 0%;
-            height: 1px;
-            background: #FFD700;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* MOBILE */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-        }
-
-        /* DEFINITION SECTION */
-        .definition-section {
-            width: 100%;
-            max-width: 600px;
-            margin: 30px auto 40px;
-            animation: fadeIn 1.5s ease-out 1s both;
-        }
-
-        .definition-box {
-            background: rgba(20, 20, 40, 0.6);
-            border: 1px solid rgba(255, 215, 0, 0.25);
-            border-radius: 12px;
-            padding: 25px 25px;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
-        }
-
-        .definition-label {
-            font-family: 'Cinzel', serif;
-            font-size: 0.8em;
-            letter-spacing: 3px;
-            color: rgba(255, 215, 0, 0.7);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .definition-text {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2em;
-            line-height: 1.7;
-            color: #e0e0e0;
-        }
-
-        /* Cursor blinking */
-        .cursor {
+        .submit-button { 
+            padding: 18px 40px; 
+            border-radius: 4px; /* Minimal, less soft */
+            font-family: 'Cinzel', serif; 
+            font-size: 1.1em; 
+            font-weight: 700; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+            text-decoration: none; 
             display: inline-block;
-            margin-left: 2px;
-            color: #FFD700;
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-
-            0%,
-            50%,
-            100% {
-                opacity: 1;
-            }
-
-            25%,
-            75% {
-                opacity: 0;
-            }
-        }
-
-        /* Definition section title */
-        .definition-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.3em;
-            color: #FFD700;
             text-align: center;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 14px;
-            text-shadow: 0 0 12px rgba(255, 215, 0, 0.5),
-                0 0 25px rgba(255, 215, 0, 0.25);
-            animation: fadeIn 1.5s ease-out 1s both;
+        }
+        .submit-button:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3); 
+            background: #fff;
+            color: #000;
+            border-color: #fff;
         }
 
-        @keyframes spaceDrift {
-            0% {
-                transform: translateX(0px);
-            }
+        /* Sections */
+        .section-box { width: 100%; margin-bottom: 60px; text-align: center; }
+        .section-header { font-family: 'Cinzel', serif; font-size: 1.5em; color: #FFD700; margin-bottom: 25px; letter-spacing: 3px; text-transform: uppercase; }
+        
+        .card { background: rgba(10, 10, 25, 0.8); border: 1px solid rgba(255, 215, 0, 0.25); border-radius: 8px; padding: 45px 35px; backdrop-filter: blur(10px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6); width: 100%; margin-bottom: 40px; }
 
-            50% {
-                transform: translateX(-20px);
-            }
+        /* Form */
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; font-family: 'Cinzel', serif; font-size: 0.9em; color: #FFD700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; text-align: center; }
+        .form-group input, .form-group textarea { width: 100%; padding: 15px; background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 4px; color: #ffffff; font-family: 'Cormorant Garamond', serif; font-size: 1.1em; text-align: center; transition: all 0.3s ease; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #FFD700; box-shadow: 0 0 15px rgba(255, 215, 0, 0.2); }
 
-            100% {
-                transform: translateX(0px);
-            }
+        /* Shared Footer */
+        .footer { width: 100%; text-align: center; padding: 40px 0; border-top: 1px solid rgba(255, 215, 0, 0.1); margin-top: 60px; }
+        .signature { font-family: 'Great Vibes', cursive; font-size: 4em; color: #FFD700; margin-top: 10px; }
+
+        /* Strategy Section */
+        .strategy-section { width: 100%; margin: 80px 0 60px; text-align: center; }
+        .strategy-headline { font-family: 'Cinzel', serif; font-size: 2.2em; font-weight: 700; color: #FFD700; margin-bottom: 25px; letter-spacing: 3px; text-transform: uppercase; line-height: 1.2; }
+        .strategy-body { font-family: 'Cormorant Garamond', serif; font-size: 1.25em; line-height: 1.5; color: #c8c8c8; max-width: 600px; margin: 0 auto; text-align: center; }
+        .divider { width: 40px; height: 1px; background: #FFD700; margin: 60px auto; opacity: 0.4; }
+
+        .divider { width: 40px; height: 1px; background: #FFD700; margin: 60px auto; opacity: 0.4; }
+        
+        /* Entry Grid */
+        .entry-section { width: 100%; max-width: 1100px; margin: 40px auto 80px; padding: 0 20px; }
+        .entry-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px; 
+            margin-top: 50px; 
+        }
+        .entry-card { 
+            background: rgba(10, 10, 25, 0.9); 
+            border: 1px solid rgba(255, 215, 0, 0.2); 
+            border-radius: 4px; /* Sharp edges */
+            padding: 40px 25px; 
+            display: flex; 
+            flex-direction: column; 
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .entry-card:hover { 
+            border-color: #FFD700; 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+        }
+        .entry-card .card-title { 
+            font-family: 'Cinzel', serif; 
+            font-size: 1.1em; 
+            color: #FFD700; 
+            margin-bottom: 20px; 
+            letter-spacing: 2px; 
+            text-transform: uppercase;
+            min-height: 3em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .entry-card .card-copy { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 1.1em; 
+            color: #c8c8c8; 
+            line-height: 1.5; 
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        .entry-card .card-btn { 
+            background: transparent; 
+            color: #FFD700; 
+            border: 1px solid rgba(255, 215, 0, 0.5); 
+            padding: 12px 20px; 
+            font-family: 'Cinzel', serif; 
+            font-size: 0.85em; 
+            letter-spacing: 1.5px; 
+            text-transform: uppercase; 
+            text-decoration: none; 
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        .entry-card .card-btn:hover { 
+            background: #FFD700; 
+            color: #000; 
+            border-color: #FFD700; 
+        }
+
+        /* Passive Work Section */
+        .passive-section { width: 100%; max-width: 700px; margin: 100px auto; text-align: left; padding: 0 20px; }
+        .passive-headline { font-family: 'Cinzel', serif; font-size: 2.5em; font-weight: 700; color: #FFD700; margin-bottom: 30px; letter-spacing: 4px; text-transform: uppercase; line-height: 1.1; }
+        .passive-body { font-family: 'Cormorant Garamond', serif; font-size: 1.45em; line-height: 1.4; color: #ffffff; }
+        .passive-body p { margin-bottom: 25px; }
+
+        /* Filter Section */
+        .filter-section { width: 100%; max-width: 1000px; margin: 40px auto 100px; padding: 0 20px; }
+        .filter-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1px 1fr; 
+            gap: 60px; 
+            align-items: start;
+        }
+        .filter-col { padding: 20px 0; }
+        .filter-col.negative { opacity: 0.8; } /* Starker, firm tone */
+        .filter-v-divider { background: rgba(255, 215, 0, 0.15); width: 1px; height: 100%; min-height: 200px; }
+        
+        .filter-headline { font-family: 'Cinzel', serif; font-size: 1.4em; color: #FFD700; margin-bottom: 30px; letter-spacing: 2px; text-transform: uppercase; }
+        .filter-list { list-style: none; padding: 0; }
+        .filter-item { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 1.25em; 
+            color: #e0e0e0; 
+            margin-bottom: 12px; 
+            line-height: 1.3; 
+            position: relative; 
+            padding-left: 20px;
+        }
+        .filter-item::before { 
+            content: "—"; 
+            position: absolute; 
+            left: 0; 
+            color: #FFD700; 
+            opacity: 0.6; 
+        }
+
+        /* Bio Section */
+        .bio-section { width: 100%; max-width: 1100px; margin: 80px auto 120px; padding: 0 40px; }
+        .bio-grid { 
+            display: grid; 
+            grid-template-columns: 1.2fr 1fr; 
+            gap: 40px; 
+            align-items: center; 
+        }
+        .bio-image-col img { 
+            width: 100%; 
+            height: auto; 
+            border-radius: 4px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+        }
+        .bio-text-col { text-align: left; }
+        .bio-headline { font-family: 'Cinzel', serif; font-size: 2.2em; font-weight: 700; color: #FFD700; margin-bottom: 30px; letter-spacing: 3px; text-transform: uppercase; line-height: 1.2; }
+        .bio-body { font-family: 'Cormorant Garamond', serif; font-size: 1.3em; line-height: 1.5; color: #e0e0e0; margin-bottom: 40px; max-width: 600px; }
+        .bio-cta { width: auto; min-width: 280px; }
+
+        @media (max-width: 1100px) {
+            .entry-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) { 
+            .title { font-size: 2.2em; } 
+            .button-group { flex-direction: column; width: 100%; max-width: 320px; }
+            .nav-links { display: none; } 
+            .entry-grid { grid-template-columns: 1fr; }
+            .filter-grid { grid-template-columns: 1fr; gap: 40px; }
+            .filter-v-divider { display: none; }
+            .bio-grid { grid-template-columns: 1fr; gap: 40px; }
+            .bio-section { padding: 0 20px; text-align: center; }
+            .bio-text-col { text-align: center; }
+            .bio-body { margin-left: auto; margin-right: auto; }
         }
     </style>
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="nav-inner">
-            <div class="nav-logo">Mental Capital</div>
-            <div class="nav-links">
-                <a href="#explore">Explore</a>
-                <a href="#podcast">Podcast</a>
-                <a href="#booking">Book</a>
-                <a href="#contact">Connect</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Background Elements -->
     <div class="background-overlay"></div>
     <img src="assets/images/background.png" alt="" class="background-image" aria-hidden="true">
     <div class="stars" id="starfield"></div>
 
-    <!-- Main Content -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Mental Capital</a>
+            <div class="nav-links">
+                <a href="workshop.html">The Protocol</a>
+                <a href="brotherhood.html">Brotherhood</a>
+                <a href="coaching.html">Coaching</a>
+                <a href="intel.html">Intel</a>
+                <a href="founder.html">The Founder</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <!-- Logo Section -->
+        <!-- Hero Section -->
         <div class="logo-container">
-            <img src="assets/images/mental-capital-logo.jpg" alt="Mental Capital Logo" class="logo new-logo">
+            <img src="assets/images/mental-capital-logo.png" alt="Mental Capital Logo" class="new-logo">
         </div>
 
-        <!-- Hero Text -->
-        <h1 class="title">Mental Capital™</h1>
+        <h1 class="title">Reclaim Control. <br>Rebuild the Man.</h1>
         <p class="subtitle">
-            I am a Life Coach, Reiki Master, & Public Speaker dedicated to empowering leaders from within who are
-            curious & committed to becoming the highest version of themselves.
+            Tools, frameworks, and environments designed to eliminate internal resistance and elevate how you think, act, and lead.
         </p>
-        <p class="call-to-action">Are you ready to Re-awaken to Yourself?</p>
 
-        <!-- Signup Form -->
-        <div class="form-container">
-            <form id="signupForm">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+        <div class="hero-label">What is Mental Capital?</div>
+        
+        <div class="typing-container">
+            <div class="definition-label">Definition:</div>
+            <span id="hero-typing" class="typing-text"></span><span class="cursor">|</span>
+        </div>
+        
+        <div class="button-group">
+            <a href="#apply" class="submit-button cta-primary">Start Here</a>
+            <a href="coaching.html" class="submit-button cta-secondary">Explore Coaching</a>
+        </div>
+
+        <!-- Strategy Section -->
+        <div class="strategy-section">
+            <h2 class="strategy-headline">Most Men Don’t Have a Strategy for Themselves</h2>
+            <div class="strategy-body">
+                <p>They operate on reaction. Old patterns. Unexamined behaviors. <br><br>
+                <span class="highlight">Mental Capital exists to change that.</span><br><br>
+                This is where you identify what’s running you—and take control of it.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <section class="entry-section">
+            <h2 class="section-header">Choose Your Entry Point</h2>
+            <div class="entry-grid">
+                <!-- Block 1 -->
+                <div class="entry-card">
+                    <h3 class="card-title">1-on-1 Coaching</h3>
+                    <p class="card-copy">Direct, personalized guidance to correct patterns, sharpen thinking, and accelerate execution.</p>
+                    <a href="coaching.html" class="card-btn">Apply for Coaching</a>
+                </div>
+                <!-- Block 2 -->
+                <div class="entry-card">
+                    <h3 class="card-title">Male Archetype Intensive (8 Weeks)</h3>
+                    <p class="card-copy">A structured deep dive into the patterns shaping how you show up—and how to take control of them.</p>
+                    <a href="workshop.html" class="card-btn">Apply for the Intensive</a>
+                </div>
+                <!-- Block 3 -->
+                <div class="entry-card">
+                    <h3 class="card-title">Brotherhood</h3>
+                    <p class="card-copy">Surround yourself with men who operate with clarity, discipline, and accountability.</p>
+                    <a href="brotherhood.html" class="card-btn">Join the Brotherhood</a>
+                </div>
+                <!-- Block 4 -->
+                <div class="entry-card">
+                    <h3 class="card-title">Events & Retreats</h3>
+                    <p class="card-copy">Step out of your environment. Rebuild perspective. Return with clarity and direction.</p>
+                    <a href="events.html" class="card-btn">View Events</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="passive-section">
+            <h2 class="passive-headline">This Work Is Not Passive</h2>
+            <div class="passive-body">
+                <p>You don’t drift into clarity. You build it.</p>
+                <p>You don’t remove internal resistance by thinking about it—you confront it directly.</p>
+                <p><span class="highlight">Mental Capital is built through awareness, ownership, and disciplined action.</span></p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="filter-section">
+            <div class="filter-grid">
+                <!-- For You -->
+                <div class="filter-col">
+                    <h2 class="filter-headline">This Is For You If:</h2>
+                    <ul class="filter-list">
+                        <li class="filter-item">You know you’re operating below your potential</li>
+                        <li class="filter-item">You’re repeating the same patterns</li>
+                        <li class="filter-item">You want clarity, not motivation</li>
+                        <li class="filter-item">You’re ready to take full ownership</li>
+                    </ul>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Your E-mail</label>
-                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                <!-- Divider -->
+                <div class="filter-v-divider"></div>
+
+                <!-- Not For You -->
+                <div class="filter-col negative">
+                    <h2 class="filter-headline">This Is Not For You If:</h2>
+                    <ul class="filter-list">
+                        <li class="filter-item">You avoid discomfort</li>
+                        <li class="filter-item">You want surface-level advice</li>
+                        <li class="filter-item">You’re not ready to be honest with yourself</li>
+                    </ul>
                 </div>
+            </div>
+        </section>
 
-                <div class="interests-section">
-                    <p class="interests-title">What are you most interested in hearing about?</p>
-                    <p class="interests-subtitle">(feel free to select as many or as few as you like)</p>
+        <div class="divider"></div>
 
-                    <div class="checkbox-grid">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="mental-health" name="interests" value="Mental Health Tips/News">
-                            <label for="mental-health">Mental Health Tips/News</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="coaching-couples" name="interests" value="Coaching for Couples">
-                            <label for="coaching-couples">Coaching for Couples</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="podcasts" name="interests" value="New Podcast Episodes">
-                            <label for="podcasts">New Podcast Episodes</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="personal-coaching" name="interests"
-                                value="Personal Coaching/Sessions">
-                            <label for="personal-coaching">Personal Coaching/Sessions</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="events" name="interests" value="Events & Retreats">
-                            <label for="events">Events & Retreats</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="reiki" name="interests" value="Reiki Sessions/Training">
-                            <label for="reiki">Reiki Sessions/Training</label>
-                        </div>
+        <section class="bio-section">
+            <div class="bio-grid">
+                <div class="bio-image-col">
+                    <img src="assets/images/zeus.png" alt="Zeus Fae - Strategic Architect">
+                </div>
+                <div class="bio-text-col">
+                    <h2 class="bio-headline">Built Through Experience. Refined Through Pressure.</h2>
+                    <div class="bio-body">
+                        <p>Zeus Fae works with men who are ready to confront what’s holding them back and rebuild how they think and operate.</p>
+                        <br>
+                        <p>His work focuses on identifying unconscious patterns, eliminating internal resistance, and creating disciplined execution across all areas of life.</p>
+                        <br>
+                        <p><span class="highlight">This is not motivation. This is structured transformation.</span></p>
                     </div>
-                </div>
-
-                <button type="submit" class="submit-button">LETS STAY CONNECTED!</button>
-
-                <div class="success-message" id="successMessage">
-                    <h3>✨ Welcome to the Journey!</h3>
-                    <p>Thank you for connecting. You'll receive updates based on your interests soon.</p>
-                </div>
-            </form>
-        </div>
-
-        <!-- Featured Image Section -->
-        <div class="featured-image-section">
-            <div class="featured-image-circle">
-                <img src="assets/images/background.png" alt="Mental Capital Cosmic Chakra Illustration">
-            </div>
-        </div>
-
-        <!-- Definition Section -->
-        <h2 class="definition-title">What is Mental Capital?</h2>
-        <div class="definition-section">
-            <div class="definition-box">
-                <div class="definition-label">Definition:</div>
-                <div class="definition-text">
-                    <span id="typewriter"></span><span class="cursor">|</span>
+                    <a href="coaching.html" class="submit-button bio-cta">Work With Zeus</a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section-divider"></div>
+        <div class="divider" style="margin-top: 100px;"></div>
 
-        <!-- Explore More Section -->
-        <div class="explore-more-section" id="explore">
-            <h2 class="section-title">EXPLORE MORE..</h2>
-            <div class="link-hub">
-                <a href="https://www.buzzsprout.com/2126107" class="link-card">
-                    <div class="link-thumb"><img src="assets/images/logo.png" alt="Podcast"></div>
-                    <span class="link-text">The Podcast</span>
-                </a>
-                <a href="https://open.spotify.com/episode/3IyKflrCjGHIZj1Oy3QLAf?si=21bdbb7eb0ad43bb" class="link-card">
-                    <div class="link-thumb"><span style="color: #FFD700; font-size: 20px;">📖</span></div>
-                    <span class="link-text">My Story</span>
-                </a>
-                <a href="https://api.solynx.solutions/widget/bookings/zeus-fae-personal-calendar-7efqkv34f"
-                    class="link-card">
-                    <div class="link-thumb"><span style="color: #FFD700; font-size: 20px;">📞</span></div>
-                    <span class="link-text">Schedule a Call with Zeus</span>
-                </a>
-                <a href="https://api.solynx.solutions/widget/bookings/reiki-calendar-wDa2g" class="link-card">
-                    <div class="link-thumb"><span style="color: #FFD700; font-size: 20px;">✨</span></div>
-                    <span class="link-text">Book a Reiki Session</span>
-                </a>
-                <a href="https://api.solynx.solutions/widget/bookings/reiki-calendar-wDa2g" class="link-card">
-                    <div class="link-thumb"><span style="color: #FFD700; font-size: 20px;">🎓</span></div>
-                    <span class="link-text">Become a Reiki Master</span>
-                </a>
-                <a href="https://www.instagram.com/mental_capital" class="link-card">
-                    <div class="link-thumb"><span style="color: #FFD700; font-size: 20px;">📸</span></div>
-                    <span class="link-text">Follow & Connect with Zeus</span>
-                </a>
-                <a href="https://api.solynx.solutions/widget/bookings/mental-capital-podcast" class="link-card">
-                    <div class="link-thumb"><span style="color: #FFD700; font-size: 20px;">🎙️</span></div>
-                    <span class="link-text">Share Your Story / Be on the Podcast</span>
-                </a>
+        <!-- Problem Section -->
+
+        <!-- Application Form -->
+        <div class="section-box" id="apply">
+            <h2 class="section-header">SECURE THE PROTOCOL</h2>
+            <p class="subtitle" style="font-size: 1.1em;">
+                We only accept men who are ready to build the highest version of themselves. Submit your audit below for admission consideration.
+            </p>
+            
+            <div class="card">
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Full Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="Executive Contact">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bottleneck">What is your #1 internal bottleneck right now?</label>
+                        <textarea id="bottleneck" name="bottleneck" rows="3" required placeholder="Be direct. No fluff."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="commitment">Commitment Level (1-10)</label>
+                        <input type="text" id="commitment" name="commitment" placeholder="How ready are you to execute?">
+                    </div>
+
+                    <button type="submit" class="submit-button">Submit Application</button>
+                    
+                    <div id="successMessage" style="display:none; color: #FFD700; margin-top: 20px; font-style: italic;">
+                        Submission Received. If your application matches our standard, we will contact you within 24 hours.
+                    </div>
+                </form>
             </div>
         </div>
 
-        <div class="section-divider"></div>
-
-        <!-- Closing Section -->
-        <div class="closing-section">
-            <div class="quote-block">
-                When we incarnated here, we forgot who we were, because that makes the remembering that much more
-                profound.
-            </div>
-            <p class="closing-copy">I am passionate about seeing you live a life full of purpose & passion, remember who
-                you really are at your core, & reawaken to your divinity.</p>
-            <p class="closing-copy">You are loved, you are valued, & most importantly: You are worthy.</p>
-            <p class="closing-copy">So deeply honored to walk with you on your journey,</p>
-            <div class="signature-wrap">
-                <div class="signature">Zeus</div>
-            </div>
-
-            <!-- Social Links -->
-            <div class="social-links">
-                <a href="#" class="social-link" aria-label="Facebook">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12 2.04c-5.5 0-10 4.5-10 10 0 5 3.66 9.12 8.44 9.88v-6.99h-2.54v-2.89h2.54V9.85c0-2.5 1.47-3.89 3.77-3.89 1.11 0 2.22.2 2.22.2v2.44h-1.25c-1.24 0-1.63.77-1.63 1.56v1.87h2.75l-.44 2.89h-2.31v6.99c4.78-.76 8.44-4.88 8.44-9.88 0-5.5-4.5-10-10-10z" />
-                    </svg>
-                </a>
-                <a href="#" class="social-link" aria-label="X">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z" />
-                    </svg>
-                </a>
-                <a href="#" class="social-link" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.981 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.669-.072-4.949-.2-4.358-2.621-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                    </svg>
-                </a>
-                <a href="#" class="social-link" aria-label="Pinterest">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12.017 0C5.396 0 0 5.397 0 12.017c0 5.078 3.158 9.412 7.63 11.17-.105-.945-.199-2.396.041-3.428.216-.931 1.391-5.897 1.391-5.897s-.355-.71-.355-1.762c0-1.651.957-2.884 2.15-2.884 1.013 0 1.503.76 1.503 1.67 0 1.02-.65 2.541-.983 3.952-.28 1.183.593 2.147 1.758 2.147 2.112 0 3.733-2.227 3.733-5.441 0-2.846-2.045-4.835-4.965-4.835-3.382 0-5.366 2.537-5.366 5.157 0 1.022.393 2.119.884 2.719.097.118.111.222.082.34-.09.373-.288 1.174-.327 1.332-.051.205-.169.249-.391.147-1.458-.679-2.37-2.812-2.37-4.524 0-3.682 2.674-7.065 7.711-7.065 4.048 0 7.195 2.883 7.195 6.734 0 4.021-2.535 7.258-6.052 7.258-1.182 0-2.292-.614-2.671-1.334l-.727 2.77c-.262 1.006-1.01 2.45-1.504 3.25 1.456.444 3.003.684 4.606.68 6.621 0 12.017-5.396 12.017-12.017S18.638 0 12.017 0z" />
-                    </svg>
-                </a>
-            </div>
-        </div>
+        <footer class="footer">
+            <p class="subtitle" style="font-size: 1em; margin-bottom: 10px;">Strategic Performance Architect</p>
+            <div class="signature">Zeus</div>
+        </footer>
     </div>
 
     <script>
-        // Create immersive space travel starfield
+        // Starfield
         function createStars() {
             const starfield = document.getElementById('starfield');
             const numberOfStars = 160;
-
             for (let i = 0; i < numberOfStars; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
-
-                // Random direction from center (-1 to 1)
                 const angle = Math.random() * Math.PI * 2;
                 const x = Math.cos(angle);
                 const y = Math.sin(angle);
-
-                // Depth layers
                 let size, duration, opacity;
-
                 const layer = Math.random();
-
-                if (layer < 0.5) {
-                    size = Math.random() * 1 + 0.5;
-                    duration = Math.random() * 40 + 50;
-                    opacity = Math.random() * 0.3 + 0.2;
-                } else if (layer < 0.85) {
-                    size = Math.random() * 1.5 + 1;
-                    duration = Math.random() * 25 + 30;
-                    opacity = Math.random() * 0.3 + 0.4;
-                } else {
-                    size = Math.random() * 2 + 2;
-                    duration = Math.random() * 15 + 15;
-                    opacity = Math.random() * 0.3 + 0.7;
-                }
-
-                star.style.width = size + 'px';
-                star.style.height = size + 'px';
-
-                star.style.setProperty('--x', x);
-                star.style.setProperty('--y', y);
-                star.style.setProperty('--star-opacity', opacity);
-
-                star.style.animationDuration = duration + 's';
-                star.style.animationDelay = -(Math.random() * duration) + 's';
-
-                // Occasional streak stars
-                if (Math.random() > 0.9) {
-                    star.style.width = '2px';
-                    star.style.height = '8px';
-                    star.style.background = 'linear-gradient(180deg, #fff, transparent)';
-                }
-
+                if (layer < 0.5) { size = Math.random() * 1 + 0.5; duration = Math.random() * 40 + 50; opacity = Math.random() * 0.3 + 0.2; }
+                else if (layer < 0.85) { size = Math.random() * 1.5 + 1; duration = Math.random() * 25 + 30; opacity = Math.random() * 0.3 + 0.4; }
+                else { size = Math.random() * 2 + 2; duration = Math.random() * 15 + 15; opacity = Math.random() * 0.3 + 0.7; }
+                star.style.width = size + 'px'; star.style.height = size + 'px';
+                star.style.setProperty('--x', x); star.style.setProperty('--y', y); star.style.setProperty('--star-opacity', opacity);
+                star.style.animationDuration = duration + 's'; star.style.animationDelay = -(Math.random() * duration) + 's';
                 starfield.appendChild(star);
             }
         }
+        // Hero Typing Animation
+        const heroText = "Mental capital refers to an individual's total cognitive and emotional resources, including intellectual capability, emotional intelligence, resilience, and learning flexibility. It shapes how people learn, work, and thrive, serving as a foundational asset for personal wellbeing and economic productivity.";
+        const heroTarget = document.getElementById("hero-typing");
+        let heroIndex = 0;
+        const typingSpeed = 15; // Even faster for the long text
 
-        createStars();
-
-        // Form submission handler
-        document.getElementById('signupForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const interests = formData.getAll('interests');
-
-            // Show success message
-            const form = e.target;
-            const inputs = form.querySelectorAll('input, button');
-            inputs.forEach(input => input.disabled = true);
-
-            const successMessage = document.getElementById('successMessage');
-            successMessage.style.display = 'block';
-
-            // Log the data (you can replace this with actual API call)
-            console.log('Form submitted:', {
-                name,
-                email,
-                interests
-            });
-
-            // Here you would typically send the data to your email service
-            // For example, integrating with Flodesk, Mailchimp, or your backend
-            /*
-            fetch('YOUR_API_ENDPOINT', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name, email, interests })
-            })
-            .then(response => response.json())
-            .then(data => {
-                successMessage.style.display = 'block';
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('There was an error submitting your information. Please try again.');
-                inputs.forEach(input => input.disabled = false);
-            });
-            */
-
-            // Reset form after 3 seconds (optional)
-            setTimeout(() => {
-                form.reset();
-                inputs.forEach(input => input.disabled = false);
-                successMessage.style.display = 'none';
-            }, 5000);
-        });
-
-        // Typewriter effect
-        const text = `Mental capital refers to an individual's total cognitive and emotional resources, including intellectual capability, emotional intelligence, resilience, and learning flexibility. It shapes how people learn, work, and thrive, serving as a foundational asset for personal wellbeing and economic productivity.`;
-
-        let index = 0;
-        const speed = 25;
-
-        function typeWriter() {
-            if (index < text.length) {
-                document.getElementById("typewriter").innerHTML += text.charAt(index);
-                index++;
-                setTimeout(typeWriter, speed);
+        function typeHero() {
+            if (heroIndex < heroText.length) {
+                heroTarget.textContent += heroText.charAt(heroIndex);
+                heroIndex++;
+                setTimeout(typeHero, typingSpeed);
             }
         }
 
         window.addEventListener("load", () => {
-            setTimeout(typeWriter, 800);
+            createStars();
+            // Start typing after a small delay
+            setTimeout(typeHero, 800);
+        });
+
+        // Form handler
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.querySelectorAll('input, button, textarea').forEach(el => el.disabled = true);
+            document.getElementById('successMessage').style.display = 'block';
+            console.log('Application Submitted');
         });
     </script>
 </body>
