@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/protocol", "destination": "/workshop", "permanent": true },
+    { "source": "/protocol.html", "destination": "/workshop", "permanent": true }
+  ]
+}

@@ -4,121 +4,643 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The 8-Week Protocol | Reclaim Your Kingdom | Mental Capital</title>
-    <meta name="description" content="The definitive behavioral threshold for men. Eliminate internal resistance, master your archetypes, and operate at 100% capacity.">
-
-    <!-- Fonts -->
+    <title>Male Archetype Intensive (8 Weeks) | Mental Capital</title>
+    <meta name="description" content="A structured 8-week deep dive into the patterns and archetypes shaping how you think, behave, and show up. Founder's Round — Limited Availability.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Cormorant Garamond', serif; background: #000; color: #fff; overflow-x: hidden; position: relative; }
-        .background-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(0, 0, 20, 0.95) 0%, rgba(10, 5, 30, 0.92) 50%, rgba(0, 0, 20, 0.95) 100%); z-index: 0; }
-        .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; animation: spaceDrift 60s linear infinite; }
-        .star { position: absolute; top: 50%; left: 50%; background: white; border-radius: 50%; transform: translate(-50%, -50%) scale(0.1); animation: warpMove linear infinite; box-shadow: 0 0 6px rgba(255, 255, 255, 0.6); will-change: transform; }
-        @keyframes warpMove { 0% { transform: translate(-50%, -50%) scale(0.05); opacity: 0; } 10% { opacity: var(--star-opacity, 0.7); } 100% { transform: translate(calc(-50% + var(--x) * 120vw), calc(-50% + var(--y) * 120vh)) scale(2.5); opacity: 0; } }
-        @keyframes spaceDrift { 0%, 100% { transform: translateX(0px); } 50% { transform: translateX(-20px); } }
-        
-        .navbar { position: fixed; top: 0; left: 0; width: 100%; background: rgba(10, 5, 30, 0.75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 215, 0, 0.2); z-index: 1000; }
-        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-family: 'Cinzel', serif; font-size: 1.2em; color: #FFD700; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); text-decoration: none; }
-        .nav-links { display: flex; gap: 25px; }
-        .nav-links a { font-family: 'Philosopher', sans-serif; color: #e0e0e0; text-decoration: none; font-size: 0.9em; letter-spacing: 1.5px; transition: all 0.3s ease; position: relative; }
-        .nav-links a:hover { color: #FFD700; text-shadow: 0 0 8px rgba(255, 215, 0, 0.7); }
-        
-        .container { position: relative; z-index: 10; max-width: 800px; margin: 0 auto; padding: 120px 20px; }
-        .section-title { font-family: 'Cinzel', serif; font-size: 2.5em; color: #FFD700; text-align: center; margin-bottom: 40px; letter-spacing: 3px; text-transform: uppercase; text-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
-        .copy-block { font-size: 1.3em; line-height: 1.8; color: #e0e0e0; margin-bottom: 30px; text-align: center; }
-        .highlight { color: #FFD700; font-weight: 600; }
-        
-        .card { background: rgba(20, 20, 40, 0.7); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 4px; padding: 40px; backdrop-filter: blur(10px); margin-bottom: 40px; box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
-        .card-header { font-family: 'Cinzel', serif; color: #FFD700; font-size: 1.4em; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; text-align: center; }
-        
-        .week-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
-        .week-item { border-left: 2px solid #FFD700; padding-left: 20px; margin-bottom: 20px; }
-        .week-title { font-family: 'Cinzel', serif; color: #FFD700; font-size: 1.1em; margin-bottom: 5px; }
-        .week-desc { font-size: 1em; color: #c8c8c8; line-height: 1.5; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        .cta-button { display: block; width: 100%; max-width: 400px; margin: 60px auto 0; padding: 20px; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); border: none; border-radius: 4px; color: #000; font-family: 'Cinzel', serif; font-size: 1.2em; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; text-align: center; cursor: pointer; transition: all 0.4s ease; box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4); }
-        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(255, 215, 0, 0.6); }
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-        @media (max-width: 768px) { .week-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+        /* Background */
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,20,0.95) 0%, rgba(10,5,30,0.92) 50%, rgba(0,0,20,0.95) 100%);
+            z-index: 0;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            max-width: 500px;
+            opacity: 0.10;
+            z-index: 1;
+            filter: blur(1px);
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.10; transform: translate(-50%, -50%) scale(1); }
+            50%       { opacity: 0.18; transform: translate(-50%, -50%) scale(1.05); }
+        }
+
+        /* Starfield */
+        .stars {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            animation: spaceDrift 60s linear infinite;
+        }
+
+        .star {
+            position: absolute;
+            top: 50%; left: 50%;
+            background: white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0.1);
+            animation: warpMove linear infinite;
+            box-shadow: 0 0 6px rgba(255,255,255,0.6);
+            will-change: transform;
+        }
+
+        @keyframes warpMove {
+            0%   { transform: translate(-50%,-50%) scale(0.05); opacity: 0; }
+            10%  { opacity: var(--star-opacity, 0.7); }
+            100% { transform: translate(calc(-50% + var(--x)*120vw), calc(-50% + var(--y)*120vh)) scale(2.5); opacity: 0; }
+        }
+
+        @keyframes spaceDrift {
+            0%, 100% { transform: translateX(0px); }
+            50%       { transform: translateX(-20px); }
+        }
+
+        /* Minimal top bar — brand only, no nav links */
+        .topbar {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            background: rgba(10,5,30,0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,215,0,0.15);
+            z-index: 1000;
+            padding: 16px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .topbar-brand {
+            font-family: 'Cinzel', serif;
+            font-size: 1em;
+            color: rgba(255,215,0,0.7);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        /* Page wrapper */
+        .page {
+            position: relative;
+            z-index: 10;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ── DIVIDER ── */
+        .divider {
+            width: 40px;
+            height: 1px;
+            background: #FFD700;
+            margin: 70px auto;
+            opacity: 0.35;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            text-align: center;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        .hero-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.85em;
+            color: rgba(255,215,0,0.6);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .hero-headline {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8em;
+            font-weight: 700;
+            color: #FFD700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            line-height: 1.15;
+            margin-bottom: 28px;
+            text-shadow: 0 0 30px rgba(255,215,0,0.35);
+        }
+
+        .hero-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.45em;
+            color: #e8e8e8;
+            line-height: 1.6;
+            max-width: 640px;
+            margin: 0 auto 22px;
+            font-weight: 400;
+        }
+
+        .hero-details {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.9em;
+            color: rgba(255,215,0,0.65);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 48px;
+        }
+
+        /* ── BUTTONS ── */
+        .btn-primary {
+            display: inline-block;
+            padding: 18px 48px;
+            background: #FFD700;
+            color: #000;
+            border: 1px solid #FFD700;
+            font-family: 'Cinzel', serif;
+            font-size: 1em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #fff;
+            border-color: #fff;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.3);
+        }
+
+        /* ── SECTIONS ── */
+        .section {
+            width: 100%;
+            text-align: center;
+        }
+
+        .section.left {
+            text-align: left;
+        }
+
+        .section-headline {
+            font-family: 'Cinzel', serif;
+            font-size: 1.9em;
+            font-weight: 700;
+            color: #FFD700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .section-body {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25em;
+            color: #d8d8d8;
+            line-height: 1.65;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .section-body p + p {
+            margin-top: 20px;
+        }
+
+        /* ── BULLET LIST ── */
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .bullet-list li {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2em;
+            color: #e0e0e0;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .bullet-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #FFD700;
+            opacity: 0.7;
+        }
+
+        /* ── TWO-COL FILTER (For / Not For) ── */
+        .filter-grid {
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr;
+            gap: 60px;
+            width: 100%;
+            max-width: 760px;
+            align-items: start;
+        }
+
+        .filter-col {
+            padding: 10px 0;
+        }
+
+        .filter-v-divider {
+            background: rgba(255,215,0,0.12);
+            width: 1px;
+            min-height: 180px;
+            height: 100%;
+        }
+
+        .filter-headline {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1em;
+            color: #FFD700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .filter-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .filter-list li {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15em;
+            color: #d8d8d8;
+            line-height: 1.45;
+            margin-bottom: 12px;
+            padding-left: 22px;
+            position: relative;
+        }
+
+        .filter-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #FFD700;
+            opacity: 0.55;
+        }
+
+        .filter-col.negative .filter-list li {
+            color: rgba(216,216,216,0.75);
+        }
+
+        /* ── SCARCITY CALLOUT ── */
+        .scarcity-box {
+            width: 100%;
+            border: 1px solid rgba(255,215,0,0.25);
+            border-radius: 4px;
+            padding: 48px 40px;
+            background: rgba(10,10,25,0.7);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        /* ── APPLICATION FORM ── */
+        .form-card {
+            width: 100%;
+            background: rgba(10,10,25,0.85);
+            border: 1px solid rgba(255,215,0,0.25);
+            border-radius: 4px;
+            padding: 50px 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+        }
+
+        .form-group {
+            margin-bottom: 28px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.82em;
+            color: #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(0,0,0,0.55);
+            border: 1px solid rgba(255,215,0,0.25);
+            border-radius: 4px;
+            color: #ffffff;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1em;
+            text-align: center;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #FFD700;
+            box-shadow: 0 0 14px rgba(255,215,0,0.18);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 18px;
+            background: #FFD700;
+            color: #000;
+            border: 1px solid #FFD700;
+            font-family: 'Cinzel', serif;
+            font-size: 1em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 8px;
+        }
+
+        .btn-submit:hover {
+            background: #fff;
+            border-color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.3);
+        }
+
+        .success-message {
+            display: none;
+            color: #FFD700;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15em;
+            font-style: italic;
+            margin-top: 24px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 40px 0 20px;
+            border-top: 1px solid rgba(255,215,0,0.08);
+            margin-top: 80px;
+        }
+
+        .footer p {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.85em;
+            color: rgba(255,215,0,0.4);
+            letter-spacing: 1px;
+        }
+
+        .footer a {
+            color: rgba(255,215,0,0.4);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: rgba(255,215,0,0.8);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 680px) {
+            .hero-headline { font-size: 1.9em; }
+            .section-headline { font-size: 1.5em; }
+
+            .filter-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .filter-v-divider { display: none; }
+
+            .form-card { padding: 36px 24px; }
+            .scarcity-box { padding: 36px 24px; }
+        }
     </style>
 </head>
 
 <body>
     <div class="background-overlay"></div>
+    <img src="assets/images/background.png" alt="" class="background-image" aria-hidden="true">
     <div class="stars" id="starfield"></div>
 
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">Mental Capital</a>
-            <div class="nav-links">
-                <a href="workshop.html">The Protocol</a>
-                <a href="community.html">Community</a>
-                <a href="coaching.html">Coaching</a>
-                <a href="intel.html">Intel</a>
-                <a href="founder.html">The Founder</a>
-            </div>
-        </div>
-    </nav>
+    <!-- Minimal top bar -->
+    <header class="topbar">
+        <a href="index.html" class="topbar-brand">Mental Capital</a>
+    </header>
 
-    <div class="container" id="content">
-        <h1 class="section-title">THE 8-WEEK PROTOCOL: RECLAIM YOUR KINGDOM.</h1>
-        
-        <div class="copy-block">
-            Most men operate at <span class="highlight">30% of their capacity</span> because they lack a coherent internal system. They have the drive, but their "internal capital" is leaking.
-        </div>
-        
-        <div class="copy-block">
-            This workshop is the audit and the upgrade. It is the definitive behavioral threshold for men ready to rebuild discipline and step into their power.
-        </div>
+    <main class="page">
 
-        <div class="card">
-            <div class="card-header">Who is this for?</div>
-            <div class="week-desc" style="text-align: center; margin-bottom: 20px;">
-                <p>• Leaders and entrepreneurs hitting a ceiling despite more effort.</p>
-                <p>• Men who feel their edge is dull and want to reclaim their "Warrior" archetype.</p>
-                <p>• Fathers who want to lead their families with grounded, decisive presence.</p>
-            </div>
-            <div class="card-header" style="font-size: 1.1em; color: rgba(255, 215, 0, 0.6);">Who this is NOT for</div>
-            <div class="week-desc" style="text-align: center; font-style: italic;">
-                Men looking for a "healing circle" to complain without taking action. Those unwilling to be audited and held to a standard.
-            </div>
-        </div>
+        <!-- ── SECTION 1: HERO ── -->
+        <section class="hero" id="top">
+            <p class="hero-label">Mental Capital</p>
+            <h1 class="hero-headline">The Male Archetype<br>Intensive (8 Weeks)</h1>
+            <p class="hero-sub">A structured deep dive into the patterns and archetypes shaping how you think, behave, and show up.</p>
+            <p class="hero-details">Founder's Round &middot; Begins June 1 &middot; Limited Availability</p>
+            <a href="#apply" class="btn-primary">Apply for the Intensive</a>
+        </section>
 
-        <div class="card">
-            <div class="card-header">The Curriculum</div>
-            <div class="week-grid">
-                <div class="week-item">
-                    <div class="week-title">Week 1-2: The Audit</div>
-                    <div class="week-desc">Pinpointing the "Lover" and "Magician" leaks. Identifiying where your energy is being spent on low-value internal friction.</div>
+        <div class="divider"></div>
+
+        <!-- ── SECTION 2: CORE TRUTH ── -->
+        <section class="section">
+            <h2 class="section-headline">Most Men Are Operating on<br>Patterns They Don't See</h2>
+            <div class="section-body">
+                <p>The way you think, react, and make decisions isn't random.</p>
+                <p>It's driven by patterns you've developed over time—many of which you're not fully aware of.</p>
+                <p>Until you see them clearly, you keep repeating them.</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ── SECTION 3: WHAT THIS IS ── -->
+        <section class="section">
+            <h2 class="section-headline">What This Intensive Is</h2>
+            <div class="section-body">
+                <p>This is an 8-week structured process designed to help you identify the archetypes and patterns shaping your behavior.</p>
+                <p>You'll break down how they show up in your decisions, your relationships, and your execution—and learn how to take control of them.</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ── SECTION 4: WHAT YOU GET ── -->
+        <section class="section">
+            <h2 class="section-headline">What You Get</h2>
+            <ul class="bullet-list">
+                <li>A clear understanding of the archetypes influencing your behavior</li>
+                <li>Direct insight into the patterns limiting your performance</li>
+                <li>Tools to shift how you think, decide, and act</li>
+                <li>A structured environment that demands accountability</li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ── SECTIONS 5 & 6: FOR / NOT FOR ── -->
+        <section class="section">
+            <div class="filter-grid">
+                <!-- For You -->
+                <div class="filter-col">
+                    <h2 class="filter-headline">This Is For You If:</h2>
+                    <ul class="filter-list">
+                        <li>You know you're capable of more but keep repeating the same patterns</li>
+                        <li>You want clarity, not surface-level advice</li>
+                        <li>You're ready to take full ownership of how you operate</li>
+                    </ul>
                 </div>
-                <div class="week-item">
-                    <div class="week-title">Week 3-4: Archetype Alignment</div>
-                    <div class="week-desc">Behavioral protocols for the "Warrior" and "King." Operationalizing discipline and sovereign decision-making.</div>
-                </div>
-                <div class="week-item">
-                    <div class="week-title">Week 5-6: Emotional Liquidity</div>
-                    <div class="week-desc">Leveraging stress and resistance as fuel. Turning "friction" into a competitive advantage.</div>
-                </div>
-                <div class="week-item">
-                    <div class="week-title">Week 7-8: The Governance</div>
-                    <div class="week-desc">Setting the personal infrastructure for permanent change. Ensuring the standard remains when the workshop ends.</div>
+
+                <div class="filter-v-divider"></div>
+
+                <!-- Not For You -->
+                <div class="filter-col negative">
+                    <h2 class="filter-headline">This Is Not For You If:</h2>
+                    <ul class="filter-list">
+                        <li>You avoid discomfort</li>
+                        <li>You're looking for quick fixes</li>
+                        <li>You're not ready to be honest with yourself</li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <a href="https://api.solynx.solutions/widget/bookings/zeus-fae-personal-calendar-7efqkv34f" class="cta-button">APPLY FOR THE NEXT COHORT</a>
-    </div>
+        <div class="divider"></div>
+
+        <!-- ── SECTION 7: STRUCTURE ── -->
+        <section class="section">
+            <h2 class="section-headline">The Structure</h2>
+            <div class="section-body">
+                <p>This is an 8-week process. Each week builds on the last.</p>
+                <p>You will not be given generic advice—you will be required to engage, reflect, and apply what you learn.</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ── SECTION 8: ZEUS ── -->
+        <section class="section">
+            <h2 class="section-headline">Led by Zeus Fae</h2>
+            <div class="section-body">
+                <p>Zeus Fae works with individuals ready to confront what's holding them back and change how they operate.</p>
+                <p>This work is not about motivation. It's about seeing clearly and acting differently.</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ── SECTION 9: SCARCITY ── -->
+        <section class="section">
+            <div class="scarcity-box">
+                <h2 class="section-headline" style="margin-bottom: 20px;">Limited Availability</h2>
+                <div class="section-body">
+                    <p>This is a founder's round with limited capacity.</p>
+                    <p>Once spots are filled, applications will close and the next cohort will be announced later.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ── SECTION 10: FINAL CTA ── -->
+        <section class="section" id="apply">
+            <h2 class="section-headline">Apply Now</h2>
+            <p class="section-body" style="margin-bottom: 48px;">If you're ready to take control of how you think, decide, and act, apply below.</p>
+
+            <!-- ── SECTION 11: FORM ── -->
+            <div class="form-card">
+                <form id="applyForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Full Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email Address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bottleneck">What is your #1 internal bottleneck right now?</label>
+                        <textarea id="bottleneck" name="bottleneck" rows="4" required placeholder="Be direct. No fluff."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="commitment">Commitment Level (1–10)</label>
+                        <input type="text" id="commitment" name="commitment" placeholder="How ready are you to execute?">
+                    </div>
+
+                    <button type="submit" class="btn-submit">Apply Now</button>
+
+                    <div class="success-message" id="successMsg">
+                        Application received. If accepted, you will be contacted with next steps.
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p><a href="index.html">← Back to Mental Capital</a></p>
+        </footer>
+
+    </main>
 
     <script>
+        // Starfield
         function createStars() {
             const starfield = document.getElementById('starfield');
-            const numberOfStars = 160;
-            for (let i = 0; i < numberOfStars; i++) {
+            const count = 160;
+            for (let i = 0; i < count; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 const angle = Math.random() * Math.PI * 2;
@@ -126,16 +648,29 @@
                 const y = Math.sin(angle);
                 let size, duration, opacity;
                 const layer = Math.random();
-                if (layer < 0.5) { size = Math.random() * 1 + 0.5; duration = Math.random() * 40 + 50; opacity = Math.random() * 0.3 + 0.2; }
-                else if (layer < 0.85) { size = Math.random() * 1.5 + 1; duration = Math.random() * 25 + 30; opacity = Math.random() * 0.3 + 0.4; }
-                else { size = Math.random() * 2 + 2; duration = Math.random() * 15 + 15; opacity = Math.random() * 0.3 + 0.7; }
-                star.style.width = size + 'px'; star.style.height = size + 'px';
-                star.style.setProperty('--x', x); star.style.setProperty('--y', y); star.style.setProperty('--star-opacity', opacity);
-                star.style.animationDuration = duration + 's'; star.style.animationDelay = -(Math.random() * duration) + 's';
+                if (layer < 0.5)       { size = Math.random() * 1 + 0.5;   duration = Math.random() * 40 + 50; opacity = Math.random() * 0.3 + 0.2; }
+                else if (layer < 0.85) { size = Math.random() * 1.5 + 1;   duration = Math.random() * 25 + 30; opacity = Math.random() * 0.3 + 0.4; }
+                else                   { size = Math.random() * 2 + 2;     duration = Math.random() * 15 + 15; opacity = Math.random() * 0.3 + 0.7; }
+                star.style.width  = size + 'px';
+                star.style.height = size + 'px';
+                star.style.setProperty('--x', x);
+                star.style.setProperty('--y', y);
+                star.style.setProperty('--star-opacity', opacity);
+                star.style.animationDuration = duration + 's';
+                star.style.animationDelay    = -(Math.random() * duration) + 's';
                 starfield.appendChild(star);
             }
         }
-        window.addEventListener("load", createStars);
+
+        // Form submission
+        document.getElementById('applyForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.querySelectorAll('input, textarea, button').forEach(el => el.disabled = true);
+            document.getElementById('successMsg').style.display = 'block';
+        });
+
+        window.addEventListener('load', createStars);
     </script>
 </body>
+
 </html>

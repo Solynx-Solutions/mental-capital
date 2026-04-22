@@ -778,7 +778,7 @@
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">Mental Capital</a>
             <div class="nav-links">
-                <a href="workshop.html">The Protocol</a>
+                <a href="workshop.html">Intensive</a>
                 <a href="community.html">Community</a>
                 <a href="coaching.html">Coaching</a>
                 <a href="intel.html">Intel</a>
@@ -795,7 +795,7 @@
                 <h1 class="title">Reclaim Control. Rebuild Your Mind.</h1>
                 <p class="subtitle">
                     Tools, frameworks, and environments designed to eliminate internal resistance and elevate how you
-                    think, act, and move through life.
+                    think, act, and show up.
                 </p>
 
                 <div class="typing-container">
@@ -814,8 +814,8 @@
                 <h2 class="strategy-headline">Most People Don’t Have a Strategy for Themselves</h2>
                 <div class="strategy-body">
                     <p>They operate on reaction. Old patterns. Unexamined behaviors.</p>
-                    <p style="margin-top: 15px;">Mental Capital exists to change that.</p>
-                    <p style="margin-top: 15px;">This is where you identify what’s running you—and take control of it.
+                    <p style="margin-top: 15px;">Most don't realize what's actually driving their decisions.</p>
+                    <p style="margin-top: 15px;">This is where you identify what's running you—and take control of it.
                     </p>
                 </div>
             </section>
@@ -823,21 +823,26 @@
             <div class="divider"></div>
 
             <section class="entry-section">
-                <h2 class="section-header">Choose Your Entry Point</h2>
+                <h2 class="section-header">Choose Where You Start</h2>
                 <div class="entry-grid">
                     <!-- Block 1 -->
                     <div class="entry-card">
                         <h3 class="card-title">1-on-1 Coaching</h3>
-                        <p class="card-copy">Direct, personalized guidance to correct patterns, sharpen thinking, and
-                            accelerate execution.</p>
+                        <p class="card-copy">Direct, personalized work to identify what's holding you back and
+                            restructure how you think, decide, and execute.</p>
                         <a href="coaching.html" class="card-btn">Apply for Coaching</a>
                     </div>
                     <!-- Block 2 -->
                     <div class="entry-card">
                         <h3 class="card-title">Male Archetype Intensive (8 Weeks)</h3>
-                        <p class="card-copy">A structured deep dive into male archetypes and behavioral patterns for men
-                            ready to take control of how they show up.</p>
+                        <p class="card-copy"><em
+                                style="color: #FFD700; font-style: normal; display: block; margin-bottom: 10px;">Founder's
+                                Round. Begins June 1. Limited availability.</em>A structured deep dive into the patterns
+                            and archetypes shaping how men think, behave, and show up.</p>
                         <a href="workshop.html" class="card-btn">Apply for the Intensive</a>
+                        <p
+                            style="font-family: 'Cormorant Garamond', serif; font-size: 0.85em; color: rgba(255,215,0,0.55); margin-top: 12px; letter-spacing: 0.5px;">
+                            Applications close once capacity is reached.</p>
                     </div>
                     <!-- Block 3 -->
                     <div class="entry-card">
@@ -859,9 +864,8 @@
             <section class="passive-section">
                 <h2 class="passive-headline">This Work Is Not Passive</h2>
                 <div class="passive-body">
-                    <p>You don’t drift into clarity. You build it.</p>
-                    <p>You don’t remove internal resistance by thinking about it—you confront it directly.</p>
-                    <p>Mental Capital is built through awareness, ownership, and disciplined action.</p>
+                    <p>You don't drift into clarity. You build it.<br>You don't remove internal resistance by thinking about it—you confront it directly.</p>
+                    <p>Nothing changes until you do.</p>
                 </div>
             </section>
 
@@ -888,8 +892,8 @@
                         <h2 class="filter-headline">This Is Not For You If:</h2>
                         <ul class="filter-list">
                             <li class="filter-item">You avoid discomfort</li>
-                            <li class="filter-item">You want surface-level advice</li>
-                            <li class="filter-item">You’re not ready to be honest with yourself</li>
+                            <li class="filter-item">You're looking for surface-level advice</li>
+                            <li class="filter-item">You're not willing to be honest with yourself</li>
                         </ul>
                     </div>
                 </div>
@@ -905,11 +909,11 @@
                     <div class="bio-text-col">
                         <h2 class="bio-headline">Built Through Experience. Refined Through Pressure.</h2>
                         <div class="bio-body">
-                            <p>Zeus Fae works with individuals who are ready to confront what’s holding them back and
-                                rebuild how they think and operate.</p>
+                            <p>Zeus Fae works with individuals who are ready to confront what's holding them back and change how they operate.</p>
                             <br>
-                            <p>His work focuses on identifying unconscious patterns, eliminating internal resistance,
-                                and creating disciplined execution across all areas of life.</p>
+                            <p>His work focuses on identifying the patterns driving your decisions, eliminating internal resistance, and creating disciplined execution across all areas of life.</p>
+                            <br>
+                            <p>This is not about advice or motivation. It's about seeing clearly and acting differently.</p>
                             <br>
                             <p>His approach includes specialized frameworks for men through archetype-based work.</p>
                         </div>
@@ -926,8 +930,8 @@
             <div class="section-box" id="apply">
                 <h2 class="section-header">You Don’t Fix This Later</h2>
                 <p class="subtitle" style="font-size: 1.1em;">
-                    The longer you delay, the more your patterns solidify.<br><br>
-                    If you’re ready to step into control, this is where it starts.
+                    The longer you delay, the more your patterns stay in place.<br><br>
+                    If you're ready to take control of how you think, decide, and act&#8212;this is where it starts.
                 </p>
 
                 <div class="card">
@@ -994,23 +998,35 @@
                 }
             }
             // Hero Typing Animation
-            const heroText = "Mental capital refers to an individual's total cognitive and emotional resources, including intellectual capability, emotional intelligence, resilience, and learning flexibility. It shapes how people learn, work, and thrive, serving as a foundational asset for personal wellbeing and economic productivity.";
+            const heroLines = [
+                "Mental Capital is the unseen force shaping how you think, react, and repeat your patterns.",
+                "Everything changes when you start seeing it clearly."
+            ];
             const heroTarget = document.getElementById("hero-typing");
-            let heroIndex = 0;
-            const typingSpeed = 15; // Even faster for the long text
+            const typingSpeed = 28;
+            const linePause = 600; // pause between lines
 
-            function typeHero() {
-                if (heroIndex < heroText.length) {
-                    heroTarget.textContent += heroText.charAt(heroIndex);
-                    heroIndex++;
-                    setTimeout(typeHero, typingSpeed);
+            function typeHero(lineIndex, charIndex) {
+                if (lineIndex >= heroLines.length) return; // done, no loop
+                const line = heroLines[lineIndex];
+                if (charIndex < line.length) {
+                    // Rebuild innerHTML from scratch: completed lines + current partial line
+                    const completed = heroLines.slice(0, lineIndex).join('<br>');
+                    const partial = line.substring(0, charIndex + 1);
+                    heroTarget.innerHTML = completed + (lineIndex > 0 ? '<br>' : '') + partial;
+                    setTimeout(() => typeHero(lineIndex, charIndex + 1), typingSpeed);
+                } else {
+                    // Line finished — move to next line after pause
+                    if (lineIndex + 1 < heroLines.length) {
+                        setTimeout(() => typeHero(lineIndex + 1, 0), linePause);
+                    }
                 }
             }
 
             window.addEventListener("load", () => {
                 createStars();
                 // Start typing after a small delay
-                setTimeout(typeHero, 800);
+                setTimeout(() => typeHero(0, 0), 800);
             });
 
             // Form handler
