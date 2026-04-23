@@ -865,7 +865,21 @@
                             placeholder="How ready are you to execute?">
                     </div>
 
+                    <!-- A2P SMS Consent -->
+                    <div class="form-group" style="margin-top: 28px; display: flex; flex-direction: column; gap: 16px;">
+                        <div style="display: flex; align-items: flex-start; gap: 12px;">
+                            <input type="checkbox" id="smsConsentTransactional" name="smsConsentTransactional" style="margin-top: 4px; accent-color: #FFD700; width: 16px; height: 16px; flex-shrink: 0;">
+                            <label for="smsConsentTransactional" style="font-family: 'Cormorant Garamond', serif; font-size: 0.95em; color: rgba(216,216,216,0.7); line-height: 1.5; cursor: pointer;">I consent to receive non-marketing text messages from Mental Capital regarding application updates, acceptance notifications, onboarding instructions, and access details. Message frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</label>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 12px;">
+                            <input type="checkbox" id="smsConsentMarketing" name="smsConsentMarketing" style="margin-top: 4px; accent-color: #FFD700; width: 16px; height: 16px; flex-shrink: 0;">
+                            <label for="smsConsentMarketing" style="font-family: 'Cormorant Garamond', serif; font-size: 0.95em; color: rgba(216,216,216,0.7); line-height: 1.5; cursor: pointer;">I consent to receive marketing text messages from Mental Capital regarding program updates and future opportunities. Message frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</label>
+                        </div>
+                    </div>
+
                     <button type="submit" class="btn-submit" id="submitBtn">Submit Application</button>
+
+                    <p style="font-family: 'Philosopher', sans-serif; font-size: 0.78em; color: rgba(216,216,216,0.4); text-align: center; margin-top: 14px; line-height: 1.5; letter-spacing: 0.5px;">By submitting, you agree to our <a href="/privacy-policy" style="color: rgba(255,215,0,0.5); text-decoration: none;">Privacy Policy</a> and <a href="/terms" style="color: rgba(255,215,0,0.5); text-decoration: none;">Terms &amp; Conditions</a>.</p>
                 </form>
             </div>
 
@@ -887,6 +901,10 @@
         <!-- Footer -->
         <footer class="footer">
             <p><a href="index.html">&larr; Back to Mental Capital</a></p>
+            <div style="margin-top: 16px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="/privacy-policy" style="font-size: 0.8em; color: rgba(255,215,0,0.4); text-decoration: none; letter-spacing: 1px;">Privacy Policy</a>
+                <a href="/terms" style="font-size: 0.8em; color: rgba(255,215,0,0.4); text-decoration: none; letter-spacing: 1px;">Terms &amp; Conditions</a>
+            </div>
         </footer>
 
     </main>
@@ -932,7 +950,11 @@
                 email: document.getElementById("email")?.value,
                 phone: document.getElementById("phone")?.value,
                 bottleneck: document.getElementById("bottleneck")?.value,
-                commitment: document.getElementById("commitment")?.value
+                commitment: document.getElementById("commitment")?.value,
+                smsConsentTransactional: document.getElementById("smsConsentTransactional")?.checked || false,
+                smsConsentMarketing: document.getElementById("smsConsentMarketing")?.checked || false,
+                source: "workshop_page",
+                offer: "archetype_intensive"
             };
 
             console.log("DATA:", data);
