@@ -545,6 +545,71 @@
             color: rgba(255, 215, 0, 0.8);
         }
 
+        /* ── PAYMENT CARD ── */
+        .payment-card {
+            display: none;
+            width: 100%;
+            background: rgba(10, 10, 25, 0.85);
+            border: 1px solid rgba(255, 215, 0, 0.35);
+            border-radius: 4px;
+            padding: 50px 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        .payment-headline {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #FFD700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .payment-subtext {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15em;
+            color: #d8d8d8;
+            line-height: 1.6;
+            margin-bottom: 36px;
+        }
+
+        .price-block {
+            border: 1px solid rgba(255, 215, 0, 0.18);
+            border-radius: 4px;
+            padding: 28px 32px;
+            margin-bottom: 36px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .price-program {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.88em;
+            color: rgba(255, 215, 0, 0.65);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .price-amount {
+            font-family: 'Cinzel', serif;
+            font-size: 2.4em;
+            font-weight: 700;
+            color: #FFD700;
+            letter-spacing: 2px;
+        }
+
+        .price-note {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.95em;
+            color: rgba(216, 216, 216, 0.5);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
         /* ── RESPONSIVE ── */
         @media (max-width: 680px) {
             .hero-headline {
@@ -768,7 +833,8 @@
             <p class="section-body" style="margin-bottom: 48px;">If you're ready to stop repeating the same patterns and
                 start operating differently, apply below.</p>
 
-            <div class="form-card">
+            <!-- Step 1: Application -->
+            <div class="form-card" id="applicationCard">
                 <form id="applyForm">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -792,17 +858,27 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="commitment">Commitment Level (1–10)</label>
+                        <label for="commitment">Commitment Level (1&ndash;10)</label>
                         <input type="text" id="commitment" name="commitment"
                             placeholder="How ready are you to execute?">
                     </div>
 
                     <button type="submit" class="btn-submit" id="submitBtn">Submit Application</button>
-
-                    <div class="success-message" id="successMsg">
-                        Application received. If accepted, you will be contacted with next steps.
-                    </div>
                 </form>
+            </div>
+
+            <!-- Step 2: Payment (hidden until form submit) -->
+            <div class="payment-card" id="paymentCard" style="display: none;">
+                <p class="payment-headline">Complete Your Enrollment</p>
+                <p class="payment-subtext">Your application has been received. Secure your spot below.</p>
+
+                <div class="price-block">
+                    <p class="price-program">Archetype Intensive &mdash; 8 Weeks</p>
+                    <p class="price-amount">$111</p>
+                    <p class="price-note">Founder's Round &middot; Limited spots</p>
+                </div>
+
+                <button class="btn-submit" id="payBtn" onclick="openPayment()">Secure Your Spot</button>
             </div>
         </section>
 
@@ -840,11 +916,42 @@
             }
         }
 
-        // Form submission
-        document.getElementById('applyForm').addEventListener('submit', function (e) {
+        // ── Config — replace before going live ──
+        const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/TBEyJX4iqsvjNPRPuMKw/webhook-trigger/62268d80-a169-471b-a791-fb341f271285';
+        const STRIPE_LINK = 'https://app.mentalcapital.world/payment-link/69cf82efa6c96e61a845f6e4';
+
+        function openPayment() {
+            window.open(STRIPE_LINK, '_blank');
+        }
+
+        // 2-step form flow
+        document.getElementById('applyForm').addEventListener('submit', async function (e) {
             e.preventDefault();
+
+            const name       = document.getElementById('name').value.trim();
+            const email      = document.getElementById('email').value.trim();
+            const phone      = document.getElementById('phone').value.trim();
+            const bottleneck = document.getElementById('bottleneck').value.trim();
+            const commitment = document.getElementById('commitment').value.trim();
+
+            // Lock form inputs + button
             this.querySelectorAll('input, textarea, button').forEach(el => el.disabled = true);
-            document.getElementById('successMsg').style.display = 'block';
+
+            // Fire webhook — non-blocking, silent fail so UX is never gated
+            fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name, email, phone, bottleneck, commitment,
+                    source: 'workshop_page',
+                    offer:  'archetype_intensive'
+                })
+            }).catch(() => {});
+
+            // Reveal payment section
+            const paymentCard = document.getElementById('paymentCard');
+            paymentCard.style.display = 'block';
+            paymentCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
 
         window.addEventListener('load', createStars);
