@@ -925,30 +925,31 @@
         }
 
         // 2-step form flow
-        document.getElementById('applyForm').addEventListener('submit', async function (e) {
+        document.getElementById('applyForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const name       = document.getElementById('name').value.trim();
-            const email      = document.getElementById('email').value.trim();
-            const phone      = document.getElementById('phone').value.trim();
-            const bottleneck = document.getElementById('bottleneck').value.trim();
-            const commitment = document.getElementById('commitment').value.trim();
+            const data = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                bottleneck: document.getElementById("bottleneck").value,
+                commitment: document.getElementById("commitment").value,
+                source: "workshop_page",
+                offer: "archetype_intensive"
+            };
 
-            // Lock form inputs + button
+            fetch("https://services.leadconnectorhq.com/hooks/TBEyJX4iqsvjNPRPuMKw/webhook-trigger/62268d80-a169-471b-a791-fb341f271285", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            console.log("Webhook sent:", data);
+
+            // Lock form + reveal payment section
             this.querySelectorAll('input, textarea, button').forEach(el => el.disabled = true);
-
-            // Fire webhook — non-blocking, silent fail so UX is never gated
-            fetch(WEBHOOK_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name, email, phone, bottleneck, commitment,
-                    source: 'workshop_page',
-                    offer:  'archetype_intensive'
-                })
-            }).catch(() => {});
-
-            // Reveal payment section
             const paymentCard = document.getElementById('paymentCard');
             paymentCard.style.display = 'block';
             paymentCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
