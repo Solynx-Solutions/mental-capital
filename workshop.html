@@ -548,6 +548,8 @@
         /* ── PAYMENT CARD ── */
         .payment-card {
             display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
             width: 100%;
             background: rgba(10, 10, 25, 0.85);
             border: 1px solid rgba(255, 215, 0, 0.35);
@@ -874,7 +876,7 @@
 
                 <div class="price-block">
                     <p class="price-program">Archetype Intensive &mdash; 8 Weeks</p>
-                    <p class="price-amount">$111</p>
+                    <p class="price-amount">$555</p>
                     <p class="price-note">Founder's Round &middot; Limited spots</p>
                 </div>
 
@@ -916,12 +918,8 @@
             }
         }
 
-        // ── Config — replace before going live ──
-        const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/TBEyJX4iqsvjNPRPuMKw/webhook-trigger/62268d80-a169-471b-a791-fb341f271285';
-        const STRIPE_LINK = 'https://app.mentalcapital.world/payment-link/69cf82efa6c96e61a845f6e4';
-
         function openPayment() {
-            window.open(STRIPE_LINK, '_blank');
+            window.open('https://app.mentalcapital.world/payment-link/69cf82efa6c96e61a845f6e4', '_blank');
         }
 
         // 2-step form flow
@@ -929,29 +927,31 @@
             e.preventDefault();
 
             const data = {
-                name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                phone: document.getElementById("phone").value,
-                bottleneck: document.getElementById("bottleneck").value,
-                commitment: document.getElementById("commitment").value,
-                source: "workshop_page",
-                offer: "archetype_intensive"
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                bottleneck: document.getElementById('bottleneck').value,
+                commitment: document.getElementById('commitment').value,
+                source: 'workshop_page',
+                offer: 'archetype_intensive'
             };
 
-            fetch("https://services.leadconnectorhq.com/hooks/TBEyJX4iqsvjNPRPuMKw/webhook-trigger/62268d80-a169-471b-a791-fb341f271285", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
+            fetch('https://services.leadconnectorhq.com/hooks/TBEyJX4iqsvjNPRPuMKw/webhook-trigger/62268d80-a169-471b-a791-fb341f271285', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            console.log("Webhook sent:", data);
+            // Lock inputs, hide submit button
+            this.querySelectorAll('input, textarea').forEach(el => el.disabled = true);
+            document.getElementById('submitBtn').style.display = 'none';
 
-            // Lock form + reveal payment section
-            this.querySelectorAll('input, textarea, button').forEach(el => el.disabled = true);
+            // Fade in payment section
             const paymentCard = document.getElementById('paymentCard');
             paymentCard.style.display = 'block';
+            requestAnimationFrame(() => {
+                paymentCard.style.opacity = '1';
+            });
             paymentCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
 
