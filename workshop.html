@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Male Archetype Intensive (8 Weeks) | Mental Capital</title>
-    <meta name="description" content="A structured 8-week deep dive into the patterns and archetypes shaping how you think, behave, and show up. Founder's Round — Limited Availability.">
+    <title>The Archetype Intensive (8 Weeks) | Mental Capital</title>
+    <meta name="description" content="A structured 8-week deep dive into the King, Warrior, Magician, and Lover archetypes—and how they shape how you think, behave, and operate. Founder's Round — Limited Availability.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
@@ -86,7 +86,7 @@
             50%       { transform: translateX(-20px); }
         }
 
-        /* Minimal top bar — brand only, no nav links */
+        /* Minimal top bar */
         .topbar {
             position: fixed;
             top: 0; left: 0;
@@ -210,10 +210,6 @@
             text-align: center;
         }
 
-        .section.left {
-            text-align: left;
-        }
-
         .section-headline {
             font-family: 'Cinzel', serif;
             font-size: 1.9em;
@@ -236,6 +232,77 @@
 
         .section-body p + p {
             margin-top: 20px;
+        }
+
+        /* ── ARCHETYPE GRID ── */
+        .archetype-intro {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25em;
+            color: #d8d8d8;
+            line-height: 1.65;
+            max-width: 680px;
+            margin: 0 auto 48px;
+        }
+
+        .archetype-intro p + p {
+            margin-top: 20px;
+        }
+
+        .archetype-intro em {
+            font-style: italic;
+            color: #e8e8e8;
+        }
+
+        .archetype-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 100%;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .archetype-card {
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 4px;
+            padding: 32px 28px;
+            background: rgba(10,10,25,0.6);
+            backdrop-filter: blur(10px);
+            text-align: left;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .archetype-card:hover {
+            border-color: rgba(255,215,0,0.45);
+            background: rgba(15,15,35,0.75);
+        }
+
+        .archetype-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #FFD700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .archetype-desc {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05em;
+            color: rgba(216,216,216,0.75);
+            line-height: 1.45;
+            letter-spacing: 0.3px;
+        }
+
+        .archetype-footnote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1em;
+            color: rgba(216,216,216,0.65);
+            line-height: 1.6;
+            max-width: 680px;
+            margin: 36px auto 0;
+            font-style: italic;
         }
 
         /* ── BULLET LIST ── */
@@ -450,6 +517,10 @@
             .hero-headline { font-size: 1.9em; }
             .section-headline { font-size: 1.5em; }
 
+            .archetype-grid {
+                grid-template-columns: 1fr;
+            }
+
             .filter-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -478,8 +549,8 @@
         <!-- ── SECTION 1: HERO ── -->
         <section class="hero" id="top">
             <p class="hero-label">Mental Capital</p>
-            <h1 class="hero-headline">The Male Archetype<br>Intensive (8 Weeks)</h1>
-            <p class="hero-sub">A structured deep dive into the patterns and archetypes shaping how you think, behave, and show up.</p>
+            <h1 class="hero-headline">The Archetype<br>Intensive (8 Weeks)</h1>
+            <p class="hero-sub">A structured 8-week process to identify and break the patterns shaping how you think, behave, and operate—using the King, Warrior, Magician, and Lover framework.</p>
             <p class="hero-details">Founder's Round &middot; Begins June 1 &middot; Limited Availability</p>
             <a href="#apply" class="btn-primary">Apply for the Intensive</a>
         </section>
@@ -488,41 +559,75 @@
 
         <!-- ── SECTION 2: CORE TRUTH ── -->
         <section class="section">
-            <h2 class="section-headline">Most Men Are Operating on<br>Patterns They Don't See</h2>
+            <h2 class="section-headline">You're Not Operating Randomly</h2>
             <div class="section-body">
-                <p>The way you think, react, and make decisions isn't random.</p>
-                <p>It's driven by patterns you've developed over time—many of which you're not fully aware of.</p>
-                <p>Until you see them clearly, you keep repeating them.</p>
+                <p>The way you think, react, and make decisions follows patterns.</p>
+                <p>Most men never identify those patterns—so they keep repeating them.</p>
+                <p>Until you see what's actually driving you, nothing changes.</p>
+                <p>And most people never stop long enough to examine them.</p>
             </div>
         </section>
 
         <div class="divider"></div>
 
-        <!-- ── SECTION 3: WHAT THIS IS ── -->
+        <!-- ── SECTION 3: THE FRAMEWORK ── -->
+        <section class="section">
+            <h2 class="section-headline">The Framework Behind This Work</h2>
+            <div class="archetype-intro">
+                <p>This intensive is built on the psychological model outlined in <em>King, Warrior, Magician, Lover</em> by Douglas Gillette and Robert L. Moore.</p>
+                <p>It defines four core archetypes that shape masculine behavior:</p>
+            </div>
+            <div class="archetype-grid">
+                <div class="archetype-card">
+                    <p class="archetype-name">King</p>
+                    <p class="archetype-desc">Leadership, structure, responsibility</p>
+                </div>
+                <div class="archetype-card">
+                    <p class="archetype-name">Warrior</p>
+                    <p class="archetype-desc">Discipline, action, execution</p>
+                </div>
+                <div class="archetype-card">
+                    <p class="archetype-name">Magician</p>
+                    <p class="archetype-desc">Awareness, insight, transformation</p>
+                </div>
+                <div class="archetype-card">
+                    <p class="archetype-name">Lover</p>
+                    <p class="archetype-desc">Connection, presence, meaning</p>
+                </div>
+            </div>
+            <p class="archetype-footnote">Growth comes from understanding and integrating these—not operating in imbalance.</p>
+            <p class="archetype-footnote" style="margin-top: 16px;">When these are imbalanced, they show up as hesitation, overreaction, avoidance, or lack of direction.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ── SECTION 4: WHAT THIS IS ── -->
         <section class="section">
             <h2 class="section-headline">What This Intensive Is</h2>
             <div class="section-body">
-                <p>This is an 8-week structured process designed to help you identify the archetypes and patterns shaping your behavior.</p>
-                <p>You'll break down how they show up in your decisions, your relationships, and your execution—and learn how to take control of them.</p>
+                <p>This is an 8-week structured process designed to help you understand how you operate at a deeper level.</p>
+                <p>You will identify the patterns shaping your behavior, understand how they show up in your decisions and relationships, and begin to actively change how you operate.</p>
+                <p>This is applied self-awareness—not theory.</p>
+                <p>Each week focuses on identifying and working through a specific pattern so you can apply it in real time.</p>
             </div>
         </section>
 
         <div class="divider"></div>
 
-        <!-- ── SECTION 4: WHAT YOU GET ── -->
+        <!-- ── SECTION 5: WHAT YOU GET ── -->
         <section class="section">
             <h2 class="section-headline">What You Get</h2>
             <ul class="bullet-list">
-                <li>A clear understanding of the archetypes influencing your behavior</li>
-                <li>Direct insight into the patterns limiting your performance</li>
-                <li>Tools to shift how you think, decide, and act</li>
-                <li>A structured environment that demands accountability</li>
+                <li>A clear understanding of the four archetypes and how they show up in your life</li>
+                <li>Direct insight into the patterns limiting your behavior</li>
+                <li>Clear frameworks you can apply immediately to change how you think, decide, and act</li>
+                <li>A structured environment that requires accountability</li>
             </ul>
         </section>
 
         <div class="divider"></div>
 
-        <!-- ── SECTIONS 5 & 6: FOR / NOT FOR ── -->
+        <!-- ── SECTIONS 6 & 7: FOR / NOT FOR ── -->
         <section class="section">
             <div class="filter-grid">
                 <!-- For You -->
@@ -531,7 +636,7 @@
                     <ul class="filter-list">
                         <li>You know you're capable of more but keep repeating the same patterns</li>
                         <li>You want clarity, not surface-level advice</li>
-                        <li>You're ready to take full ownership of how you operate</li>
+                        <li>You're ready to take full ownership</li>
                     </ul>
                 </div>
 
@@ -543,7 +648,7 @@
                     <ul class="filter-list">
                         <li>You avoid discomfort</li>
                         <li>You're looking for quick fixes</li>
-                        <li>You're not ready to be honest with yourself</li>
+                        <li>You're not willing to be honest with yourself</li>
                     </ul>
                 </div>
             </div>
@@ -551,47 +656,62 @@
 
         <div class="divider"></div>
 
-        <!-- ── SECTION 7: STRUCTURE ── -->
+        <!-- ── SECTION 8: STRUCTURE ── -->
         <section class="section">
             <h2 class="section-headline">The Structure</h2>
             <div class="section-body">
-                <p>This is an 8-week process. Each week builds on the last.</p>
-                <p>You will not be given generic advice—you will be required to engage, reflect, and apply what you learn.</p>
+                <p>This is an 8-week process where each week builds on the last.</p>
+                <p>You will identify patterns, break them down, and apply changes in real time.</p>
+                <p>This is not passive. You will be expected to engage, reflect, and execute.</p>
             </div>
         </section>
 
         <div class="divider"></div>
 
-        <!-- ── SECTION 8: ZEUS ── -->
+        <!-- ── SECTION 9: ZEUS ── -->
         <section class="section">
             <h2 class="section-headline">Led by Zeus Fae</h2>
             <div class="section-body">
                 <p>Zeus Fae works with individuals ready to confront what's holding them back and change how they operate.</p>
-                <p>This work is not about motivation. It's about seeing clearly and acting differently.</p>
+                <p>His work focuses on identifying patterns, increasing awareness, and creating disciplined execution.</p>
+                <p>This intensive applies that work through the archetypal framework.</p>
+                <p>This intensive is where that work becomes structured and applied.</p>
             </div>
         </section>
 
         <div class="divider"></div>
 
-        <!-- ── SECTION 9: SCARCITY ── -->
+        <!-- ── SECTION 10: SCARCITY ── -->
         <section class="section">
             <div class="scarcity-box">
                 <h2 class="section-headline" style="margin-bottom: 20px;">Limited Availability</h2>
                 <div class="section-body">
-                    <p>This is a founder's round with limited capacity.</p>
-                    <p>Once spots are filled, applications will close and the next cohort will be announced later.</p>
+                    <p>This is a founder's round with a strict cap on participants.</p>
+                    <p>Once capacity is reached, applications close immediately.</p>
                 </div>
             </div>
         </section>
 
         <div class="divider"></div>
 
-        <!-- ── SECTION 10: FINAL CTA ── -->
+        <!-- ── SECTION 11: WHAT CHANGES AFTER 8 WEEKS ── -->
+        <section class="section">
+            <h2 class="section-headline">What Changes After 8 Weeks</h2>
+            <ul class="bullet-list">
+                <li>Recognize the patterns driving your behavior</li>
+                <li>Understand how they show up in real situations</li>
+                <li>Have a clear framework for how to respond differently</li>
+                <li>Stop reacting automatically and start acting intentionally</li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ── SECTION 12: FINAL CTA + FORM ── -->
         <section class="section" id="apply">
             <h2 class="section-headline">Apply Now</h2>
-            <p class="section-body" style="margin-bottom: 48px;">If you're ready to take control of how you think, decide, and act, apply below.</p>
+            <p class="section-body" style="margin-bottom: 48px;">If you're ready to stop repeating the same patterns and start operating differently, apply below.</p>
 
-            <!-- ── SECTION 11: FORM ── -->
             <div class="form-card">
                 <form id="applyForm">
                     <div class="form-group">
@@ -619,7 +739,7 @@
                         <input type="text" id="commitment" name="commitment" placeholder="How ready are you to execute?">
                     </div>
 
-                    <button type="submit" class="btn-submit">Apply Now</button>
+                    <button type="submit" class="btn-submit" id="submitBtn">Submit Application</button>
 
                     <div class="success-message" id="successMsg">
                         Application received. If accepted, you will be contacted with next steps.
@@ -630,7 +750,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p><a href="index.html">← Back to Mental Capital</a></p>
+            <p><a href="index.html">&larr; Back to Mental Capital</a></p>
         </footer>
 
     </main>
