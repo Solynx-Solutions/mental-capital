@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Archetype Intensive (8 Weeks) | Mental Capital</title>
-    <meta name="description" content="A structured 8-week deep dive into the King, Warrior, Magician, and Lover archetypes—and how they shape how you think, behave, and operate. Founder's Round — Limited Availability.">
+    <meta name="description"
+        content="A structured 8-week deep dive into the King, Warrior, Magician, and Lover archetypes—and how they shape how you think, behave, and operate. Founder's Round — Limited Availability.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Philosopher:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <style>
         * {
@@ -32,7 +35,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(0,0,20,0.95) 0%, rgba(10,5,30,0.92) 50%, rgba(0,0,20,0.95) 100%);
+            background: linear-gradient(135deg, rgba(0, 0, 20, 0.95) 0%, rgba(10, 5, 30, 0.92) 50%, rgba(0, 0, 20, 0.95) 100%);
             z-index: 0;
         }
 
@@ -50,15 +53,26 @@
         }
 
         @keyframes pulseGlow {
-            0%, 100% { opacity: 0.10; transform: translate(-50%, -50%) scale(1); }
-            50%       { opacity: 0.18; transform: translate(-50%, -50%) scale(1.05); }
+
+            0%,
+            100% {
+                opacity: 0.10;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                opacity: 0.18;
+                transform: translate(-50%, -50%) scale(1.05);
+            }
         }
 
         /* Starfield */
         .stars {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: 1;
             pointer-events: none;
             animation: spaceDrift 60s linear infinite;
@@ -66,34 +80,53 @@
 
         .star {
             position: absolute;
-            top: 50%; left: 50%;
+            top: 50%;
+            left: 50%;
             background: white;
             border-radius: 50%;
             transform: translate(-50%, -50%) scale(0.1);
             animation: warpMove linear infinite;
-            box-shadow: 0 0 6px rgba(255,255,255,0.6);
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
             will-change: transform;
         }
 
         @keyframes warpMove {
-            0%   { transform: translate(-50%,-50%) scale(0.05); opacity: 0; }
-            10%  { opacity: var(--star-opacity, 0.7); }
-            100% { transform: translate(calc(-50% + var(--x)*120vw), calc(-50% + var(--y)*120vh)) scale(2.5); opacity: 0; }
+            0% {
+                transform: translate(-50%, -50%) scale(0.05);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: var(--star-opacity, 0.7);
+            }
+
+            100% {
+                transform: translate(calc(-50% + var(--x)*120vw), calc(-50% + var(--y)*120vh)) scale(2.5);
+                opacity: 0;
+            }
         }
 
         @keyframes spaceDrift {
-            0%, 100% { transform: translateX(0px); }
-            50%       { transform: translateX(-20px); }
+
+            0%,
+            100% {
+                transform: translateX(0px);
+            }
+
+            50% {
+                transform: translateX(-20px);
+            }
         }
 
         /* Minimal top bar */
         .topbar {
             position: fixed;
-            top: 0; left: 0;
+            top: 0;
+            left: 0;
             width: 100%;
-            background: rgba(10,5,30,0.8);
+            background: rgba(10, 5, 30, 0.8);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,215,0,0.15);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.15);
             z-index: 1000;
             padding: 16px 30px;
             display: flex;
@@ -104,7 +137,7 @@
         .topbar-brand {
             font-family: 'Cinzel', serif;
             font-size: 1em;
-            color: rgba(255,215,0,0.7);
+            color: rgba(255, 215, 0, 0.7);
             letter-spacing: 3px;
             text-transform: uppercase;
             text-decoration: none;
@@ -141,7 +174,7 @@
         .hero-label {
             font-family: 'Cinzel', serif;
             font-size: 0.85em;
-            color: rgba(255,215,0,0.6);
+            color: rgba(255, 215, 0, 0.6);
             letter-spacing: 3px;
             text-transform: uppercase;
             margin-bottom: 30px;
@@ -156,7 +189,7 @@
             text-transform: uppercase;
             line-height: 1.15;
             margin-bottom: 28px;
-            text-shadow: 0 0 30px rgba(255,215,0,0.35);
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.35);
         }
 
         .hero-sub {
@@ -172,7 +205,7 @@
         .hero-details {
             font-family: 'Philosopher', sans-serif;
             font-size: 0.9em;
-            color: rgba(255,215,0,0.65);
+            color: rgba(255, 215, 0, 0.65);
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 48px;
@@ -201,7 +234,7 @@
             border-color: #fff;
             color: #000;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255,215,0,0.3);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
         }
 
         /* ── SECTIONS ── */
@@ -230,7 +263,7 @@
             margin: 0 auto;
         }
 
-        .section-body p + p {
+        .section-body p+p {
             margin-top: 20px;
         }
 
@@ -244,7 +277,7 @@
             margin: 0 auto 48px;
         }
 
-        .archetype-intro p + p {
+        .archetype-intro p+p {
             margin-top: 20px;
         }
 
@@ -263,18 +296,18 @@
         }
 
         .archetype-card {
-            border: 1px solid rgba(255,215,0,0.2);
+            border: 1px solid rgba(255, 215, 0, 0.2);
             border-radius: 4px;
             padding: 32px 28px;
-            background: rgba(10,10,25,0.6);
+            background: rgba(10, 10, 25, 0.6);
             backdrop-filter: blur(10px);
             text-align: left;
             transition: border-color 0.3s ease, background 0.3s ease;
         }
 
         .archetype-card:hover {
-            border-color: rgba(255,215,0,0.45);
-            background: rgba(15,15,35,0.75);
+            border-color: rgba(255, 215, 0, 0.45);
+            background: rgba(15, 15, 35, 0.75);
         }
 
         .archetype-name {
@@ -290,7 +323,7 @@
         .archetype-desc {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.05em;
-            color: rgba(216,216,216,0.75);
+            color: rgba(216, 216, 216, 0.75);
             line-height: 1.45;
             letter-spacing: 0.3px;
         }
@@ -298,7 +331,7 @@
         .archetype-footnote {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.1em;
-            color: rgba(216,216,216,0.65);
+            color: rgba(216, 216, 216, 0.65);
             line-height: 1.6;
             max-width: 680px;
             margin: 36px auto 0;
@@ -347,7 +380,7 @@
         }
 
         .filter-v-divider {
-            background: rgba(255,215,0,0.12);
+            background: rgba(255, 215, 0, 0.12);
             width: 1px;
             min-height: 180px;
             height: 100%;
@@ -386,16 +419,16 @@
         }
 
         .filter-col.negative .filter-list li {
-            color: rgba(216,216,216,0.75);
+            color: rgba(216, 216, 216, 0.75);
         }
 
         /* ── SCARCITY CALLOUT ── */
         .scarcity-box {
             width: 100%;
-            border: 1px solid rgba(255,215,0,0.25);
+            border: 1px solid rgba(255, 215, 0, 0.25);
             border-radius: 4px;
             padding: 48px 40px;
-            background: rgba(10,10,25,0.7);
+            background: rgba(10, 10, 25, 0.7);
             backdrop-filter: blur(10px);
             text-align: center;
         }
@@ -403,12 +436,12 @@
         /* ── APPLICATION FORM ── */
         .form-card {
             width: 100%;
-            background: rgba(10,10,25,0.85);
-            border: 1px solid rgba(255,215,0,0.25);
+            background: rgba(10, 10, 25, 0.85);
+            border: 1px solid rgba(255, 215, 0, 0.25);
             border-radius: 4px;
             padding: 50px 40px;
             backdrop-filter: blur(10px);
-            box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
         }
 
         .form-group {
@@ -430,8 +463,8 @@
         .form-group textarea {
             width: 100%;
             padding: 14px 16px;
-            background: rgba(0,0,0,0.55);
-            border: 1px solid rgba(255,215,0,0.25);
+            background: rgba(0, 0, 0, 0.55);
+            border: 1px solid rgba(255, 215, 0, 0.25);
             border-radius: 4px;
             color: #ffffff;
             font-family: 'Cormorant Garamond', serif;
@@ -444,7 +477,7 @@
         .form-group textarea:focus {
             outline: none;
             border-color: #FFD700;
-            box-shadow: 0 0 14px rgba(255,215,0,0.18);
+            box-shadow: 0 0 14px rgba(255, 215, 0, 0.18);
         }
 
         .form-group textarea {
@@ -472,7 +505,7 @@
             background: #fff;
             border-color: #fff;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255,215,0,0.3);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
         }
 
         .success-message {
@@ -491,31 +524,36 @@
             width: 100%;
             text-align: center;
             padding: 40px 0 20px;
-            border-top: 1px solid rgba(255,215,0,0.08);
+            border-top: 1px solid rgba(255, 215, 0, 0.08);
             margin-top: 80px;
         }
 
         .footer p {
             font-family: 'Philosopher', sans-serif;
             font-size: 0.85em;
-            color: rgba(255,215,0,0.4);
+            color: rgba(255, 215, 0, 0.4);
             letter-spacing: 1px;
         }
 
         .footer a {
-            color: rgba(255,215,0,0.4);
+            color: rgba(255, 215, 0, 0.4);
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .footer a:hover {
-            color: rgba(255,215,0,0.8);
+            color: rgba(255, 215, 0, 0.8);
         }
 
         /* ── RESPONSIVE ── */
         @media (max-width: 680px) {
-            .hero-headline { font-size: 1.9em; }
-            .section-headline { font-size: 1.5em; }
+            .hero-headline {
+                font-size: 1.9em;
+            }
+
+            .section-headline {
+                font-size: 1.5em;
+            }
 
             .archetype-grid {
                 grid-template-columns: 1fr;
@@ -526,10 +564,17 @@
                 gap: 40px;
             }
 
-            .filter-v-divider { display: none; }
+            .filter-v-divider {
+                display: none;
+            }
 
-            .form-card { padding: 36px 24px; }
-            .scarcity-box { padding: 36px 24px; }
+            .form-card {
+                padding: 36px 24px;
+            }
+
+            .scarcity-box {
+                padding: 36px 24px;
+            }
         }
     </style>
 </head>
@@ -550,7 +595,8 @@
         <section class="hero" id="top">
             <p class="hero-label">Mental Capital</p>
             <h1 class="hero-headline">The Archetype<br>Intensive (8 Weeks)</h1>
-            <p class="hero-sub">A structured 8-week process to identify and break the patterns shaping how you think, behave, and operate—using the King, Warrior, Magician, and Lover framework.</p>
+            <p class="hero-sub">A structured 8-week process to identify and break the patterns shaping how you think,
+                behave, and operate—using the King, Warrior, Magician, and Lover framework.</p>
             <p class="hero-details">Founder's Round &middot; Begins June 1 &middot; Limited Availability</p>
             <a href="#apply" class="btn-primary">Apply for the Intensive</a>
         </section>
@@ -574,7 +620,8 @@
         <section class="section">
             <h2 class="section-headline">The Framework Behind This Work</h2>
             <div class="archetype-intro">
-                <p>This intensive is built on the psychological model outlined in <em>King, Warrior, Magician, Lover</em> by Douglas Gillette and Robert L. Moore.</p>
+                <p>This intensive is built on the psychological model outlined in <em>King, Warrior, Magician,
+                        Lover</em> by Douglas Gillette and Robert L. Moore.</p>
                 <p>It defines four core archetypes that shape masculine behavior:</p>
             </div>
             <div class="archetype-grid">
@@ -595,8 +642,10 @@
                     <p class="archetype-desc">Connection, presence, meaning</p>
                 </div>
             </div>
-            <p class="archetype-footnote">Growth comes from understanding and integrating these—not operating in imbalance.</p>
-            <p class="archetype-footnote" style="margin-top: 16px;">When these are imbalanced, they show up as hesitation, overreaction, avoidance, or lack of direction.</p>
+            <p class="archetype-footnote">Growth comes from understanding and integrating these—not operating in
+                imbalance.</p>
+            <p class="archetype-footnote" style="margin-top: 16px;">When these are imbalanced, they show up as
+                hesitation, overreaction, avoidance, or lack of direction.</p>
         </section>
 
         <div class="divider"></div>
@@ -605,10 +654,13 @@
         <section class="section">
             <h2 class="section-headline">What This Intensive Is</h2>
             <div class="section-body">
-                <p>This is an 8-week structured process designed to help you understand how you operate at a deeper level.</p>
-                <p>You will identify the patterns shaping your behavior, understand how they show up in your decisions and relationships, and begin to actively change how you operate.</p>
+                <p>This is an 8-week structured process designed to help you understand how you operate at a deeper
+                    level.</p>
+                <p>You will identify the patterns shaping your behavior, understand how they show up in your decisions
+                    and relationships, and begin to actively change how you operate.</p>
                 <p>This is applied self-awareness—not theory.</p>
-                <p>Each week focuses on identifying and working through a specific pattern so you can apply it in real time.</p>
+                <p>Each week focuses on identifying and working through a specific pattern so you can apply it in real
+                    time.</p>
             </div>
         </section>
 
@@ -622,6 +674,7 @@
                 <li>Direct insight into the patterns limiting your behavior</li>
                 <li>Clear frameworks you can apply immediately to change how you think, decide, and act</li>
                 <li>A structured environment that requires accountability</li>
+                <li>A private community to stay connected &amp; supported even after the intensive ends</li>
             </ul>
         </section>
 
@@ -672,10 +725,12 @@
         <section class="section">
             <h2 class="section-headline">Led by Zeus Fae</h2>
             <div class="section-body">
-                <p>Zeus Fae works with individuals ready to confront what's holding them back and change how they operate.</p>
-                <p>His work focuses on identifying patterns, increasing awareness, and creating disciplined execution.</p>
+                <p>Zeus Fae works with individuals ready to confront what's holding them back and change how they
+                    operate.</p>
+                <p>His work focuses on identifying patterns, increasing awareness, and creating disciplined execution.
+                </p>
                 <p>This intensive applies that work through the archetypal framework.</p>
-                <p>This intensive is where that work becomes structured and applied.</p>
+                <p>This intensive is where that work becomes structured and embodied.</p>
             </div>
         </section>
 
@@ -710,7 +765,8 @@
         <!-- ── SECTION 12: FINAL CTA + FORM ── -->
         <section class="section" id="apply">
             <h2 class="section-headline">Apply Now</h2>
-            <p class="section-body" style="margin-bottom: 48px;">If you're ready to stop repeating the same patterns and start operating differently, apply below.</p>
+            <p class="section-body" style="margin-bottom: 48px;">If you're ready to stop repeating the same patterns and
+                start operating differently, apply below.</p>
 
             <div class="form-card">
                 <form id="applyForm">
@@ -731,12 +787,14 @@
 
                     <div class="form-group">
                         <label for="bottleneck">What is your #1 internal bottleneck right now?</label>
-                        <textarea id="bottleneck" name="bottleneck" rows="4" required placeholder="Be direct. No fluff."></textarea>
+                        <textarea id="bottleneck" name="bottleneck" rows="4" required
+                            placeholder="Be direct. No fluff."></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="commitment">Commitment Level (1–10)</label>
-                        <input type="text" id="commitment" name="commitment" placeholder="How ready are you to execute?">
+                        <input type="text" id="commitment" name="commitment"
+                            placeholder="How ready are you to execute?">
                     </div>
 
                     <button type="submit" class="btn-submit" id="submitBtn">Submit Application</button>
@@ -768,16 +826,16 @@
                 const y = Math.sin(angle);
                 let size, duration, opacity;
                 const layer = Math.random();
-                if (layer < 0.5)       { size = Math.random() * 1 + 0.5;   duration = Math.random() * 40 + 50; opacity = Math.random() * 0.3 + 0.2; }
-                else if (layer < 0.85) { size = Math.random() * 1.5 + 1;   duration = Math.random() * 25 + 30; opacity = Math.random() * 0.3 + 0.4; }
-                else                   { size = Math.random() * 2 + 2;     duration = Math.random() * 15 + 15; opacity = Math.random() * 0.3 + 0.7; }
-                star.style.width  = size + 'px';
+                if (layer < 0.5) { size = Math.random() * 1 + 0.5; duration = Math.random() * 40 + 50; opacity = Math.random() * 0.3 + 0.2; }
+                else if (layer < 0.85) { size = Math.random() * 1.5 + 1; duration = Math.random() * 25 + 30; opacity = Math.random() * 0.3 + 0.4; }
+                else { size = Math.random() * 2 + 2; duration = Math.random() * 15 + 15; opacity = Math.random() * 0.3 + 0.7; }
+                star.style.width = size + 'px';
                 star.style.height = size + 'px';
                 star.style.setProperty('--x', x);
                 star.style.setProperty('--y', y);
                 star.style.setProperty('--star-opacity', opacity);
                 star.style.animationDuration = duration + 's';
-                star.style.animationDelay    = -(Math.random() * duration) + 's';
+                star.style.animationDelay = -(Math.random() * duration) + 's';
                 starfield.appendChild(star);
             }
         }
