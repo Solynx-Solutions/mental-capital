@@ -1121,7 +1121,7 @@
 
                         <div class="form-group">
                             <label for="lf-goal">What Are You Currently Trying to Improve or Solve?</label>
-                            <textarea id="lf-goal" name="goal" rows="3" placeholder="Optional — be direct."></textarea>
+                            <textarea id="lf-goal" name="message" rows="3" placeholder="Optional — be direct."></textarea>
                         </div>
 
                         <!-- SMS Consent -->
@@ -1255,14 +1255,14 @@
                         name: document.getElementById('lf-name')?.value,
                         email: document.getElementById('lf-email')?.value,
                         phone: document.getElementById('lf-phone')?.value,
-                        goal: document.getElementById('lf-goal')?.value,
+                        message: document.getElementById('lf-goal')?.value,
                         sms_consent_transactional: document.getElementById('lf-sms-trans')?.checked || false,
                         sms_consent_marketing: document.getElementById('lf-sms-mkt')?.checked || false,
                         source: 'homepage_lead_form',
                         tag: 'lead_entered'
                     };
 
-                    fetch('https://services.leadconnectorhq.com/hooks/TBEyJX4iqsvjNPRPuMKw/webhook-trigger/62268d80-a169-471b-a791-fb341f271285', {
+                    fetch('https://services.leadconnectorhq.com/hooks/TBEyJX4iqsvjNPRPuMKw/webhook-trigger/Qxk7Fkm3Y526q4eiW6Dp', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(payload)
