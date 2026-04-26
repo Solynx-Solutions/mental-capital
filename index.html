@@ -448,6 +448,163 @@
             margin-top: 60px;
         }
 
+        /* ── LEAD CAPTURE FORM ── */
+        .lead-form-section {
+            width: 100%;
+            max-width: 680px;
+            margin: 0 auto 80px;
+            scroll-margin-top: 90px;
+        }
+
+        .lead-form-section .lf-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75em;
+            color: rgba(255, 215, 0, 0.6);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .lead-form-section .lf-headline {
+            font-family: 'Cinzel', serif;
+            font-size: 2em;
+            font-weight: 700;
+            color: #FFD700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1.15;
+            margin-bottom: 14px;
+            text-shadow: 0 0 24px rgba(255, 215, 0, 0.3);
+        }
+
+        .lead-form-section .lf-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2em;
+            color: #d8d8d8;
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .lead-form-section .lf-micro {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.82em;
+            color: rgba(255, 215, 0, 0.4);
+            text-align: center;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        .lead-form-card {
+            width: 100%;
+            background: rgba(10, 10, 25, 0.85);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            border-radius: 4px;
+            padding: 48px 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .lead-form-card .form-group label {
+            font-size: 0.78em;
+        }
+
+        /* Checkbox containers */
+        .lf-sms-group {
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .lf-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+            margin-bottom: 14px;
+        }
+
+        .lf-checkbox input[type="checkbox"] {
+            width: 16px;
+            min-width: 16px;
+            height: 16px;
+            margin-top: 3px;
+            accent-color: #FFD700;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .lf-checkbox span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.92em;
+            color: rgba(216, 216, 216, 0.65);
+            line-height: 1.5;
+        }
+
+        /* Lead form legal */
+        .lf-legal {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.75em;
+            color: rgba(255, 215, 0, 0.3);
+            text-align: center;
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+            margin-top: 12px;
+        }
+
+        .lf-legal a {
+            color: rgba(255, 215, 0, 0.45);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .lf-legal a:hover {
+            color: rgba(255, 215, 0, 0.8);
+        }
+
+        /* Lead form submit btn */
+        .btn-lead-submit {
+            width: 100%;
+            padding: 18px;
+            background: #FFD700;
+            color: #000;
+            border: 1px solid #FFD700;
+            font-family: 'Cinzel', serif;
+            font-size: 1em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 0;
+        }
+
+        .btn-lead-submit:hover {
+            background: #fff;
+            border-color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-lead-submit:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .lf-success {
+            display: none;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15em;
+            color: #FFD700;
+            font-style: italic;
+            text-align: center;
+            line-height: 1.65;
+            margin-top: 20px;
+        }
+
         .signature {
             font-family: 'Great Vibes', cursive;
             font-size: 4em;
@@ -812,7 +969,7 @@
             </div>
 
             <div class="button-group">
-                <a href="#apply" class="submit-button cta-primary">Start Here</a>
+                <a href="#start-form" class="submit-button cta-primary">Start Here</a>
                 <a href="coaching.html" class="submit-button cta-secondary">Explore Coaching</a>
             </div>
 
@@ -938,7 +1095,63 @@
 
             <!-- Problem Section -->
 
-            <!-- Application Form -->
+            <!-- ── LEAD CAPTURE FORM ── -->
+            <section id="start-form" class="lead-form-section">
+                <p class="lf-label">Mental Capital</p>
+                <h2 class="lf-headline">Begin Your Ascent</h2>
+                <p class="lf-sub">Clarity first. Then direction.</p>
+                <p class="lf-micro">Enter your details to get access to insights, updates, and next steps.</p>
+
+                <div class="lead-form-card">
+                    <form id="leadForm">
+                        <div class="form-group">
+                            <label for="lf-name">Name</label>
+                            <input type="text" id="lf-name" name="name" required placeholder="Full Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lf-email">Email</label>
+                            <input type="email" id="lf-email" name="email" required placeholder="Your Email Address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lf-phone">Phone</label>
+                            <input type="tel" id="lf-phone" name="phone" required placeholder="Your Phone Number">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lf-goal">What Are You Currently Trying to Improve or Solve?</label>
+                            <textarea id="lf-goal" name="goal" rows="3" placeholder="Optional — be direct."></textarea>
+                        </div>
+
+                        <!-- SMS Consent -->
+                        <div class="lf-sms-group">
+                            <label class="lf-checkbox">
+                                <input type="checkbox" name="sms_consent_transactional" id="lf-sms-trans">
+                                <span>I consent to receive text messages from Mental Capital related to updates, onboarding, and access details. Message frequency may vary. Message &amp; data rates may apply. Reply STOP to opt out.</span>
+                            </label>
+                            <label class="lf-checkbox">
+                                <input type="checkbox" name="sms_consent_marketing" id="lf-sms-mkt">
+                                <span>I agree to receive occasional updates and opportunities from Mental Capital. Message &amp; data rates may apply. Reply STOP to opt out.</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-lead-submit" id="leadSubmitBtn">Enter the Network</button>
+
+                        <div class="lf-legal">
+                            <p>By submitting this form, you agree to our <a href="privacy-policy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms &amp; Conditions</a>.</p>
+                        </div>
+
+                        <p class="lf-success" id="leadSuccess">
+                            You're in. Watch your email for next steps.
+                        </p>
+                    </form>
+                </div>
+            </section>
+
+            <div class="divider" style="margin-top: 0;"></div>
+
+            <!-- Application Form (existing, untouched) -->
             <div class="section-box" id="apply">
                 <h2 class="section-header">You Don’t Fix This Later</h2>
                 <p class="subtitle" style="font-size: 1.1em;">
@@ -970,8 +1183,8 @@
                 <p class="subtitle" style="font-size: 1em; margin-bottom: 10px;">Strategic Performance Architect</p>
                 <div class="signature">Zeus</div>
                 <div style="margin-top: 24px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
-                    <a href="/privacy-policy" style="font-family: 'Philosopher', sans-serif; font-size: 0.8em; color: rgba(255,215,0,0.4); text-decoration: none; letter-spacing: 1px; transition: color 0.3s;" onmouseover="this.style.color='rgba(255,215,0,0.8)'" onmouseout="this.style.color='rgba(255,215,0,0.4)'">Privacy Policy</a>
-                    <a href="/terms" style="font-family: 'Philosopher', sans-serif; font-size: 0.8em; color: rgba(255,215,0,0.4); text-decoration: none; letter-spacing: 1px; transition: color 0.3s;" onmouseover="this.style.color='rgba(255,215,0,0.8)'" onmouseout="this.style.color='rgba(255,215,0,0.4)'">Terms &amp; Conditions</a>
+                    <a href="privacy-policy.html" style="font-family: 'Philosopher', sans-serif; font-size: 0.8em; color: rgba(255,215,0,0.4); text-decoration: none; letter-spacing: 1px; transition: color 0.3s;" onmouseover="this.style.color='rgba(255,215,0,0.8)'" onmouseout="this.style.color='rgba(255,215,0,0.4)'">Privacy Policy</a>
+                    <a href="terms.html" style="font-family: 'Philosopher', sans-serif; font-size: 0.8em; color: rgba(255,215,0,0.4); text-decoration: none; letter-spacing: 1px; transition: color 0.3s;" onmouseover="this.style.color='rgba(255,215,0,0.8)'" onmouseout="this.style.color='rgba(255,215,0,0.4)'">Terms &amp; Conditions</a>
                 </div>
             </footer>
         </div>
@@ -1023,6 +1236,49 @@
                     }
                 }
             }
+
+            // Lead Form Handler
+            (function () {
+                const leadForm = document.getElementById('leadForm');
+                const leadBtn = document.getElementById('leadSubmitBtn');
+                const leadSuccess = document.getElementById('leadSuccess');
+
+                if (!leadForm) return;
+
+                leadForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    leadBtn.innerText = 'Submitting...';
+                    leadBtn.disabled = true;
+
+                    const payload = {
+                        name: document.getElementById('lf-name')?.value,
+                        email: document.getElementById('lf-email')?.value,
+                        phone: document.getElementById('lf-phone')?.value,
+                        goal: document.getElementById('lf-goal')?.value,
+                        sms_consent_transactional: document.getElementById('lf-sms-trans')?.checked || false,
+                        sms_consent_marketing: document.getElementById('lf-sms-mkt')?.checked || false,
+                        source: 'homepage_lead_form',
+                        tag: 'lead_entered'
+                    };
+
+                    fetch('https://services.leadconnectorhq.com/hooks/TBEyJX4iqsvjNPRPuMKw/webhook-trigger/62268d80-a169-471b-a791-fb341f271285', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    })
+                    .then(() => {
+                        leadForm.querySelectorAll('input, textarea, select').forEach(el => el.disabled = true);
+                        leadBtn.innerText = "You're In";
+                        if (leadSuccess) leadSuccess.style.display = 'block';
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        leadBtn.innerText = 'Try Again';
+                        leadBtn.disabled = false;
+                    });
+                });
+            })();
 
             window.addEventListener("load", () => {
                 createStars();
