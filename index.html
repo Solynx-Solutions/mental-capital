@@ -1254,7 +1254,7 @@
                     const payload = {
                         name: document.getElementById('lf-name')?.value,
                         email: document.getElementById('lf-email')?.value,
-                        phone: document.getElementById('lf-phone')?.value,
+                        phone: "+1" + document.getElementById('lf-phone')?.value,
                         message: document.getElementById('lf-goal')?.value,
                         sms_consent_transactional: document.getElementById('lf-sms-trans')?.checked || false,
                         sms_consent_marketing: document.getElementById('lf-sms-mkt')?.checked || false,
