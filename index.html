@@ -460,13 +460,115 @@
             box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
         }
 
-        /* Shared Footer */
+        /* ── FOOTER ── */
         .footer {
             width: 100%;
             text-align: center;
-            padding: 40px 0;
+            padding: 48px 20px 40px;
             border-top: 1px solid rgba(255, 215, 0, 0.1);
             margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+
+        .footer-title {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.88em;
+            color: rgba(255, 215, 0, 0.45);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+
+        .footer-link {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.78em;
+            color: rgba(255, 215, 0, 0.4);
+            text-decoration: none;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            background: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: rgba(255, 215, 0, 0.85);
+        }
+
+        .footer-link-sep {
+            color: rgba(255, 215, 0, 0.2);
+            font-size: 0.75em;
+            user-select: none;
+        }
+
+        /* Powered-by attribution */
+        .powered-by-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 28px;
+            text-decoration: none;
+            color: rgba(255, 215, 0, 0.45);
+            background: none;
+            border: none;
+            transition: opacity 0.35s ease, color 0.35s ease, filter 0.35s ease;
+            opacity: 0.75;
+        }
+
+        .powered-by-link:hover {
+            opacity: 1;
+            color: rgba(255, 215, 0, 0.9);
+            filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.15));
+        }
+
+        .powered-by-logo {
+            height: 22px;
+            width: auto;
+            max-width: 100px;
+            object-fit: contain;
+            display: block;
+            flex-shrink: 0;
+            opacity: 0.75;
+        }
+
+        .powered-by-text {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 0.75em;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            color: rgba(255, 215, 0, 0.45);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .powered-by-logo {
+                height: 20px;
+                max-width: 88px;
+            }
+
+            .powered-by-link {
+                gap: 8px;
+            }
+
+            .powered-by-text {
+                font-size: 0.72em;
+            }
+
+            .footer-links {
+                gap: 14px;
+            }
         }
 
         /* ── LEAD CAPTURE FORM ── */
@@ -1172,10 +1274,10 @@
 
             <div class="divider" style="margin-top: 0;"></div>
 
-            <!-- Application Form (existing, untouched) -->
-            <div class="section-box" id="apply">
-                <h2 class="section-header">You Don’t Fix This Later</h2>
-                <p class="subtitle" style="font-size: 1.1em;">
+            <!-- Application Form -->
+            <div class="section-box" id="apply" style="text-align: center; margin-left: auto; margin-right: auto;">
+                <h2 class="section-header" style="text-align: center; margin-left: auto; margin-right: auto;">You Don’t Fix This Later</h2>
+                <p class="subtitle" style="font-size: 1.1em; text-align: center; margin-left: auto; margin-right: auto; max-width: 640px;">
                     The longer you delay, the more your patterns stay in place.<br><br>
                     If you're ready to take control of how you think, decide, and act&#8212;this is where it starts.
                 </p>
@@ -1201,12 +1303,35 @@
             </div>
 
             <footer class="footer">
-                <p class="subtitle" style="font-size: 1em; margin-bottom: 10px;">Strategic Performance Architect</p>
+
+                <!-- Title & Signature -->
+                <p class="footer-title">Strategic Performance Architect</p>
                 <div class="signature">Zeus</div>
-                <div style="margin-top: 24px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
-                    <a href="privacy-policy.html" style="font-family: 'Philosopher', sans-serif; font-size: 0.8em; color: rgba(255,215,0,0.4); text-decoration: none; letter-spacing: 1px; transition: color 0.3s;" onmouseover="this.style.color='rgba(255,215,0,0.8)'" onmouseout="this.style.color='rgba(255,215,0,0.4)'">Privacy Policy</a>
-                    <a href="terms.html" style="font-family: 'Philosopher', sans-serif; font-size: 0.8em; color: rgba(255,215,0,0.4); text-decoration: none; letter-spacing: 1px; transition: color 0.3s;" onmouseover="this.style.color='rgba(255,215,0,0.8)'" onmouseout="this.style.color='rgba(255,215,0,0.4)'">Terms &amp; Conditions</a>
-                </div>
+
+                <!-- Nav links -->
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+                    <span class="footer-link-sep" aria-hidden="true">|</span>
+                    <a href="terms.html" class="footer-link">Terms &amp; Conditions</a>
+                </nav>
+
+                <!-- Powered by SOLYNX LLC -->
+                <a
+                    href="https://www.solynx.solutions/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="powered-by-link"
+                    aria-label="Powered by SOLYNX LLC"
+                >
+                    <img
+                        src="https://www.solynx.solutions/assets/images/SLX-WRD.png"
+                        alt="SOLYNX LLC Logo"
+                        class="powered-by-logo"
+                        loading="lazy"
+                    >
+                    <span class="powered-by-text">Powered by SOLYNX LLC</span>
+                </a>
+
             </footer>
         </div>
 
