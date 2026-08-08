@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Santa Cruz County Men's Group Interest | Mental Capital</title>
-    <meta name="description" content="Register your interest in a Santa Cruz County men's group presented through Mental Capital in collaboration with River Crimmer.">
+    <title>Santa Cruz County Men's Groups | Mental Capital</title>
+    <meta name="description" content="Register your interest in upcoming Santa Cruz County men's groups through Mental Capital in collaboration with River Crimmer.">
     <link rel="canonical" href="https://mentalcapital.world/santa-cruz-mens-group">
-    <meta property="og:title" content="Santa Cruz County Men's Group Interest | Mental Capital">
-    <meta property="og:description" content="Share your interest and receive updates about the upcoming Santa Cruz County men's group.">
+    <meta property="og:title" content="Santa Cruz County Men's Groups | Mental Capital">
+    <meta property="og:description" content="Register your interest and receive details about upcoming Santa Cruz County men's groups as locations, schedules and enrollment information are confirmed.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mentalcapital.world/santa-cruz-mens-group">
     <meta property="og:image" content="https://mentalcapital.world/assets/images/mental-capital-logo.png">
@@ -15,533 +15,122 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg: #030308;
-            --panel: rgba(12, 10, 24, 0.94);
-            --panel-2: rgba(18, 14, 32, 0.88);
-            --gold: #e5c15c;
-            --gold-bright: #ffd86b;
-            --text: #f6f2e8;
-            --muted: #b9b1a4;
-            --border: rgba(229, 193, 92, 0.28);
-            --danger: #ffb4a8;
-            --success: #bfe8c7;
-        }
-        * { box-sizing: border-box; }
-        html { background: var(--bg); scroll-behavior: smooth; }
-        body {
-            margin: 0;
-            min-height: 100vh;
-            font-family: 'Cormorant Garamond', serif;
-            background:
-                radial-gradient(circle at 50% -15%, rgba(74, 50, 120, 0.24), transparent 42%),
-                linear-gradient(180deg, #070511 0%, #030308 55%, #000 100%);
-            color: var(--text);
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            opacity: .22;
-            background-image: radial-gradient(circle, rgba(255,255,255,.55) 0 1px, transparent 1.2px);
-            background-size: 46px 46px;
-            mask-image: linear-gradient(to bottom, #000 0%, transparent 78%);
-        }
-        a { color: var(--gold-bright); }
-        .shell {
-            width: min(100%, 760px);
-            margin: 0 auto;
-            padding: max(24px, env(safe-area-inset-top)) 18px max(40px, env(safe-area-inset-bottom));
-            position: relative;
-            z-index: 1;
-        }
-        .brand {
-            display: flex;
-            justify-content: center;
-            margin: 8px 0 18px;
-        }
-        .brand img {
-            width: 96px;
-            height: auto;
-            filter: drop-shadow(0 0 18px rgba(229,193,92,.32));
-        }
-        .eyebrow {
-            margin: 0 0 10px;
-            text-align: center;
-            font-family: 'Cinzel', serif;
-            font-size: .72rem;
-            letter-spacing: .22em;
-            text-transform: uppercase;
-            color: var(--gold);
-        }
-        h1 {
-            margin: 0 auto 12px;
-            max-width: 650px;
-            text-align: center;
-            font-family: 'Cinzel', serif;
-            font-size: clamp(2rem, 8vw, 3.6rem);
-            line-height: 1.03;
-            letter-spacing: .02em;
-            color: #fff7df;
-        }
-        .intro {
-            max-width: 620px;
-            margin: 0 auto 24px;
-            text-align: center;
-            font-size: clamp(1.12rem, 4.6vw, 1.32rem);
-            line-height: 1.5;
-            color: var(--muted);
-        }
-        .intro strong { color: var(--text); font-weight: 600; }
-        .card {
-            background: linear-gradient(180deg, var(--panel-2), var(--panel));
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            box-shadow: 0 24px 70px rgba(0,0,0,.48);
-            overflow: hidden;
-        }
-        .card-head {
-            padding: 22px 20px 18px;
-            border-bottom: 1px solid rgba(229,193,92,.15);
-        }
-        .card-head h2 {
-            margin: 0 0 7px;
-            font-family: 'Cinzel', serif;
-            font-size: 1.2rem;
-            color: var(--gold-bright);
-        }
-        .card-head p {
-            margin: 0;
-            font-size: 1rem;
-            color: var(--muted);
-            line-height: 1.45;
-        }
-        form { padding: 20px; }
-        .grid { display: grid; gap: 16px; }
-        .two { grid-template-columns: 1fr; }
-        .field { display: grid; gap: 7px; }
-        label, legend {
-            font-family: 'Cinzel', serif;
-            font-size: .78rem;
-            line-height: 1.35;
-            letter-spacing: .06em;
-            color: #efe5c9;
-        }
-        .required::after { content: ' *'; color: var(--gold-bright); }
-        input, select, textarea {
-            width: 100%;
-            min-height: 50px;
-            border: 1px solid rgba(229,193,92,.28);
-            border-radius: 10px;
-            background: rgba(0,0,0,.38);
-            color: #fff;
-            font: inherit;
-            font-size: 1.05rem;
-            padding: 12px 13px;
-            outline: none;
-            transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
-        }
-        textarea { min-height: 130px; resize: vertical; }
-        input:focus, select:focus, textarea:focus {
-            border-color: var(--gold-bright);
-            box-shadow: 0 0 0 3px rgba(255,216,107,.10);
-            background: rgba(0,0,0,.5);
-        }
-        option { color: #111; }
-        .scale-wrap {
-            border: 1px solid rgba(229,193,92,.18);
-            border-radius: 12px;
-            padding: 14px;
-            background: rgba(0,0,0,.18);
-        }
-        .scale-labels {
-            display: flex;
-            justify-content: space-between;
-            gap: 14px;
-            margin-top: 8px;
-            font-size: .9rem;
-            color: var(--muted);
-        }
-        input[type="range"] {
-            min-height: 34px;
-            padding: 0;
-            accent-color: var(--gold-bright);
-            border: 0;
-            background: transparent;
-        }
-        .scale-value {
-            font-family: 'Cinzel', serif;
-            color: var(--gold-bright);
-            font-size: 1.2rem;
-            margin-left: 6px;
-        }
-        fieldset {
-            border: 0;
-            margin: 0;
-            padding: 0;
-        }
-        .contact-options {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            margin-top: 8px;
-        }
-        .contact-option {
-            position: relative;
-        }
-        .contact-option input {
-            position: absolute;
-            opacity: 0;
-            pointer-events: none;
-        }
-        .contact-option span {
-            min-height: 46px;
-            display: grid;
-            place-items: center;
-            border: 1px solid rgba(229,193,92,.25);
-            border-radius: 10px;
-            background: rgba(0,0,0,.25);
-            font-family: 'Cinzel', serif;
-            font-size: .73rem;
-            color: #e9e1d2;
-            cursor: pointer;
-        }
-        .contact-option input:checked + span {
-            border-color: var(--gold-bright);
-            background: rgba(229,193,92,.12);
-            color: var(--gold-bright);
-            box-shadow: inset 0 0 0 1px rgba(229,193,92,.2);
-        }
-        .consent-box {
-            display: grid;
-            gap: 12px;
-            padding-top: 2px;
-        }
-        .check {
-            display: grid;
-            grid-template-columns: 22px 1fr;
-            gap: 10px;
-            align-items: start;
-            font-family: inherit;
-            font-size: .95rem;
-            line-height: 1.42;
-            color: var(--muted);
-            letter-spacing: 0;
-        }
-        .check input {
-            width: 18px;
-            height: 18px;
-            min-height: 0;
-            margin: 2px 0 0;
-            padding: 0;
-            accent-color: var(--gold-bright);
-        }
-        .sms-note {
-            margin: 0;
-            color: #d7ccb9;
-            font-size: .91rem;
-            line-height: 1.42;
-        }
-        .sms-note strong { color: var(--gold-bright); }
-        .error {
-            display: none;
-            margin: 0;
-            padding: 11px 12px;
-            border: 1px solid rgba(255,180,168,.28);
-            border-radius: 10px;
-            color: var(--danger);
-            background: rgba(110,30,24,.18);
-            font-size: .96rem;
-        }
-        .error.show { display: block; }
-        .submit {
-            width: 100%;
-            min-height: 54px;
-            border: 1px solid var(--gold-bright);
-            border-radius: 10px;
-            background: linear-gradient(180deg, #f3d36e, #cfa73f);
-            color: #0b0910;
-            font-family: 'Cinzel', serif;
-            font-weight: 700;
-            font-size: .9rem;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-            cursor: pointer;
-            box-shadow: 0 12px 28px rgba(191,150,45,.2);
-        }
-        .submit:disabled { opacity: .62; cursor: wait; }
-        .legal {
-            margin: 2px 0 0;
-            color: #958d83;
-            font-size: .88rem;
-            line-height: 1.42;
-            text-align: center;
-        }
-        .non-clinical {
-            margin: 18px auto 0;
-            max-width: 660px;
-            text-align: center;
-            color: #8f887e;
-            font-size: .88rem;
-            line-height: 1.42;
-        }
-        .footer {
-            margin-top: 24px;
-            text-align: center;
-            color: #8c857b;
-            font-size: .88rem;
-        }
-        .footer a { color: #bda75f; text-decoration: none; }
-        @media (min-width: 620px) {
-            .shell { padding-left: 24px; padding-right: 24px; }
-            .card-head { padding: 26px 28px 20px; }
-            form { padding: 26px 28px 30px; }
-            .two { grid-template-columns: 1fr 1fr; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            * { scroll-behavior: auto !important; }
-        }
+        :root{--bg:#030308;--panel:rgba(12,10,24,.94);--panel2:rgba(18,14,32,.88);--gold:#e5c15c;--gold2:#ffd86b;--text:#f6f2e8;--muted:#b9b1a4;--border:rgba(229,193,92,.28);--danger:#ffb4a8}
+        *{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;min-height:100vh;font-family:'Cormorant Garamond',serif;background:radial-gradient(circle at 50% -15%,rgba(74,50,120,.24),transparent 42%),linear-gradient(180deg,#070511 0%,#030308 55%,#000 100%);color:var(--text)}
+        body:before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.2;background-image:radial-gradient(circle,rgba(255,255,255,.55) 0 1px,transparent 1.2px);background-size:46px 46px;mask-image:linear-gradient(to bottom,#000 0%,transparent 78%)}
+        a{color:var(--gold2)}.shell{width:min(100%,760px);margin:0 auto;padding:max(24px,env(safe-area-inset-top)) 18px max(40px,env(safe-area-inset-bottom));position:relative;z-index:1}.brand{display:flex;justify-content:center;margin:8px 0 18px}.brand img{width:96px;height:auto;filter:drop-shadow(0 0 18px rgba(229,193,92,.32))}
+        .eyebrow{margin:0 0 10px;text-align:center;font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}h1{margin:0 auto 12px;max-width:650px;text-align:center;font-family:'Cinzel',serif;font-size:clamp(2rem,8vw,3.6rem);line-height:1.03;letter-spacing:.02em;color:#fff7df}.intro{max-width:630px;margin:0 auto 24px;text-align:center;font-size:clamp(1.12rem,4.6vw,1.32rem);line-height:1.5;color:var(--muted)}.intro strong{color:var(--text);font-weight:600}
+        .card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--border);border-radius:18px;box-shadow:0 24px 70px rgba(0,0,0,.48);overflow:hidden}.card-head{padding:22px 20px 18px;border-bottom:1px solid rgba(229,193,92,.15)}.card-head h2{margin:0 0 7px;font-family:'Cinzel',serif;font-size:1.2rem;color:var(--gold2)}.card-head p{margin:0;font-size:1rem;color:var(--muted);line-height:1.45}
+        form{padding:20px}.grid{display:grid;gap:16px}.two{grid-template-columns:1fr}.field{display:grid;gap:7px}label,legend{font-family:'Cinzel',serif;font-size:.78rem;line-height:1.35;letter-spacing:.06em;color:#efe5c9}.required:after{content:' *';color:var(--gold2)}input,textarea{width:100%;min-height:50px;border:1px solid rgba(229,193,92,.28);border-radius:10px;background:rgba(0,0,0,.38);color:#fff;font:inherit;font-size:1.05rem;padding:12px 13px;outline:none;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease}textarea{min-height:130px;resize:vertical}input:focus,textarea:focus{border-color:var(--gold2);box-shadow:0 0 0 3px rgba(255,216,107,.1);background:rgba(0,0,0,.5)}
+        .scale-wrap{border:1px solid rgba(229,193,92,.18);border-radius:12px;padding:14px;background:rgba(0,0,0,.18)}.scale-labels{display:flex;justify-content:space-between;gap:14px;margin-top:8px;font-size:.9rem;color:var(--muted)}input[type=range]{min-height:34px;padding:0;accent-color:var(--gold2);border:0;background:transparent}.scale-value{font-family:'Cinzel',serif;color:var(--gold2);font-size:1.2rem;margin-left:6px}
+        fieldset{border:0;margin:0;padding:0}.contact-options{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.contact-option{position:relative}.contact-option input{position:absolute;opacity:0;pointer-events:none}.contact-option span{min-height:46px;display:grid;place-items:center;border:1px solid rgba(229,193,92,.25);border-radius:10px;background:rgba(0,0,0,.25);font-family:'Cinzel',serif;font-size:.73rem;color:#e9e1d2;cursor:pointer}.contact-option input:checked+span{border-color:var(--gold2);background:rgba(229,193,92,.12);color:var(--gold2);box-shadow:inset 0 0 0 1px rgba(229,193,92,.2)}
+        .consent-box{display:grid;gap:13px;padding:15px;border:1px solid rgba(229,193,92,.16);border-radius:12px;background:rgba(0,0,0,.16)}.check{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;font-family:inherit;font-size:.94rem;line-height:1.42;color:var(--muted);letter-spacing:0}.check input{width:18px;height:18px;min-height:0;margin:2px 0 0;padding:0;accent-color:var(--gold2)}.sms-note{margin:0;color:#d7ccb9;font-size:.91rem;line-height:1.42}.sms-note strong{color:var(--gold2)}
+        .error{display:none;margin:0;padding:11px 12px;border:1px solid rgba(255,180,168,.28);border-radius:10px;color:var(--danger);background:rgba(110,30,24,.18);font-size:.96rem}.error.show{display:block}.submit{width:100%;min-height:54px;border:1px solid var(--gold2);border-radius:10px;background:linear-gradient(180deg,#f3d36e,#cfa73f);color:#0b0910;font-family:'Cinzel',serif;font-weight:700;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;box-shadow:0 12px 28px rgba(191,150,45,.2)}.submit:disabled{opacity:.62;cursor:wait}.legal{margin:2px 0 0;color:#958d83;font-size:.88rem;line-height:1.42;text-align:center}.non-clinical{margin:18px auto 0;max-width:660px;text-align:center;color:#8f887e;font-size:.88rem;line-height:1.42}.footer{margin-top:24px;text-align:center;color:#8c857b;font-size:.88rem}.footer a{color:#bda75f;text-decoration:none}
+        @media(min-width:620px){.shell{padding-left:24px;padding-right:24px}.card-head{padding:26px 28px 20px}form{padding:26px 28px 30px}.two{grid-template-columns:1fr 1fr}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
     </style>
 </head>
 <body>
-    <main class="shell">
-        <div class="brand"><img src="assets/images/mental-capital-logo.png" alt="Mental Capital"></div>
-        <p class="eyebrow">Santa Cruz County</p>
-        <h1>Men's Group Interest Registration</h1>
-        <p class="intro">A new local men's group is being developed through <strong>Mental Capital</strong> in collaboration with <strong>River Crimmer</strong>. Add your name to the interest list and we'll send you the next details as they are confirmed.</p>
+<main class="shell">
+    <div class="brand"><img src="assets/images/mental-capital-logo.png" alt="Mental Capital"></div>
+    <p class="eyebrow">Santa Cruz County</p>
+    <h1>Men's Groups Interest Registration</h1>
+    <p class="intro">Mental Capital and River Crimmer are developing upcoming men's groups in Santa Cruz County. Register your interest and we'll contact you as group locations, schedules, format and enrollment details are confirmed.</p>
 
-        <section class="card" aria-labelledby="form-title">
-            <div class="card-head">
-                <h2 id="form-title">Register Your Interest</h2>
-                <p>This is an interest-registration form. There is no payment and no commitment to participate.</p>
-            </div>
-
-            <form id="mensGroupForm" novalidate>
-                <div class="grid">
-                    <div class="grid two">
-                        <div class="field">
-                            <label class="required" for="firstName">First Name</label>
-                            <input id="firstName" name="first_name" type="text" autocomplete="given-name" required>
-                        </div>
-                        <div class="field">
-                            <label class="required" for="lastName">Last Name</label>
-                            <input id="lastName" name="last_name" type="text" autocomplete="family-name" required>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label class="required" for="email">Email Address</label>
-                        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
-                    </div>
-
-                    <div class="field">
-                        <label class="required" for="phone">Mobile Phone Number</label>
-                        <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(831) 555-0123" required>
-                    </div>
-
-                    <div class="field">
-                        <label class="required" for="countyArea">What part of Santa Cruz County do you currently live in?</label>
-                        <input id="countyArea" name="county_area" type="text" autocomplete="address-level2" placeholder="City, neighborhood, or area" required>
-                    </div>
-
-                    <div class="field scale-wrap">
-                        <label class="required" for="lifeSatisfaction">On a scale of 1–10, how satisfied are you with where you are in life right now? <span class="scale-value" id="scaleValue">5</span></label>
-                        <input id="lifeSatisfaction" name="life_satisfaction" type="range" min="1" max="10" value="5" step="1" required aria-describedby="scaleLabels">
-                        <div class="scale-labels" id="scaleLabels"><span>1 — Not satisfied</span><span>10 — Very satisfied</span></div>
-                    </div>
-
-                    <div class="field">
-                        <label for="priority">What would you most like to improve, work through, or change in your life right now?</label>
-                        <textarea id="priority" name="current_priority" maxlength="1200" placeholder="Optional — share only what you are comfortable providing."></textarea>
-                    </div>
-
-                    <fieldset>
-                        <legend class="required">Preferred contact method</legend>
-                        <div class="contact-options">
-                            <label class="contact-option"><input type="radio" name="preferred_contact_method" value="Text" required><span>Text</span></label>
-                            <label class="contact-option"><input type="radio" name="preferred_contact_method" value="Email" required><span>Email</span></label>
-                            <label class="contact-option"><input type="radio" name="preferred_contact_method" value="Phone" required><span>Phone</span></label>
-                        </div>
-                    </fieldset>
-
-                    <div class="consent-box">
-                        <label class="check" for="smsConsent">
-                            <input id="smsConsent" name="sms_consent_transactional" type="checkbox">
-                            <span>I agree to receive text messages from Mental Capital about my Santa Cruz County Men's Group interest registration, meeting updates, and related next steps. Message frequency varies. Message &amp; data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase.</span>
-                        </label>
-                        <p class="sms-note"><strong>If you choose Text as your preferred contact method, SMS consent is required.</strong> If you do not consent to text messages, choose Email or Phone instead.</p>
-                    </div>
-
-                    <p class="error" id="formError" role="alert"></p>
-
-                    <button class="submit" id="submitBtn" type="submit">Register My Interest</button>
-
-                    <p class="legal">By submitting this form, you authorize Mental Capital to contact you about this registration and related Men's Group updates using the contact method you selected. See our <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</p>
+    <section class="card" aria-labelledby="form-title">
+        <div class="card-head"><h2 id="form-title">Register Your Interest</h2><p>This is a low-friction interest registration. There is no payment and no commitment to participate.</p></div>
+        <form id="mensGroupForm" novalidate>
+            <div class="grid">
+                <div class="grid two">
+                    <div class="field"><label class="required" for="firstName">First Name</label><input id="firstName" name="first_name" type="text" autocomplete="given-name" required></div>
+                    <div class="field"><label class="required" for="lastName">Last Name</label><input id="lastName" name="last_name" type="text" autocomplete="family-name" required></div>
                 </div>
-            </form>
-        </section>
+                <div class="field"><label class="required" for="email">Email Address</label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" required></div>
+                <div class="field"><label class="required" for="phone">Mobile Phone Number</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(831) 555-0123" required></div>
+                <div class="field"><label class="required" for="countyArea">What part of Santa Cruz County do you currently live in?</label><input id="countyArea" name="county_area" type="text" autocomplete="address-level2" placeholder="City, neighborhood, or area" required></div>
+                <div class="field scale-wrap"><label class="required" for="lifeSatisfaction">On a scale of 1–10, how satisfied are you with where you are in life right now? <span class="scale-value" id="scaleValue">5</span></label><input id="lifeSatisfaction" name="life_satisfaction" type="range" min="1" max="10" value="5" step="1" required aria-describedby="scaleLabels"><div class="scale-labels" id="scaleLabels"><span>1 — Not satisfied</span><span>10 — Very satisfied</span></div></div>
+                <div class="field"><label for="priority">What would you most like to improve, work through, or change in your life right now?</label><textarea id="priority" name="current_priority" maxlength="1200" placeholder="Optional — share only what you are comfortable providing."></textarea></div>
+                <fieldset><legend class="required">Preferred Contact Method</legend><div class="contact-options"><label class="contact-option"><input type="radio" name="preferred_contact_method" value="Text" required><span>Text</span></label><label class="contact-option"><input type="radio" name="preferred_contact_method" value="Email" required><span>Email</span></label><label class="contact-option"><input type="radio" name="preferred_contact_method" value="Phone" required><span>Phone</span></label></div></fieldset>
 
-        <p class="non-clinical">This registration is not a clinical intake, mental-health assessment, diagnosis, or therapy evaluation. Please do not submit private medical or clinical information through this form.</p>
-        <footer class="footer">Mental Capital · <a href="https://www.solynx.solutions/" target="_blank" rel="noopener">Powered by SOLYNX LLC</a></footer>
-    </main>
+                <div class="consent-box">
+                    <label class="check" for="smsTransactional"><input id="smsTransactional" name="sms_consent_transactional" type="checkbox"><span>I consent to receive non-marketing text messages from Mental Capital regarding this Men's Groups interest registration, scheduling updates, enrollment information, and related access details. Message frequency may vary. Message &amp; data rates may apply. Reply HELP for assistance or STOP to opt out.</span></label>
+                    <label class="check" for="smsMarketing"><input id="smsMarketing" name="sms_consent_marketing" type="checkbox"><span>By checking this box, I consent to receive marketing and promotional messages, including special offers, discounts, and new product or program updates from Mental Capital. Message frequency may vary. Message &amp; data rates may apply. Reply HELP for help or STOP to opt out.</span></label>
+                    <p class="sms-note"><strong>If you choose Text as your preferred contact method, the first checkbox is required.</strong> Marketing consent is optional and is not required to register your interest.</p>
+                </div>
 
-    <script>
-        (function () {
-            const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/TBEyJX4iqsvjNPRPuMKw/webhook-trigger/Qxk7Fkm3Y526q4eiW6Dp';
-            const form = document.getElementById('mensGroupForm');
-            const submitBtn = document.getElementById('submitBtn');
-            const formError = document.getElementById('formError');
-            const lifeSatisfaction = document.getElementById('lifeSatisfaction');
-            const scaleValue = document.getElementById('scaleValue');
-            const smsConsent = document.getElementById('smsConsent');
+                <p class="error" id="formError" role="alert"></p>
+                <button class="submit" id="submitBtn" type="submit">Register My Interest</button>
+                <p class="legal">By submitting this form, you authorize Mental Capital to contact you about this registration using the contact method you selected. See our <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>.</p>
+            </div>
+        </form>
+    </section>
 
-            const params = new URLSearchParams(window.location.search);
-            const tracking = {
-                source: 'Santa Cruz Men\'s Groups',
-                campaign: 'Men\'s Groups QR Launch',
-                partner: 'River Crimmer',
-                route_key: 'mc_sc_mens_group_interest_v1',
-                qr_source: params.get('qr_source') || params.get('flyer') || 'unattributed',
-                utm_source: params.get('utm_source') || 'direct',
-                utm_medium: params.get('utm_medium') || 'qr',
-                utm_campaign: params.get('utm_campaign') || 'mens_groups_qr_launch',
-                utm_content: params.get('utm_content') || ''
-            };
-
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                event: 'mens_group_interest_view',
-                mc_source: tracking.source,
-                mc_campaign: tracking.campaign,
-                mc_partner: tracking.partner,
-                mc_qr_source: tracking.qr_source,
-                mc_utm_source: tracking.utm_source,
-                mc_utm_medium: tracking.utm_medium,
-                mc_utm_campaign: tracking.utm_campaign,
-                mc_utm_content: tracking.utm_content
-            });
-
-            lifeSatisfaction.addEventListener('input', function () {
-                scaleValue.textContent = lifeSatisfaction.value;
-            });
-
-            function normalizePhone(value) {
-                const digits = String(value || '').replace(/\D/g, '');
-                if (digits.length === 10) return '+1' + digits;
-                if (digits.length === 11 && digits.startsWith('1')) return '+' + digits;
-                return value.trim();
-            }
-
-            function showError(message) {
-                formError.textContent = message;
-                formError.classList.add('show');
-                formError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-
-            function clearError() {
-                formError.textContent = '';
-                formError.classList.remove('show');
-            }
-
-            form.addEventListener('submit', async function (event) {
-                event.preventDefault();
-                clearError();
-
-                if (!form.checkValidity()) {
-                    form.reportValidity();
-                    return;
-                }
-
-                const preferred = form.querySelector('input[name="preferred_contact_method"]:checked')?.value || '';
-                if (preferred === 'Text' && !smsConsent.checked) {
-                    showError('Please provide SMS consent to choose Text as your preferred contact method, or select Email or Phone instead.');
-                    smsConsent.focus();
-                    return;
-                }
-
-                const firstName = document.getElementById('firstName').value.trim();
-                const lastName = document.getElementById('lastName').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const phone = normalizePhone(document.getElementById('phone').value);
-                const countyArea = document.getElementById('countyArea').value.trim();
-                const satisfaction = lifeSatisfaction.value;
-                const priority = document.getElementById('priority').value.trim();
-
-                const summary = [
-                    'Santa Cruz County Men\'s Group Interest Registration',
-                    'Area: ' + countyArea,
-                    'Life satisfaction: ' + satisfaction + '/10',
-                    'Preferred contact: ' + preferred,
-                    'SMS consent: ' + (smsConsent.checked ? 'Yes' : 'No'),
-                    priority ? 'Current priority: ' + priority : 'Current priority: Not provided',
-                    'QR source: ' + tracking.qr_source,
-                    'UTM: ' + [tracking.utm_source, tracking.utm_medium, tracking.utm_campaign, tracking.utm_content].filter(Boolean).join(' / ')
-                ].join('\n');
-
-                const payload = {
-                    first_name: firstName,
-                    last_name: lastName,
-                    name: firstName + ' ' + lastName,
-                    email: email,
-                    phone: phone,
-                    county_area: countyArea,
-                    life_satisfaction: Number(satisfaction),
-                    current_priority: priority,
-                    preferred_contact_method: preferred,
-                    sms_consent_transactional: smsConsent.checked,
-                    source: tracking.source,
-                    campaign: tracking.campaign,
-                    partner: tracking.partner,
-                    route_key: tracking.route_key,
-                    tag: 'mc_sc_mens_group_interest',
-                    tags: [
-                        'mc_sc_mens_group_interest',
-                        'source_santa_cruz_mens_groups',
-                        'campaign_mens_groups_qr_launch',
-                        'partner_river_crimmer'
-                    ],
-                    qr_source: tracking.qr_source,
-                    utm_source: tracking.utm_source,
-                    utm_medium: tracking.utm_medium,
-                    utm_campaign: tracking.utm_campaign,
-                    utm_content: tracking.utm_content,
-                    page_url: window.location.href,
-                    message: summary
-                };
-
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Registering...';
-
-                try {
-                    const response = await fetch(WEBHOOK_URL, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (!response.ok) throw new Error('Submission failed with status ' + response.status);
-
-                    window.dataLayer.push({
-                        event: 'mens_group_interest_submit',
-                        mc_source: tracking.source,
-                        mc_campaign: tracking.campaign,
-                        mc_partner: tracking.partner,
-                        mc_qr_source: tracking.qr_source,
-                        mc_preferred_contact: preferred
-                    });
-
-                    const thanks = new URL('/santa-cruz-mens-group/thanks', window.location.origin);
-                    thanks.searchParams.set('source', tracking.qr_source);
-                    window.location.assign(thanks.toString());
-                } catch (error) {
-                    console.error(error);
-                    showError('We could not submit your registration. Please check your connection and try again.');
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Register My Interest';
-                }
-            });
-        })();
-    </script>
+    <p class="non-clinical">This registration is not a psychotherapy intake, clinical assessment, diagnosis, treatment intake, or mental-health evaluation. Please do not submit private medical or detailed clinical information through this form.</p>
+    <footer class="footer">Mental Capital · <a href="https://www.solynx.solutions/" target="_blank" rel="noopener">Powered by SOLYNX LLC</a></footer>
+</main>
+<script>
+(function(){
+    const WEBHOOK_URL='https://services.leadconnectorhq.com/hooks/TBEyJX4iqsvjNPRPuMKw/webhook-trigger/Qxk7Fkm3Y526q4eiW6Dp';
+    const form=document.getElementById('mensGroupForm');
+    const submitBtn=document.getElementById('submitBtn');
+    const formError=document.getElementById('formError');
+    const lifeSatisfaction=document.getElementById('lifeSatisfaction');
+    const scaleValue=document.getElementById('scaleValue');
+    const smsTransactional=document.getElementById('smsTransactional');
+    const smsMarketing=document.getElementById('smsMarketing');
+    const params=new URLSearchParams(window.location.search);
+    const tracking={
+        source:"Santa Cruz Men's Groups",
+        campaign:"Men's Groups QR Launch",
+        partner:"River Crimmer",
+        program:"Men's Groups",
+        route_key:'mc_sc_mens_group_interest_v1',
+        cohort:params.get('cohort')||'launch_interest',
+        flyer_variant:params.get('flyer_variant')||params.get('qr_source')||params.get('flyer')||'general_flyer',
+        distribution_source:params.get('distribution_source')||'',
+        utm_source:params.get('utm_source')||'direct',
+        utm_medium:params.get('utm_medium')||'qr',
+        utm_campaign:params.get('utm_campaign')||'mens_groups_qr_launch',
+        utm_content:params.get('utm_content')||''
+    };
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({event:'mens_group_interest_view',mc_source:tracking.source,mc_campaign:tracking.campaign,mc_partner:tracking.partner,mc_program:tracking.program,mc_cohort:tracking.cohort,mc_flyer_variant:tracking.flyer_variant,mc_distribution_source:tracking.distribution_source,mc_utm_source:tracking.utm_source,mc_utm_medium:tracking.utm_medium,mc_utm_campaign:tracking.utm_campaign,mc_utm_content:tracking.utm_content});
+    lifeSatisfaction.addEventListener('input',()=>scaleValue.textContent=lifeSatisfaction.value);
+    function normalizePhone(value){const digits=String(value||'').replace(/\D/g,'');if(digits.length===10)return '+1'+digits;if(digits.length===11&&digits.startsWith('1'))return '+'+digits;return value.trim()}
+    function showError(message){formError.textContent=message;formError.classList.add('show');formError.scrollIntoView({behavior:'smooth',block:'center'})}
+    function clearError(){formError.textContent='';formError.classList.remove('show')}
+    form.addEventListener('submit',async event=>{
+        event.preventDefault();clearError();if(!form.checkValidity()){form.reportValidity();return}
+        const preferred=form.querySelector('input[name="preferred_contact_method"]:checked')?.value||'';
+        if(preferred==='Text'&&!smsTransactional.checked){showError('Please provide operational SMS consent to choose Text as your preferred contact method, or select Email or Phone instead.');smsTransactional.focus();return}
+        const submittedAt=new Date().toISOString();
+        const firstName=document.getElementById('firstName').value.trim();
+        const lastName=document.getElementById('lastName').value.trim();
+        const email=document.getElementById('email').value.trim();
+        const phone=normalizePhone(document.getElementById('phone').value);
+        const countyArea=document.getElementById('countyArea').value.trim();
+        const satisfaction=lifeSatisfaction.value;
+        const priority=document.getElementById('priority').value.trim();
+        const summary=["Santa Cruz County Men's Groups Interest Registration",'Program: '+tracking.program,'Area: '+countyArea,'Life satisfaction: '+satisfaction+'/10','Preferred contact: '+preferred,'Operational SMS consent: '+(smsTransactional.checked?'Yes':'No'),'Marketing SMS consent: '+(smsMarketing.checked?'Yes':'No'),priority?'Current priority: '+priority:'Current priority: Not provided','Cohort: '+tracking.cohort,'Flyer variant: '+tracking.flyer_variant,tracking.distribution_source?'Distribution source: '+tracking.distribution_source:null,'Submitted: '+submittedAt,'UTM: '+[tracking.utm_source,tracking.utm_medium,tracking.utm_campaign,tracking.utm_content].filter(Boolean).join(' / ')].filter(Boolean).join('\n');
+        const payload={
+            first_name:firstName,last_name:lastName,name:firstName+' '+lastName,email,phone,
+            county_area:countyArea,life_satisfaction:Number(satisfaction),current_priority:priority,preferred_contact_method:preferred,
+            sms_consent_transactional:smsTransactional.checked,sms_consent_marketing:smsMarketing.checked,
+            source:tracking.source,campaign:tracking.campaign,partner:tracking.partner,program:tracking.program,route_key:tracking.route_key,
+            cohort:tracking.cohort,flyer_variant:tracking.flyer_variant,qr_source:tracking.flyer_variant,distribution_source:tracking.distribution_source,
+            submitted_at:submittedAt,form_submission_timestamp:submittedAt,
+            tag:'mc_sc_mens_group_interest',tags:['mc_sc_mens_group_interest','program_mens_groups','source_santa_cruz_mens_groups','campaign_mens_groups_qr_launch','partner_river_crimmer','cohort_'+tracking.cohort],
+            utm_source:tracking.utm_source,utm_medium:tracking.utm_medium,utm_campaign:tracking.utm_campaign,utm_content:tracking.utm_content,
+            page_url:window.location.href,message:summary
+        };
+        submitBtn.disabled=true;submitBtn.textContent='Registering...';
+        try{
+            const response=await fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+            if(!response.ok)throw new Error('Submission failed with status '+response.status);
+            window.dataLayer.push({event:'mens_group_interest_submit',mc_source:tracking.source,mc_campaign:tracking.campaign,mc_partner:tracking.partner,mc_program:tracking.program,mc_cohort:tracking.cohort,mc_flyer_variant:tracking.flyer_variant,mc_preferred_contact:preferred,mc_sms_operational:smsTransactional.checked,mc_sms_marketing:smsMarketing.checked});
+            const thanks=new URL('/santa-cruz-mens-group/thanks',window.location.origin);thanks.searchParams.set('source',tracking.flyer_variant);thanks.searchParams.set('cohort',tracking.cohort);window.location.assign(thanks.toString());
+        }catch(error){console.error(error);showError('We could not submit your registration. Please check your connection and try again.');submitBtn.disabled=false;submitBtn.textContent='Register My Interest'}
+    });
+})();
+</script>
 </body>
 </html>
