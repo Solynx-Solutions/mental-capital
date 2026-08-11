@@ -9,5 +9,13 @@
     { "source": "/santa-cruz-mens-group", "destination": "/santa-cruz-mens-group.html" },
     { "source": "/santa-cruz-mens-group/thanks", "destination": "/santa-cruz-mens-group-thanks.html" },
     { "source": "/santa-cruz-mens-group/consultation", "destination": "/santa-cruz-mens-group-consultation.html" }
+  ],
+  "headers": [
+    {
+      "source": "/santa-cruz-mens-group(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    }
   ]
 }
