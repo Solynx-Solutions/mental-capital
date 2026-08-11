@@ -114,6 +114,9 @@ Appointment trigger from the existing Mental Capital consultation calendar:
 
 Booking state/date-time comes from HighLevel appointment automation.
 
+## Preview / launch state
+The public route may be deployed for controlled preview, but it is intentionally protected from indexing with `X-Robots-Tag: noindex, nofollow` until CRM/notification/booking-state activation is verified. The route is not linked from the Mental Capital homepage.
+
 ## Guardrails
 - No payment collection or Stripe.
 - No clinical intake.
